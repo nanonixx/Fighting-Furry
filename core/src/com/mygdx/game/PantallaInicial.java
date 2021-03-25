@@ -22,6 +22,7 @@ public class PantallaInicial extends BaseScreen{
         buttonStartStyle.over = new TextureRegionDrawable(new TextureRegion(new Texture("startpressed.png")));
         ImageButton buttonStart = new ImageButton(buttonStartStyle);
         buttonStart.setPosition(30,10);
+        //no cambia de tamaño, no se por qué
         buttonStart.setSize(24*10, 10*10);
         buttonStart.addListener(new InputListener(){
             @Override
