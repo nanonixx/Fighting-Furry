@@ -22,11 +22,11 @@ public class PantallaInicial extends BaseScreen{
         buttonStartStyle.over = new TextureRegionDrawable(new TextureRegion(new Texture("startpressed.png")));
         ImageButton buttonStart = new ImageButton(buttonStartStyle);
         buttonStart.setPosition(30,10);
-//        buttonStart.setSize(24*10, 10*10);
+        buttonStart.setSize(24*10, 10*10);
         buttonStart.addListener(new InputListener(){
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                setScreen(new LoadingScreen(game));
+                setScreen(new GameScreen(game));
                 return true;
             }
         });
