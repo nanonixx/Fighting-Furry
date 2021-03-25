@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
+import com.mygdx.game.Objects.Gatito;
 
 public class PantallaInicial extends BaseScreen {
     public PantallaInicial(MyGdxGame game) {
@@ -18,7 +19,7 @@ public class PantallaInicial extends BaseScreen {
         stage = new Stage();
         stage.addActor(gatito = new Gatito());
         gatito.addAction(Actions.moveBy(30, 30, 1));
-        gatito.addAction(Actions.rotateBy(360*10, 5));
+        gatito.addAction(Actions.rotateBy(360*10, 0.2f));
 
     }
 

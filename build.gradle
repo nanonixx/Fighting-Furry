@@ -9,8 +9,8 @@ buildscript {
         google()
     }
     dependencies {
-        
 
+        classpath "com.badlogicgames.gdx:gdx-tools:1.9.14"
     }
 }
 
@@ -43,6 +43,7 @@ project(":desktop") {
 
     dependencies {
         implementation project(":core")
+        implementation "com.badlogicgames.gdx:gdx-tools:$gdxVersion"
         api "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
         api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
         
@@ -56,5 +57,20 @@ project(":core") {
     dependencies {
         api "com.badlogicgames.gdx:gdx:$gdxVersion"
         
+    }
+}
+
+
+
+project.ext.texturePacker = [ "core/assets/sprites/", "core/assets/", "miatles" ]
+
+// Import the texture packer
+import com.badlogic.gdx.tools.texturepacker.TexturePacker
+
+// Add a new task that packs the textures for you
+task texturePacker {
+    if (project.ext.has('texturePacker')) {
+        logger.info "Calling TexturePacker: "+texturePacker
+        TexturePacker.process(texturePacker[0], texturePacker[1], texturePacker[2])
     }
 }

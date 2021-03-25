@@ -1,0 +1,48 @@
+
+miatles.png
+size: 128, 256
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+azul
+  rotate: false
+  xy: 2, 146
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 0
+azul
+  rotate: false
+  xy: 2, 74
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 1
+gato
+  rotate: false
+  xy: 54, 146
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 0
+gato
+  rotate: false
+  xy: 2, 2
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 1
+naranja
+  rotate: false
+  xy: 54, 74
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 0
+naranja
+  rotate: false
+  xy: 54, 2
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 1
