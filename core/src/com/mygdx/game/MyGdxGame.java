@@ -9,13 +9,26 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class MyGdxGame extends Game {
 
-	@Override
-	public void create() {
-		setScreen(new PantallaInicial(this));
-	}
+	SpriteBatch batch;
+	Texture img;
+	Assets assets;
+
 
 	@Override
-	public void render() {
-		super.render();
+	public void create () {
+		batch = new SpriteBatch();
+		img = new Texture("badlogic.jpg");
+
+		assets = new Assets();
+		assets.load();
+
+		setScreen(new LoadingScreen(this));
+	}
+
+
+	@Override
+	public void dispose () {
+		batch.dispose();
+		img.dispose();
 	}
 }

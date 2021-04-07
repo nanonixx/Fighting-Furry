@@ -16,5 +16,9 @@ public class LoadingScreen extends BaseScreen{
     }
 
     @Override
-    public void render(float delta) {}
+    public void render(float delta) {
+        while(!game.assets.update()) return;
+
+        setScreen(new PantallaInicial(game));
+    }
 }

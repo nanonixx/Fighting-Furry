@@ -1,14 +1,17 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
+import com.mygdx.game.Objects.Gatito;
 
 public class PantallaInicial extends BaseScreen{
     public PantallaInicial(MyGdxGame game) {
@@ -17,6 +20,10 @@ public class PantallaInicial extends BaseScreen{
 
     @Override
     public void show() {
+
+
+
+
         ImageButton.ImageButtonStyle buttonStartStyle = new ImageButton.ImageButtonStyle();
         buttonStartStyle.up = new TextureRegionDrawable(new TextureRegion(new Texture("start.png")));
         buttonStartStyle.over = new TextureRegionDrawable(new TextureRegion(new Texture("startpressed.png")));
