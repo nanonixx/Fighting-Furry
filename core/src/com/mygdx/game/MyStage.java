@@ -9,7 +9,7 @@ public class MyStage extends Stage {
     public final VerticalGroup topLeft, topCenter, topRight, middleLeft, middleCenter, middleRight, bottomLeft, bottomCenter, bottomRight;
     Table table;
 
-    int pad = 2;
+    int pad = 0;
     int space = 2;
 
     public MyStage(Viewport viewport) {
@@ -17,6 +17,7 @@ public class MyStage extends Stage {
 
         table = new Table();
         table.setFillParent(true);
+        //table.setDebug(true);
 
         topLeft = new VerticalGroup().space(space);
         topCenter = new VerticalGroup().space(space);

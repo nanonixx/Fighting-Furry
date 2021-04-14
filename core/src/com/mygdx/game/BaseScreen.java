@@ -29,7 +29,6 @@ public class BaseScreen implements Screen {
     }
 
     public void setScreen(Screen screen){
-//        Gdx.input.setInputProcessor(screen.);
         game.setScreen(screen);
     }
 

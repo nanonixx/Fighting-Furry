@@ -34,7 +34,7 @@ public class PantallaInicial extends BaseScreen{
         buttonStart.addListener(new InputListener(){
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                setScreen(new GameScreen(game));
+                setScreen(new SelectionScreen(game));
                 return true;
             }
         });
