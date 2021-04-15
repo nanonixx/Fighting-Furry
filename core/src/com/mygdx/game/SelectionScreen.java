@@ -18,6 +18,10 @@ import com.mygdx.game.MyGdxGame;
 import java.awt.*;
 
 public class SelectionScreen extends BaseScreen {
+
+
+    private Texture background;
+
     public SelectionScreen(MyGdxGame game) {
         super(game);
     }
@@ -25,6 +29,8 @@ public class SelectionScreen extends BaseScreen {
     @Override
     public void show(){
 
+
+        background = new Texture("background.jpg");
         ImageButton.ImageButtonStyle buttonReadyStyle = new ImageButton.ImageButtonStyle();
         buttonReadyStyle.up = new TextureRegionDrawable(new TextureRegion(new Texture("readyButton.png")));
         buttonReadyStyle.over = new TextureRegionDrawable(new TextureRegion(new Texture("readyButtonPressed.png")));
@@ -39,33 +45,29 @@ public class SelectionScreen extends BaseScreen {
         stage.addActor(buttonReady);
 
 
-//        Image header = new Image(new Texture("header.png"));
-//        header.setPosition(0, 720-84);
-//
-//        stage.topCenter.addActor(header);
+        Image header = new Image(new Texture("header.png"));
+        header.setPosition(0, 720-84);
 
-        Rectangle header = new Rectangle();
+        stage.topCenter.addActor(header);
+
+//        Rectangle header = new Rectangle();
 
 
 //        header.setSize(viewport.getScreenWidth(), 85);
 //        header.setPosition(0, viewport.getTopGutterY());
 
-        ShapeRenderer headerRenderer = new ShapeRenderer();
-        headerRenderer.begin(ShapeRenderer.ShapeType.Filled);
-        headerRenderer.setColor(Color.GRAY);
-        headerRenderer.rect(0, 500, viewport.getScreenWidth(), 85);
-        headerRenderer.end();
-
-
-
-
-
+//        ShapeRenderer headerRenderer = new ShapeRenderer();
+//        headerRenderer.begin(ShapeRenderer.ShapeType.Filled);
+//        headerRenderer.setColor(Color.GRAY);
+//        headerRenderer.rect(0, 500, viewport.getScreenWidth(), 85);
+//        headerRenderer.end();
     }
 
     @Override
     public void render(float delta) {
-        Gdx.gl.glClearColor(0.7f, 0.54f, 0.87f, 0);
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+        stage.getBatch().begin();
+        stage.getBatch().draw(background, 0, 0);
+        stage.getBatch().end();
 
         stage.act(delta);
         stage.draw();

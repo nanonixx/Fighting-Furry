@@ -17,7 +17,6 @@ public class Gatito extends Actor {
         setSize(300, 300);
         setOrigin(center);
         gatitoMoviendose = Assets.getAnimation("naranja", 0.5f, Animation.PlayMode.LOOP);
-
     }
 
     @Override

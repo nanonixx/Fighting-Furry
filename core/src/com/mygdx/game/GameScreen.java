@@ -18,7 +18,6 @@ public class GameScreen extends BaseScreen {
         stage.addActor(gatito = new Gatito());
         gatito.addAction(Actions.moveBy(30, 30, 1));
         gatito.addAction(Actions.rotateBy(360 * 10, 0.2f));
-
     }
 
     @Override
