@@ -1,10 +1,8 @@
 package com.mygdx.game;
 
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.mygdx.game.Config.BaseScreen;
 
-public class LoadingScreen extends BaseScreen{
+public class LoadingScreen extends BaseScreen {
     public LoadingScreen(MyGdxGame game) {
         super(game);
     }
