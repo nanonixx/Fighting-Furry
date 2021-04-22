@@ -7,6 +7,7 @@ import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
+import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.mygdx.game.Config.BaseImageButton;
 import com.mygdx.game.Config.BaseScreen;
 
@@ -23,39 +24,69 @@ public class SelectionScreen extends BaseScreen {
     public void show(){
 
 
-        background = new Texture("background.jpg");
-//        ImageButton.ImageButtonStyle buttonReadyStyle = new ImageButton.ImageButtonStyle();
-//        buttonReadyStyle.up = new TextureRegionDrawable(new TextureRegion(new Texture("readyButton.png")));
-//        buttonReadyStyle.over = new TextureRegionDrawable(new TextureRegion(new Texture("readyButtonPressed.png")));
-//        ImageButton buttonReady = new ImageButton(buttonReadyStyle);
-//        buttonReady.setPosition(525,54);
-
-        BaseImageButton buttonReady = new BaseImageButton("readyButton.png", "readyButtonPressed.png",240, 64,525,54);
-        buttonReady.addListener(new InputListener(){
+        background = new Texture("fondaso.png");
+        BaseImageButton buttonReady = new BaseImageButton("readyButton.png", "readyButtonPressed.png", 240, 64, 525, 54, new BaseImageButton.OnClick() {
             @Override
-            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) { setScreen(new GameScreen(game));
-                return true;
+            public void onClick() {
+                setScreen(new GameScreen(game));
             }
         });
         stage.addActor(buttonReady);
 
 
-        Image header = new Image(new Texture("header.png"));
-        header.setPosition(0, 720-84);
+        Image header = new Image(new Texture("selectFighter.png"));
+        header.setPosition(366, 610);
 
         stage.topCenter.addActor(header);
 
-//        Rectangle header = new Rectangle();
+        final BaseImageButton gokuFrame = new BaseImageButton("gokuSelection.png", "gokuSelected.png", 107, 107, 491, 458, new BaseImageButton.OnClick() {
+            @Override
+            public void onClick() {
 
+            }
+        });
 
-//        header.setSize(viewport.getScreenWidth(), 85);
-//        header.setPosition(0, viewport.getTopGutterY());
+        BaseImageButton furrieFrame = new BaseImageButton("furrieSelection.png", "furrieSelected.png", 107, 107, 491, 307, new BaseImageButton.OnClick() {
+            @Override
+            public void onClick() {
 
-//        ShapeRenderer headerRenderer = new ShapeRenderer();
-//        headerRenderer.begin(ShapeRenderer.ShapeType.Filled);
-//        headerRenderer.setColor(Color.GRAY);
-//        headerRenderer.rect(0, 500, viewport.getScreenWidth(), 85);
-//        headerRenderer.end();
+            }
+        });
+
+        BaseImageButton leeFrame = new BaseImageButton("leeSelection.png", "leeSelected.png", 107, 107, 491, 156, new BaseImageButton.OnClick() {
+            @Override
+            public void onClick() {
+
+            }
+        });
+
+        BaseImageButton jacksonFrame = new BaseImageButton("miauchaelSelection.png", "miauchaelSelected.png", 107, 107, 662, 459, new BaseImageButton.OnClick() {
+            @Override
+            public void onClick() {
+
+            }
+        });
+
+        BaseImageButton pateFrame = new BaseImageButton("pateSelection.png", "pateSelected.png", 107, 107, 662, 307, new BaseImageButton.OnClick() {
+            @Override
+            public void onClick() {
+
+            }
+        });
+
+        BaseImageButton pussoliniFrame = new BaseImageButton("pussoliniSelection.png", "pussoliniSelected.png", 107, 107, 662, 156, new BaseImageButton.OnClick() {
+            @Override
+            public void onClick() {
+
+            }
+        });
+        stage.addActor(gokuFrame);
+        stage.addActor(furrieFrame);
+        stage.addActor(leeFrame);
+        stage.addActor(jacksonFrame);
+        stage.addActor(pateFrame);
+        stage.addActor(pussoliniFrame);
+
     }
 
     @Override
