@@ -3,8 +3,7 @@ package com.mygdx.game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.scenes.scene2d.InputEvent;
-import com.badlogic.gdx.scenes.scene2d.InputListener;
+import com.badlogic.gdx.scenes.scene2d.*;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
@@ -29,12 +28,7 @@ public class SelectionScreen extends BaseScreen {
 
         background = new Texture("fondaso.png");
 
-        BaseImageButton buttonReady = new BaseImageButton("readyButton.png", "readyButtonPressed.png", 240, 64, 525, 54, new BaseImageButton.OnClick() {
-            @Override
-            public void onClick() {
-                setScreen(new GameScreen(game));
-            }
-        });
+        BaseImageButton buttonReady = new BaseImageButton("readyButton.png", "readyButtonPressed.png", 240, 64, 525, 54);
         stage.addActor(buttonReady);
 
 
@@ -44,47 +38,31 @@ public class SelectionScreen extends BaseScreen {
         stage.topCenter.addActor(header);
 
         //FRAMES DE LOS PERSONAJES PARA LA SELECCIÓN
-        final BaseImageButton gokuFrame = new BaseImageButton("gokuSelection.png", "gokuSelected.png", 107, 107, 491, 458, new BaseImageButton.OnClick() {
-            @Override
-            public void onClick() {
-                showPj(stage, "gokuitot.png");
-            }
-        });
+        BaseImageButton gokuFrame = new BaseImageButton("gokuSelection.png", "gokuSelected.png", 107, 107, 491, 458);
+        //poner cosingas al hacer click
+        gokuFrame.onClick(() -> {});
+        gokuFrame.onEnter(() -> showPj(stage, "gokuitot.png"));
 
-        BaseImageButton furrieFrame = new BaseImageButton("furrieSelection.png", "furrieSelected.png", 107, 107, 491, 307, new BaseImageButton.OnClick() {
-            @Override
-            public void onClick() {
-                showPj(stage, "curie.png");
-            }
-        });
 
-        BaseImageButton leeFrame = new BaseImageButton("leeSelection.png", "leeSelected.png", 107, 107, 491, 156, new BaseImageButton.OnClick() {
-            @Override
-            public void onClick() {
-                showPj(stage, "miaulee.png");
-            }
-        });
+        BaseImageButton furrieFrame = new BaseImageButton("furrieSelection.png", "furrieSelected.png", 107, 107, 491, 307);
+        furrieFrame.onClick(()->{});
+        furrieFrame.onEnter(() -> showPj(stage, "curie.png"));
 
-        BaseImageButton jacksonFrame = new BaseImageButton("miauchaelSelection.png", "miauchaelSelected.png", 107, 107, 662, 459, new BaseImageButton.OnClick() {
-            @Override
-            public void onClick() {
-                showPj(stage, "heeHEE.png");
-            }
-        });
+        BaseImageButton leeFrame = new BaseImageButton("leeSelection.png", "leeSelected.png", 107, 107, 491, 156);
+        leeFrame.onClick(()->{});
+        leeFrame.onEnter(()->{showPj(stage, "miaulee.png");});
 
-        BaseImageButton pateFrame = new BaseImageButton("pateSelection.png", "pateSelected.png", 107, 107, 662, 307, new BaseImageButton.OnClick() {
-            @Override
-            public void onClick() {
-                showPj(stage, "pate2.png");
-            }
-        });
+        BaseImageButton jacksonFrame = new BaseImageButton("miauchaelSelection.png", "miauchaelSelected.png", 107, 107, 662, 459);
+        jacksonFrame.onClick(()->{});
+        jacksonFrame.onEnter(()->{showPj(stage, "heeHEE.png");});
 
-        final BaseImageButton pussoliniFrame = new BaseImageButton("pussoliniSelection.png", "pussoliniSelected.png", 107, 107, 662, 156, new BaseImageButton.OnClick() {
-            @Override
-            public void onClick() {
-                showPj(stage, "PUSSOLINI.png");
-            }
-        });
+        BaseImageButton pateFrame = new BaseImageButton("pateSelection.png", "pateSelected.png", 107, 107, 662, 307);
+        pateFrame.onClick(()->{});
+        pateFrame.onEnter(()->{showPj(stage, "pate2.png");});
+
+        BaseImageButton pussoliniFrame = new BaseImageButton("pussoliniSelection.png", "pussoliniSelected.png", 107, 107, 662, 156);
+        pussoliniFrame.onClick(()->{});
+        pussoliniFrame.onEnter(()->{showPj(stage, "PUSSOLINI.png");});
 
         stage.addActor(gokuFrame);
         stage.addActor(furrieFrame);
