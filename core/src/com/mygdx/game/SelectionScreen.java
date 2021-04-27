@@ -35,6 +35,15 @@ public class SelectionScreen extends BaseScreen {
         BaseImageButton buttonReady = new BaseImageButton("readyButton.png", "readyButtonPressed.png", 240, 64, 525, 54);
         stage.addActor(buttonReady);
 
+        //para testeo
+        buttonReady.addListener(new InputListener(){
+            @Override
+            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
+                setScreen(new GameScreen(game));
+                return super.touchDown(event, x, y, pointer, button);
+            }
+        });
+
 
         Image header = new Image(new Texture("selectFighter.png"));
         header.setPosition(366, 610);

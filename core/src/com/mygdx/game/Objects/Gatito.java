@@ -16,7 +16,7 @@ public class Gatito extends Actor {
     public Gatito() {
         setSize(300, 300);
         setOrigin(center);
-        gatitoMoviendose = Assets.getAnimation("naranja", 0.5f, Animation.PlayMode.LOOP);
+        gatitoMoviendose = Assets.getAnimation("bite", 0.5f, Animation.PlayMode.LOOP);
     }
 
     @Override
@@ -28,6 +28,7 @@ public class Gatito extends Actor {
     @Override
     public void draw(Batch batch, float parentAlpha) {
         super.draw(batch, parentAlpha);
-        batch.draw(gatitoMoviendose.getKeyFrame(stateTime), getX()+getWidth(), getY(), getOriginX(), getOriginY(), -getWidth(), getHeight(), getScaleX(), getScaleY(), getRotation());
+        batch.draw(gatitoMoviendose.getKeyFrame(stateTime),
+                getX()+getWidth(), getY(), getOriginX(), getOriginY(), -getWidth(), getHeight(), getScaleX(), getScaleY(), getRotation());
     }
 }
