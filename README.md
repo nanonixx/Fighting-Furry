@@ -9,6 +9,6 @@ Usándolas aplicaremos mejoras a nuestro personaje y trataremos de bajar la vida
 <br>
 
 <p align="center">
+  <img src="https://user-images.githubusercontent.com/62404395/116131125-4a003980-a6cc-11eb-843c-d4c68179133f.png"  width="350" title="hover text">
   <img src="https://user-images.githubusercontent.com/62404395/115998418-66767600-a5e7-11eb-90e2-cd24ecbcc585.png" width="350" title="hover text">
-  <img src="https://user-images.githubusercontent.com/62404395/115998430-6e361a80-a5e7-11eb-8f7b-c82b12c6dd21.png" width="350" alt="accessibility text">
 </p>
