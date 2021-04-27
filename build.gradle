@@ -26,6 +26,7 @@ allprojects {
         ashleyVersion = '1.7.3'
         aiVersion = '1.8.2'
         gdxControllersVersion = '2.1.0'
+        libVersion='1.9.1.9.6'
     }
 
     repositories {
@@ -59,4 +60,20 @@ project(":core") {
         
     }
 }
+
+project(":server") {
+    apply plugin: "java-library"
+
+    dependencies {
+        implementation "com.github.czyzby:gdx-websocket:$libVersion"
+        implementation 'jakarta.websocket:jakarta.websocket-api:2.0.0'
+        implementation 'org.glassfish.tyrus:tyrus-server:2.0.0'
+        implementation 'org.glassfish.tyrus:tyrus-client:2.0.0'
+        implementation 'org.glassfish.tyrus:tyrus-container-grizzly-server:2.0.0'
+        implementation 'com.google.code.gson:gson:2.8.6'
+        implementation "com.google.gwt:gwt-servlet:2.9.0"
+
+    }
+}
+
 
