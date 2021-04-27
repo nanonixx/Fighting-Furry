@@ -1,34 +1,55 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.actions.Actions;
-import com.mygdx.game.Objects.Gatito;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.InputListener;
+import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
+import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
+import com.mygdx.game.Config.BaseScreen;
 
 public class PantallaInicial extends BaseScreen {
     public PantallaInicial(MyGdxGame game) {
-        super(game); }
-
-    Stage stage ;
-    Gatito gatito;
+        super(game);
+    }
 
     @Override
     public void show() {
 
-        stage = new Stage();
-        stage.addActor(gatito = new Gatito());
-        gatito.addAction(Actions.moveBy(30, 30, 1));
-        gatito.addAction(Actions.rotateBy(360*10, 0.2f));
 
-    }
 
-    @Override
-    public void render(float delta) {
-        Gdx.gl.glClearColor(0.7f, 0.54f, 0.87f, 0);
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-        stage.act(delta);
-        stage.draw();
+        ImageButton.ImageButtonStyle buttonStartStyle = new ImageButton.ImageButtonStyle();
+        buttonStartStyle.up = new TextureRegionDrawable(new TextureRegion(new Texture("start.png")));
+        buttonStartStyle.over = new TextureRegionDrawable(new TextureRegion(new Texture("startpressed.png")));
+        ImageButton buttonStart = new ImageButton(buttonStartStyle);
+        buttonStart.setPosition(30,10);
+        //no cambia de tamaño, no se por qué
+        buttonStart.setSize(24*10, 10*10);
+        buttonStart.addListener(new InputListener(){
+            @Override
+            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
+                setScreen(new SelectionScreen(game));
+                return true;
+            }
+        });
+        stage.middleCenter.addActor(buttonStart);
+
+        ImageButton.ImageButtonStyle buttonQuitStyle = new ImageButton.ImageButtonStyle();
+        buttonQuitStyle.up = new TextureRegionDrawable(new TextureRegion(new Texture("quit.png")));
+        buttonQuitStyle.over = new TextureRegionDrawable(new TextureRegion(new Texture("quitpressed.png")));
+        ImageButton buttonQuit = new ImageButton(buttonQuitStyle);
+
+        buttonQuit.addListener(new InputListener(){
+            @Override
+            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
+                Gdx.app.exit();
+                System.exit(0);
+                return true;
+            }
+        });
+
+        stage.middleCenter.addActor(buttonQuit);
     }
 }

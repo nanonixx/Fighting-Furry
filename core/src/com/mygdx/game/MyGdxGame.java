@@ -1,10 +1,14 @@
 package com.mygdx.game;
 
+import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class MyGdxGame extends Game {
+
 	SpriteBatch batch;
 	Texture img;
 	Assets assets;
@@ -18,7 +22,7 @@ public class MyGdxGame extends Game {
 		assets = new Assets();
 		assets.load();
 
-		setScreen(new PantallaLoading(this));
+		setScreen(new LoadingScreen(this));
 	}
 
 

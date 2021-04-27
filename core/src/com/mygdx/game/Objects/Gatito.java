@@ -10,7 +10,6 @@ import static com.badlogic.gdx.utils.Align.center;
 
 public class Gatito extends Actor {
 
-    TextureRegion texture;
     Animation<TextureRegion> gatitoMoviendose;
     float stateTime = 0;
 
@@ -18,7 +17,6 @@ public class Gatito extends Actor {
         setSize(300, 300);
         setOrigin(center);
         gatitoMoviendose = Assets.getAnimation("naranja", 0.5f, Animation.PlayMode.LOOP);
-
     }
 
     @Override
