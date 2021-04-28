@@ -9,8 +9,8 @@ buildscript {
         google()
     }
     dependencies {
-        
 
+        classpath "com.badlogicgames.gdx:gdx-tools:1.9.14"
     }
 }
 
@@ -60,3 +60,4 @@ project(":core") {
     }
 }
 
+com.badlogic.gdx.tools.texturepacker.TexturePacker.process("core/assets/sprites/", "core/assets", "miatles")

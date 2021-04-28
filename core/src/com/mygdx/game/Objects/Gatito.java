@@ -16,7 +16,7 @@ public class Gatito extends Actor {
     public Gatito() {
         setSize(300, 300);
         setOrigin(center);
-        gatitoMoviendose = Assets.getAnimation("bite", 0.5f, Animation.PlayMode.LOOP);
+        gatitoMoviendose = Assets.getAnimation("idle", 0.4f, Animation.PlayMode.LOOP);
     }
 
     @Override

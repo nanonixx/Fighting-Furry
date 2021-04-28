@@ -1,48 +1,328 @@
 
 miatles.png
-size: 128, 256
+size: 1024, 256
 format: RGBA8888
 filter: Nearest, Nearest
 repeat: none
 azul
   rotate: false
-  xy: 2, 146
+  xy: 2, 2
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
 azul
   rotate: false
+  xy: 321, 151
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 1
+bite
+  rotate: false
+  xy: 373, 151
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 0
+bite
+  rotate: false
+  xy: 373, 151
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 8
+bite
+  rotate: false
+  xy: 425, 151
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 1
+bite
+  rotate: false
+  xy: 425, 151
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 7
+bite
+  rotate: false
+  xy: 477, 151
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 2
+bite
+  rotate: false
+  xy: 477, 151
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 6
+bite
+  rotate: false
+  xy: 529, 151
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 3
+bite
+  rotate: false
+  xy: 529, 151
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 5
+bite
+  rotate: false
+  xy: 581, 151
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 4
+gato
+  rotate: false
+  xy: 633, 151
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 0
+gato
+  rotate: false
+  xy: 685, 151
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 1
+idle
+  rotate: false
+  xy: 737, 151
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 0
+idle
+  rotate: false
+  xy: 789, 151
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 1
+kick
+  rotate: false
+  xy: 789, 151
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 0
+kick
+  rotate: false
+  xy: 789, 151
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 11
+kick
+  rotate: false
+  xy: 2, 148
+  size: 52, 73
+  orig: 52, 73
+  offset: 0, 0
+  index: 4
+kick
+  rotate: false
+  xy: 2, 148
+  size: 52, 73
+  orig: 52, 73
+  offset: 0, 0
+  index: 6
+kick
+  rotate: false
+  xy: 2, 148
+  size: 52, 73
+  orig: 52, 73
+  offset: 0, 0
+  index: 5
+kick
+  rotate: false
+  xy: 2, 148
+  size: 52, 73
+  orig: 52, 73
+  offset: 0, 0
+  index: 7
+kick
+  rotate: false
   xy: 2, 74
+  size: 50, 72
+  orig: 50, 72
+  offset: 0, 0
+  index: 3
+kick
+  rotate: false
+  xy: 56, 149
+  size: 50, 72
+  orig: 50, 72
+  offset: 0, 0
+  index: 8
+kick
+  rotate: false
+  xy: 841, 151
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
-gato
+kick
   rotate: false
-  xy: 54, 146
+  xy: 841, 151
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 10
+kick
+  rotate: false
+  xy: 893, 151
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 2
+kick
+  rotate: false
+  xy: 893, 151
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 9
+naranja
+  rotate: false
+  xy: 945, 151
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
-gato
+naranja
   rotate: false
-  xy: 2, 2
+  xy: 54, 76
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
-naranja
+punching
   rotate: false
-  xy: 54, 74
+  xy: 108, 151
+  size: 52, 70
+  orig: 52, 70
+  offset: 0, 0
+  index: 5
+punching
+  rotate: false
+  xy: 162, 151
+  size: 51, 70
+  orig: 51, 70
+  offset: 0, 0
+  index: 11
+punching
+  rotate: false
+  xy: 162, 151
+  size: 51, 70
+  orig: 51, 70
+  offset: 0, 0
+  index: 15
+punching
+  rotate: false
+  xy: 215, 151
+  size: 51, 70
+  orig: 51, 70
+  offset: 0, 0
+  index: 12
+punching
+  rotate: false
+  xy: 215, 151
+  size: 51, 70
+  orig: 51, 70
+  offset: 0, 0
+  index: 14
+punching
+  rotate: false
+  xy: 268, 151
+  size: 51, 70
+  orig: 51, 70
+  offset: 0, 0
+  index: 13
+punching
+  rotate: false
+  xy: 54, 4
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
-naranja
+punching
   rotate: false
-  xy: 54, 2
+  xy: 54, 4
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 16
+punching
+  rotate: false
+  xy: 54, 4
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 10
+punching
+  rotate: false
+  xy: 106, 77
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
+punching
+  rotate: false
+  xy: 106, 77
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 9
+punching
+  rotate: false
+  xy: 106, 5
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 2
+punching
+  rotate: false
+  xy: 158, 79
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 3
+punching
+  rotate: false
+  xy: 158, 7
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 4
+punching
+  rotate: false
+  xy: 210, 79
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 6
+punching
+  rotate: false
+  xy: 210, 79
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 7
+punching
+  rotate: false
+  xy: 210, 7
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 8
