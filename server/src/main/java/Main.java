@@ -13,10 +13,7 @@ public class Main extends JPanel {
     }
 
     void init() throws DeploymentException {
-//        String host = "192.168.246.246";
-//        String host = "192.168.1.100";
         String host = "localhost";
-//        new Server("localhost", 12345, "/", null, ServidorEndpoint.class).start();
         new Server(host, 12345, "/", null, ServidorEndpoint.class).start();
 
         JFrame frame = new JFrame();
