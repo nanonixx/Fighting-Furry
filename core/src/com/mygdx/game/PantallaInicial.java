@@ -21,8 +21,8 @@ public class PantallaInicial extends BaseScreen {
 
 
         ImageButton.ImageButtonStyle buttonStartStyle = new ImageButton.ImageButtonStyle();
-        buttonStartStyle.up = new TextureRegionDrawable(new TextureRegion(new Texture("start.png")));
-        buttonStartStyle.over = new TextureRegionDrawable(new TextureRegion(new Texture("startpressed.png")));
+        buttonStartStyle.up = new TextureRegionDrawable(new TextureRegion(new Texture("readyButton.png")));
+        buttonStartStyle.over = new TextureRegionDrawable(new TextureRegion(new Texture("readyButtonPressed.png")));
         ImageButton buttonStart = new ImageButton(buttonStartStyle);
         buttonStart.setPosition(30,10);
         //no cambia de tamaño, no se por qué
