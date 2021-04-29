@@ -1,4 +1,1 @@
-include 'desktop', 'core'
-include 'server'
-include 'server'
-
+include 'desktop', 'core', 'model',  'server', 'testclient'

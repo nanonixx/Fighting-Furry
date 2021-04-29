@@ -9,7 +9,9 @@ buildscript {
         google()
     }
     dependencies {
-
+        classpath 'org.wisepersist:gwt-gradle-plugin:1.0.13'
+        classpath "gradle.plugin.org.gretty:gretty:3.0.3"
+        classpath 'com.android.tools.build:gradle:4.0.2'
         classpath "com.badlogicgames.gdx:gdx-tools:1.9.14"
     }
 }
@@ -26,6 +28,7 @@ allprojects {
         ashleyVersion = '1.7.3'
         aiVersion = '1.8.2'
         gdxControllersVersion = '2.1.0'
+        libVersion='1.9.1.9.6'
     }
 
     repositories {
@@ -37,27 +40,60 @@ allprojects {
     }
 }
 
+
 project(":desktop") {
     apply plugin: "java-library"
 
 
     dependencies {
         implementation project(":core")
+        implementation "com.github.czyzby:gdx-websocket-common:$libVersion"
         api "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
         api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
-        
+
+        implementation project(path: ':model')
     }
 }
 
 project(":core") {
     apply plugin: "java-library"
 
-
     dependencies {
         api "com.badlogicgames.gdx:gdx:$gdxVersion"
-        compile "com.underwaterapps.overlap2druntime:overlap2d-runtime-libgdx:0.1.2-SNAPSHOT"
-        
+
+        implementation 'jakarta.websocket:jakarta.websocket-api:2.0.0'
+        implementation 'org.glassfish.tyrus:tyrus-server:2.0.0'
+        implementation 'org.glassfish.tyrus:tyrus-client:2.0.0'
+        implementation 'org.glassfish.tyrus:tyrus-container-grizzly-server:2.0.0'
+
+        implementation "com.github.czyzby:gdx-websocket:$libVersion"
+        implementation "com.google.gwt:gwt-servlet:2.9.0"
+        implementation project(path: ':model')
     }
 }
 
-com.badlogic.gdx.tools.texturepacker.TexturePacker.process("core/assets/sprites/", "core/assets", "miatles")
+project(":model") {
+    apply plugin: "java-library"
+
+    dependencies {
+        implementation "com.github.czyzby:gdx-websocket:$libVersion"
+    }
+}
+
+
+project(":server") {
+    apply plugin: "java-library"
+
+    dependencies {
+        implementation "com.github.czyzby:gdx-websocket:$libVersion"
+        implementation 'jakarta.websocket:jakarta.websocket-api:2.0.0'
+        implementation 'org.glassfish.tyrus:tyrus-server:2.0.0'
+        implementation 'org.glassfish.tyrus:tyrus-client:2.0.0'
+        implementation 'org.glassfish.tyrus:tyrus-container-grizzly-server:2.0.0'
+        implementation 'com.google.code.gson:gson:2.8.6'
+        implementation "com.google.gwt:gwt-servlet:2.9.0"
+        implementation project(path: ':model')
+    }
+}
+
+
