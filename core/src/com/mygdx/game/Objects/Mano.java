@@ -14,5 +14,5 @@ public class Mano extends MyActor {
         //animacion
     }
 
-    //<
+    //
 }
