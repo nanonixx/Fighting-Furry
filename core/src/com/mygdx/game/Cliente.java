@@ -10,9 +10,10 @@ import com.mygdx.game.Objects.Juego;
 import main.java.Mensaje;
 
 public class Cliente {
+
     private WebSocket socket;
     static Json json = new Json();
-    Juego juego;
+
     public void conectar(){
         String host = "localhost";
         socket = ExtendedNet.getNet().newWebSocket(host, 12345);
@@ -21,19 +22,19 @@ public class Cliente {
 
             @Override
             public boolean onOpen(final WebSocket webSocket) {
-                juego.conectar();
+                Cosingas.juego.conectar();
                 return FULLY_HANDLED;
             }
 
             @Override
             public boolean onClose(final WebSocket webSocket, final WebSocketCloseCode code, final String reason) {
-                juego.desconectar(code, reason);
+                Cosingas.juego.desconectar(code, reason);
                 return FULLY_HANDLED;
             }
 
             @Override
             public boolean onMessage(final WebSocket webSocket, final String packet) {
-                juego.mensaje(json.fromJson(Mensaje.class, packet));
+                Cosingas.juego.mensaje(json.fromJson(Mensaje.class, packet));
                 return FULLY_HANDLED;
             }
 
@@ -42,7 +43,15 @@ public class Cliente {
                 return false;
             }
         });
+
+        try {
+            socket.connect();
+        } catch (Exception e){
+            System.out.println("NO SE PUDO CONECTAR AL SERVIDOR");
+        }
     }
 
-    public void enviar(){}
+    public void enviar(Mensaje mensaje){
+        socket.send(json.toJson(mensaje));
+    }
 }

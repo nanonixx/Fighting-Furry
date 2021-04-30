@@ -9,6 +9,10 @@ import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.mygdx.game.Config.BaseImageButton;
 import com.mygdx.game.Config.BaseScreen;
 import com.mygdx.game.Config.MyStage;
+import main.java.Mensaje;
+
+
+
 
 public class SelectionScreen extends BaseScreen {
 
@@ -23,7 +27,6 @@ public class SelectionScreen extends BaseScreen {
     @Override
     public void show(){
 
-
         background = new Texture("fondaso.png");
 
         BaseImageButton buttonReady = new BaseImageButton("readyButton.png", "readyButtonPressed.png", 240, 64, 525, 54);
@@ -33,6 +36,7 @@ public class SelectionScreen extends BaseScreen {
         buttonReady.addListener(new InputListener(){
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
+                //Cosingas.cliente.enviar(new Mensaje("READY"));
                 setScreen(new GameScreen(game));
                 return super.touchDown(event, x, y, pointer, button);
             }
@@ -123,6 +127,7 @@ public class SelectionScreen extends BaseScreen {
         stage.addActor(jacksonFrame);
         stage.addActor(pateFrame);
         stage.addActor(pussoliniFrame);
+
 
     }
 
