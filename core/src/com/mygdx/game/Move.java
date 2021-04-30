@@ -26,7 +26,7 @@ public class Move {
 
     public Animation.PlayMode loopMode() {
         if (loop) return Animation.PlayMode.LOOP;
-        else return Animation.PlayMode.LOOP;
+        else return Animation.PlayMode.NORMAL;
         //Playmode.Normal???????¿¿¿ no hace bucle or algo del stateTime ya lo harè
     }
 
@@ -45,6 +45,22 @@ public class Move {
         gatito.getMove().ms = 0.008f;
         loop = true;
         gatito.addAction(Actions.moveBy(-50, 0, 5));
-        //depende de si está flipped, TODO
+        //depende de si está flipped
+    }
+
+    public void bite(Gatito gatito){
+        gatito.getMove().name = "bite";
+        gatito.getMove().ms = 0.08f;
+        loop = true;
+        gatito.addAction(Actions.moveBy(-50, 0, 5));
+        //depende de si está flipped
+    }
+
+    public void idle(Gatito gatito){
+        gatito.getMove().name = "idle";
+        gatito.getMove().ms = 0.4f;
+        loop = true;
+        gatito.addAction(Actions.moveBy(-50, 0, 5));
+        //depende de si está flipped
     }
 }
