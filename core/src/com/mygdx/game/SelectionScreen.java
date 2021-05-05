@@ -14,20 +14,19 @@ import com.mygdx.game.Objects.Renderizador;
 import main.java.Mensaje;
 
 
-
-
 public class SelectionScreen extends BaseScreen {
 
     private boolean selected = false;
     private Texture background;
     Image pj = new Image();
 
+
     public SelectionScreen(MyGdxGame game) {
         super(game);
     }
 
     @Override
-    public void show(){
+    public void show() {
         Cosingas.juego = new Juego();
         Cosingas.renderizador = new Renderizador(game);
         background = new Texture("fondaso.png");
@@ -36,7 +35,7 @@ public class SelectionScreen extends BaseScreen {
         stage.addActor(buttonReady);
 
         //para testeo
-        buttonReady.addListener(new InputListener(){
+        buttonReady.addListener(new InputListener() {
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
                 Cosingas.cliente.enviar(new Mensaje("READY"));
@@ -60,69 +59,73 @@ public class SelectionScreen extends BaseScreen {
         furrieFrame.onEnter(() -> showPj(stage, "curie.png"));
 
         BaseImageButton leeFrame = new BaseImageButton("leeSelection.png", "leeSelected.png", 107, 107, 491, 156);
-        leeFrame.onEnter(()->{showPj(stage, "miaulee.png");});
+        leeFrame.onEnter(() -> {
+            showPj(stage, "miaulee.png");
+        });
 
         BaseImageButton jacksonFrame = new BaseImageButton("miauchaelSelection.png", "miauchaelSelected.png", 107, 107, 662, 459);
-        jacksonFrame.onEnter(()->{showPj(stage, "heeHEE.png");});
+        jacksonFrame.onEnter(() -> {
+            showPj(stage, "heeHEE.png");
+        });
 
         BaseImageButton pateFrame = new BaseImageButton("pateSelection.png", "pateSelected.png", 107, 107, 662, 307);
-        pateFrame.onEnter(()->{showPj(stage, "pate2.png");});
+        pateFrame.onEnter(() -> {
+            showPj(stage, "pate2.png");
+        });
 
         BaseImageButton pussoliniFrame = new BaseImageButton("pussoliniSelection.png", "pussoliniSelected.png", 107, 107, 662, 156);
-        pussoliniFrame.onEnter(()->{showPj(stage, "PUSSOLINI.png");});
+        pussoliniFrame.onEnter(() -> {
+            showPj(stage, "PUSSOLINI.png");
+        });
 
         gokuFrame.onClick(() -> {
-            if(!selected) {
+            if (!selected) {
                 selected = selectPj(gokuFrame, "goku");
-            }
-            else{
+            } else {
                 unselectPjs(gokuFrame, furrieFrame, leeFrame, jacksonFrame, pateFrame, pussoliniFrame);
                 selected = selectPj(gokuFrame, "goku");
             }
         });
-        furrieFrame.onClick(()->{
-            if(!selected) {
+        furrieFrame.onClick(() -> {
+            if (!selected) {
                 selected = selectPj(furrieFrame, "furrie");
-            }
-            else{
+            } else {
                 unselectPjs(gokuFrame, furrieFrame, leeFrame, jacksonFrame, pateFrame, pussoliniFrame);
                 selected = selectPj(furrieFrame, "furrie");
             }
         });
-        leeFrame.onClick(()->{
-            if(!selected){
+        leeFrame.onClick(() -> {
+            if (!selected) {
                 selected = selectPj(leeFrame, "lee");
-            }
-            else{
+            } else {
                 unselectPjs(gokuFrame, furrieFrame, leeFrame, jacksonFrame, pateFrame, pussoliniFrame);
                 selected = selectPj(leeFrame, "lee");
             }
         });
-        jacksonFrame.onClick(()->{
-            if(!selected){
+        jacksonFrame.onClick(() -> {
+            if (!selected) {
                 selected = selectPj(jacksonFrame, "miauchael");
-            }
-            else{
+            } else {
                 unselectPjs(gokuFrame, furrieFrame, leeFrame, jacksonFrame, pateFrame, pussoliniFrame);
                 selected = selectPj(jacksonFrame, "miauchael");
             }
         });
-        pateFrame.onClick(()->{
-            if(!selected){
+        pateFrame.onClick(() -> {
+            if (!selected) {
                 selected = selectPj(pateFrame, "pate");
-            }
-            else{
+            } else {
                 unselectPjs(gokuFrame, furrieFrame, leeFrame, jacksonFrame, pateFrame, pussoliniFrame);
                 selected = selectPj(pateFrame, "pate");
             }
         });
-        pussoliniFrame.onClick(()->{if(!selected){
-            selected = selectPj(pussoliniFrame, "pussolini");
-        }
-        else{
-            unselectPjs(gokuFrame, furrieFrame, leeFrame, jacksonFrame, pateFrame, pussoliniFrame);
-            selected = selectPj(pussoliniFrame, "pussolini");
-        }});
+        pussoliniFrame.onClick(() -> {
+            if (!selected) {
+                selected = selectPj(pussoliniFrame, "pussolini");
+            } else {
+                unselectPjs(gokuFrame, furrieFrame, leeFrame, jacksonFrame, pateFrame, pussoliniFrame);
+                selected = selectPj(pussoliniFrame, "pussolini");
+            }
+        });
 
         stage.addActor(gokuFrame);
         stage.addActor(furrieFrame);
@@ -136,6 +139,10 @@ public class SelectionScreen extends BaseScreen {
 
     @Override
     public void render(float delta) {
+        if (Cosingas.renderizador.irAPantallaJuego) {
+            setScreen(new GameScreen(game));
+        }
+
         stage.getBatch().begin();
         stage.getBatch().draw(background, 0, 0);
         stage.getBatch().end();
@@ -144,20 +151,20 @@ public class SelectionScreen extends BaseScreen {
     }
 
     //metodo para cargar los sprites cuando se seleccionan
-    public void showPj(MyStage stage, String frame){
-        if(pj.getStage() != null) pj.remove();
+    public void showPj(MyStage stage, String frame) {
+        if (pj.getStage() != null) pj.remove();
         pj = new Image(new Texture("Selection/" + frame));
         pj.setPosition(72, 131);
         pj.setSize(304, 426);
         stage.addActor(pj);
     }
 
-    public boolean selectPj(BaseImageButton frame, String framename){
-        frame.getStyle().up  = new TextureRegionDrawable(new TextureRegion(new Texture(framename+"Selected.png")));
+    public boolean selectPj(BaseImageButton frame, String framename) {
+        frame.getStyle().up = new TextureRegionDrawable(new TextureRegion(new Texture(framename + "Selected.png")));
         return true;
     }
 
-    public boolean unselectPjs(BaseImageButton goku, BaseImageButton curie, BaseImageButton lee, BaseImageButton jackson, BaseImageButton pate, BaseImageButton puss){
+    public boolean unselectPjs(BaseImageButton goku, BaseImageButton curie, BaseImageButton lee, BaseImageButton jackson, BaseImageButton pate, BaseImageButton puss) {
         goku.getStyle().up = new TextureRegionDrawable(new TextureRegion(new Texture("gokuSelection.png")));
         curie.getStyle().up = new TextureRegionDrawable(new TextureRegion(new Texture("furrieSelection.png")));
         lee.getStyle().up = new TextureRegionDrawable(new TextureRegion(new Texture("leeSelection.png")));

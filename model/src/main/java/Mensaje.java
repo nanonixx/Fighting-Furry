@@ -5,6 +5,7 @@ public class Mensaje {
     public Mano mano;
     public Carta carta;
     public int[] vidas;
+    public String gato; //
 
     public Mensaje(){}
 

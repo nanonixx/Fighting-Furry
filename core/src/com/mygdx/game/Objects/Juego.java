@@ -19,7 +19,7 @@ public class Juego {
         switch (mensaje.action) {
             case "START":
                 Cosingas.renderizador.mostrarMensaje("CONECTADO");
-                Cosingas.renderizador.irAPantallJuego();
+                Cosingas.renderizador.irAPantallaJuego();
                 break;
 
             case "":
