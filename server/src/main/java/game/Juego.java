@@ -24,7 +24,6 @@ public class Juego {
                 if(!partida.faltaJugador()) {
                     partida.jugador1.send(new Mensaje("START"));
                     partida.jugador2.send(new Mensaje("START"));
-
                     partida.repartirCartasIniciales();
 
                     partida.jugador1.enviarCartas();

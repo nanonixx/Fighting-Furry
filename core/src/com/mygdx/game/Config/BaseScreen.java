@@ -30,6 +30,7 @@ public class BaseScreen implements Screen {
     }
 
     public void setScreen(Screen screen){
+        System.out.println(game);
         game.setScreen(screen);
     }
 
@@ -63,5 +64,9 @@ public class BaseScreen implements Screen {
     @Override
     public void dispose() {
         stage.dispose();
+    }
+
+    void setScreen(BaseScreen screen) {
+        game.setScreen(screen);
     }
 }

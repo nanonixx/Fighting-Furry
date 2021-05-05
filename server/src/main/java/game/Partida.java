@@ -19,7 +19,7 @@ public class Partida {
         if(jugador1 == null) {
             jugador1 = new Jugador(session);
         }
-        else if(jugador2 == null) {
+        else if(jugador2 == null && jugador1.session != session) {
             jugador2 = new Jugador(session);
 
             jugador2.oponente = jugador1;

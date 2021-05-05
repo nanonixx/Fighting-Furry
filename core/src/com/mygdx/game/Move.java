@@ -48,7 +48,7 @@ public class Move {
         //depende de si está flipped
     }
 
-    public void bite(Gatito gatito){
+    public void bite(Gatito gatito, float delta){
         gatito.getMove().name = "bite";
         gatito.getMove().ms = 0.08f;
         loop = false;

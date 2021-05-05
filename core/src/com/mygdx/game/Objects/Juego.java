@@ -8,15 +8,22 @@ public class Juego {
     Mano mano;
 
 
-    public void conectar(){
-        Cosingas.renderizador.mostrarMensaje("CONECTADO");
+    public void alConectar(){
+        //Cosingas.renderizador.mostrarMensaje("CONECTADO");
+        Cosingas.cliente.enviar(new Mensaje("READY"));
     }
 
     public void desconectar(WebSocketCloseCode code, String reason){}
 
     public void mensaje(Mensaje mensaje){
-        if(mensaje.action.equals("START")){
-            Cosingas.renderizador.mostrarMensaje("EMPIESA");
+        switch (mensaje.action) {
+            case "START":
+                Cosingas.renderizador.mostrarMensaje("CONECTADO");
+                Cosingas.renderizador.irAPantallJuego();
+                break;
+
+            case "":
+                break;
         }
     }
 

@@ -1,5 +1,7 @@
 package com.mygdx.game.Objects;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
@@ -12,6 +14,11 @@ import static com.badlogic.gdx.utils.Align.center;
 public class Gatito extends Actor {
 
     public Animation<TextureRegion> gatitoMoviendose;
+
+    public float getStateTime() {
+        return stateTime;
+    }
+
     private float stateTime = 0; //frame de la animación en la que empieza
     private int dx, dy; //posicion del gatito en la pantalla
     private int WIDTH = 250, HEIGHT = 350;

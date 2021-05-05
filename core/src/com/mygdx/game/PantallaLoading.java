@@ -1,6 +1,6 @@
 package com.mygdx.game;
 
-public class PantallaLoading extends BaseScreen {
+public class PantallaLoading extends BaseScreenVieja {
     public PantallaLoading(MyGdxGame game) {
         super(game); }
 

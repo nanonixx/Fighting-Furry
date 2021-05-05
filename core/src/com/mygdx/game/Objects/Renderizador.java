@@ -5,25 +5,30 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.mygdx.game.Config.MyLabel;
 import com.mygdx.game.Config.MyStage;
-
-import java.awt.*;
+import com.mygdx.game.GameScreen;
+import com.mygdx.game.MyGdxGame;
 
 public class Renderizador {
 
-    MyStage stage;
+    MyGdxGame game;
     Label label;
     Mano mano;
 
-    public Renderizador(MyStage stage) {
-        this.stage = stage;
+    public Renderizador(MyGdxGame game) {
+        this.game = game;
         label = new MyLabel(Color.RED);
 
-        stage.middleCenter.addActor(label);
+        game.getBaseScreen().stage.middleCenter.addActor(label);
     }
 
 
     public void mostrarMensaje(String text){
         label.setText(text);
+    }
+
+    public void irAPantallJuego(){
+        System.out.println("AAAAAAAA");
+        game.getBaseScreen().setScreen(new GameScreen(game));
     }
 
 }
