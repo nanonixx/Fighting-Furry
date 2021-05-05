@@ -19,7 +19,7 @@ public class Gatito extends Actor {
         return stateTime;
     }
 
-    private float stateTime = 0; //frame de la animación en la que empieza
+    public float stateTime = 0; //frame de la animación en la que empieza
     private int dx, dy; //posicion del gatito en la pantalla
     private int WIDTH = 250, HEIGHT = 350;
     private Move move;

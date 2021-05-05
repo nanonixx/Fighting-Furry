@@ -4,6 +4,13 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Animation;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.InputListener;
+import com.badlogic.gdx.scenes.scene2d.actions.Actions;
+import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
+import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.mygdx.game.Config.BaseScreen;
 import com.mygdx.game.Objects.Gatito;
 
@@ -12,7 +19,6 @@ public class GameScreen extends BaseScreen {
     public GameScreen(MyGdxGame game) {
         super(game);
     }
-
     Gatito P1 = new Gatito(300, 250, false, "base");
     Gatito P2 = new Gatito(750, 250, true, "base");
 
@@ -21,14 +27,13 @@ public class GameScreen extends BaseScreen {
     @Override
     public void show() {
 
-        System.out.println("BBBBBBBBBBBBB");
-
         stage.addActor(P1);
         stage.addActor(P2);
 
         //  no borrar :
 //        gatito.addAction(Actions.moveBy(30, 30, 1));
 //        gatito.addAction(Actions.rotateBy(360 * 10, 0.2f));
+
 
     }
 
@@ -47,7 +52,7 @@ public class GameScreen extends BaseScreen {
 
         //Testingo P2:
         if(Gdx.input.isKeyPressed(Input.Keys.SPACE)) {
-            P2.getMove().bite(P2, delta);
+            P2.getMove().punch(P2);
             P2.gatitoMoviendose = Assets.getAnimation(P2.getMove().getName(), P2.getMove().getMs(), P2.getMove().loopMode());
         }
 
