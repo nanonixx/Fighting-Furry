@@ -19,7 +19,7 @@ public class SelectionScreen extends BaseScreen {
     private boolean selected = false;
     private Texture background;
     Image pj = new Image();
-
+    private String pjSeleccionado = null;
 
     public SelectionScreen(MyGdxGame game) {
         super(game);
@@ -38,8 +38,10 @@ public class SelectionScreen extends BaseScreen {
         buttonReady.addListener(new InputListener() {
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                Cosingas.cliente.enviar(new Mensaje("READY"));
-                //setScreen(new GameScreen(game));
+                if(pjSeleccionado != null){
+                    Cosingas.cliente.enviar(new Mensaje("READY"));
+                    Cosingas.cliente.enviar(new Mensaje(pjSeleccionado));
+                }
                 return super.touchDown(event, x, y, pointer, button);
             }
         });
@@ -81,6 +83,7 @@ public class SelectionScreen extends BaseScreen {
         gokuFrame.onClick(() -> {
             if (!selected) {
                 selected = selectPj(gokuFrame, "goku");
+                pjSeleccionado = "goku";
             } else {
                 unselectPjs(gokuFrame, furrieFrame, leeFrame, jacksonFrame, pateFrame, pussoliniFrame);
                 selected = selectPj(gokuFrame, "goku");
@@ -88,6 +91,7 @@ public class SelectionScreen extends BaseScreen {
         });
         furrieFrame.onClick(() -> {
             if (!selected) {
+                pjSeleccionado = "furrie";
                 selected = selectPj(furrieFrame, "furrie");
             } else {
                 unselectPjs(gokuFrame, furrieFrame, leeFrame, jacksonFrame, pateFrame, pussoliniFrame);
@@ -96,6 +100,7 @@ public class SelectionScreen extends BaseScreen {
         });
         leeFrame.onClick(() -> {
             if (!selected) {
+                pjSeleccionado = "lee";
                 selected = selectPj(leeFrame, "lee");
             } else {
                 unselectPjs(gokuFrame, furrieFrame, leeFrame, jacksonFrame, pateFrame, pussoliniFrame);
@@ -105,6 +110,7 @@ public class SelectionScreen extends BaseScreen {
         jacksonFrame.onClick(() -> {
             if (!selected) {
                 selected = selectPj(jacksonFrame, "miauchael");
+                pjSeleccionado = "jackson";
             } else {
                 unselectPjs(gokuFrame, furrieFrame, leeFrame, jacksonFrame, pateFrame, pussoliniFrame);
                 selected = selectPj(jacksonFrame, "miauchael");
@@ -113,6 +119,7 @@ public class SelectionScreen extends BaseScreen {
         pateFrame.onClick(() -> {
             if (!selected) {
                 selected = selectPj(pateFrame, "pate");
+                pjSeleccionado = "pate";
             } else {
                 unselectPjs(gokuFrame, furrieFrame, leeFrame, jacksonFrame, pateFrame, pussoliniFrame);
                 selected = selectPj(pateFrame, "pate");
@@ -121,6 +128,7 @@ public class SelectionScreen extends BaseScreen {
         pussoliniFrame.onClick(() -> {
             if (!selected) {
                 selected = selectPj(pussoliniFrame, "pussolini");
+                pjSeleccionado = "pussolini";
             } else {
                 unselectPjs(gokuFrame, furrieFrame, leeFrame, jacksonFrame, pateFrame, pussoliniFrame);
                 selected = selectPj(pussoliniFrame, "pussolini");
