@@ -2,6 +2,7 @@ package com.mygdx.game.Objects;
 
 import com.github.czyzby.websocket.data.WebSocketCloseCode;
 import com.mygdx.game.Cosingas;
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import main.java.Mensaje;
 
 public class Juego {
@@ -21,8 +22,24 @@ public class Juego {
                 Cosingas.renderizador.mostrarMensaje("CONECTADO");
                 Cosingas.renderizador.irAPantallaJuego();
                 break;
-
-            case "":
+            case "GOKU":
+                //AQUÍ IRIA EL METODO PARA CAMBIAR LA SKIN DEL PJ
+                System.out.println("AVERESEGOKU");
+                break;
+            case "FURRIE":
+                System.out.println("F U R R I E");
+                break;
+            case "LEE":
+                System.out.println("LEE");
+                break;
+            case "JACKSON":
+                System.out.println("JACKSON");
+                break;
+            case "PATE":
+                System.out.println("PATE");
+                break;
+            case "PUSSOLINI":
+                System.out.println("PUSSOLINI");
                 break;
         }
     }

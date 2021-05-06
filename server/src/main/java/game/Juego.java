@@ -1,5 +1,6 @@
 package main.java.game;
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import jakarta.websocket.Session;
 import main.java.Mensaje;
 
@@ -17,19 +18,59 @@ public class Juego {
     public void onError(Session session) {}
 
     public void onMessage(Session cliente, Mensaje mensaje) {
-        if(mensaje.action.equals("READY")){
-            if (partida.faltaJugador()){
-                partida.anyadirJugador(cliente);
+        switch(mensaje.action){
+            case "READY":
+                if (partida.faltaJugador()){
+                    partida.anyadirJugador(cliente);
 
-                if(!partida.faltaJugador()) {
-                    partida.jugador1.send(new Mensaje("START"));
-                    partida.jugador2.send(new Mensaje("START"));
-                    partida.repartirCartasIniciales();
+                    if(!partida.faltaJugador()) {
+                        partida.jugador1.send(new Mensaje("START"));
+                        partida.jugador2.send(new Mensaje("START"));
+                        partida.repartirCartasIniciales();
 
-                    partida.jugador1.enviarCartas();
-                    partida.jugador2.enviarCartas();
+                        partida.jugador1.enviarCartas();
+                        partida.jugador2.enviarCartas();
+                    }
                 }
-            }
+            break;
+            //PARA SABER EL PJ QUE SE SELECCIONA
+            case "goku":
+                if(cliente == partida.jugador1.session)
+                    partida.jugador1.send(new Mensaje("GOKU"));
+                else
+                    partida.jugador2.send(new Mensaje("GOKU"));
+                break;
+
+            case "furrie":
+                if(cliente == partida.jugador1.session)
+                    partida.jugador1.send(new Mensaje("FURRIE"));
+                else
+                    partida.jugador2.send(new Mensaje("FURRIE"));
+                break;
+            case "lee":
+                if(cliente == partida.jugador1.session)
+                    partida.jugador1.send(new Mensaje("LEE"));
+                else
+                    partida.jugador2.send(new Mensaje("LEE"));
+                break;
+            case "jackson":
+                if(cliente == partida.jugador1.session)
+                    partida.jugador1.send(new Mensaje("JACKSON"));
+                else
+                    partida.jugador2.send(new Mensaje("JACKSON"));
+                break;
+            case "pate":
+                if(cliente == partida.jugador1.session)
+                    partida.jugador1.send(new Mensaje("PATE"));
+                else
+                    partida.jugador2.send(new Mensaje("PATE"));
+                break;
+            case "pussolini":
+                if(cliente == partida.jugador1.session)
+                    partida.jugador1.send(new Mensaje("PUSSOLINI"));
+                else
+                    partida.jugador2.send(new Mensaje("PUSSOLINI"));
+                break;
         }
 //        else if (mensaje.action.equals("JUGADA")){
 //            partida.hacerJugada(cliente, new Carta(mensaje.carta));
