@@ -20,7 +20,7 @@ public class GameScreen extends BaseScreen {
         super(game);
     }
     Gatito P1 = new Gatito(300, 250, false, Cosingas.renderizador.pj);
-    Gatito P2 = new Gatito(750, 250, true, "base");
+    Gatito P2 = new Gatito(750, 250, true, Cosingas.renderizador.pj);
 
     private Texture background = new Texture("pui.png");
 

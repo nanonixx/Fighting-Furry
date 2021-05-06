@@ -22,25 +22,25 @@ public class Juego {
                 Cosingas.renderizador.mostrarMensaje("CONECTADO");
                 Cosingas.renderizador.irAPantallaJuego();
                 break;
-            case "GOKU":
+            case "goku":
                 //AQUÍ IRIA EL METODO PARA CAMBIAR LA SKIN DEL PJ
                 System.out.println("AVERESEGOKU");
                 break;
-            case "FURRIE":
+            case "furrie":
                 System.out.println("F U R R I E");
                 break;
-            case "LEE":
-                Cosingas.renderizador.pjSeleccionado("idle");
+            case "lee":
+                Cosingas.renderizador.pjSeleccionado("idlelee");
                 System.out.println("LEE");
                 break;
-            case "JACKSON":
+            case "jackson":
                 System.out.println("JACKSON");
                 break;
-            case "PATE":
-                Cosingas.renderizador.pjSeleccionado("idle");
+            case "pate":
+                Cosingas.renderizador.pjSeleccionado("idlepate");
                 System.out.println("PATE");
                 break;
-            case "PUSSOLINI":
+            case "pussolini":
                 System.out.println("PUSSOLINI");
                 break;
         }

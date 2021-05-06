@@ -87,14 +87,14 @@ kick
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 11
+  index: 0
 kick
   rotate: false
   xy: 581, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 0
+  index: 11
 idlegoku
   rotate: false
   xy: 2, 156
@@ -172,6 +172,20 @@ idlepate
   orig: 50, 70
   offset: 0, 0
   index: 1
+idlepusso
+  rotate: false
+  xy: 106, 17
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 0
+idlepusso
+  rotate: false
+  xy: 158, 92
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 1
 kick
   rotate: false
   xy: 54, 161
@@ -185,14 +199,14 @@ kick
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
-  index: 5
+  index: 6
 kick
   rotate: false
   xy: 54, 161
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
-  index: 6
+  index: 5
 kick
   rotate: false
   xy: 54, 161
@@ -216,28 +230,28 @@ kick
   index: 8
 kick
   rotate: false
-  xy: 106, 17
+  xy: 158, 20
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
 kick
   rotate: false
-  xy: 106, 17
+  xy: 158, 20
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 10
 kick
   rotate: false
-  xy: 158, 92
+  xy: 210, 92
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 2
 kick
   rotate: false
-  xy: 158, 92
+  xy: 210, 92
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
@@ -286,77 +300,77 @@ punching
   index: 13
 punching
   rotate: false
-  xy: 158, 20
+  xy: 210, 20
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
 punching
   rotate: false
-  xy: 158, 20
-  size: 50, 70
-  orig: 50, 70
-  offset: 0, 0
-  index: 16
-punching
-  rotate: false
-  xy: 158, 20
+  xy: 210, 20
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 10
 punching
   rotate: false
-  xy: 210, 92
-  size: 50, 70
-  orig: 50, 70
-  offset: 0, 0
-  index: 1
-punching
-  rotate: false
-  xy: 210, 92
-  size: 50, 70
-  orig: 50, 70
-  offset: 0, 0
-  index: 9
-punching
-  rotate: false
   xy: 210, 20
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 2
+  index: 16
 punching
   rotate: false
   xy: 262, 92
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 3
+  index: 1
+punching
+  rotate: false
+  xy: 262, 92
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 9
 punching
   rotate: false
   xy: 262, 20
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 4
+  index: 2
 punching
   rotate: false
   xy: 314, 92
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 3
+punching
+  rotate: false
+  xy: 314, 20
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 4
+punching
+  rotate: false
+  xy: 366, 92
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 6
 punching
   rotate: false
-  xy: 314, 92
+  xy: 366, 92
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 7
 punching
   rotate: false
-  xy: 314, 20
+  xy: 366, 20
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
