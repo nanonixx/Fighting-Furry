@@ -36,15 +36,17 @@ public class Move {
         gatito.getMove().ms = 0.02f;
         loop = false;
         gatito.addAction(Actions.moveBy(15, 5, 2));
+        gatito.stateTime = 0;
         //depende de si está flipped, TODO
 //        gatito.addAction(Actions.moveBy(-30, -30, 2));
     }
 
     public void punch(Gatito gatito){
         gatito.getMove().name = "punching";
-        gatito.getMove().ms = 0.008f;
-        loop = false;
+        gatito.getMove().ms = 0.03f;
+        loop = true;
         gatito.addAction(Actions.moveBy(-50, 0, 5));
+        gatito.stateTime = 0;
         //depende de si está flipped
     }
 
@@ -53,6 +55,7 @@ public class Move {
         gatito.getMove().ms = 0.08f;
         loop = false;
         gatito.addAction(Actions.moveBy(-50, 0, 5));
+        gatito.stateTime = 0;
         //depende de si está flipped
     }
 
@@ -60,6 +63,7 @@ public class Move {
         gatito.getMove().name = "idle";
         gatito.getMove().ms = 0.4f;
         loop = true;
+        gatito.stateTime = 0;
         //depende de si está flipped
     }
 }
