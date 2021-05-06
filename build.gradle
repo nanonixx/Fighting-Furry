@@ -96,4 +96,5 @@ project(":server") {
     }
 }
 
+com.badlogic.gdx.tools.texturepacker.TexturePacker.process("core/assets/sprites/", "core/assets", "miatles")
 

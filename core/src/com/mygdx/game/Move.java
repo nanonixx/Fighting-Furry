@@ -60,9 +60,18 @@ public class Move {
     }
 
     public void idle(Gatito gatito){
-        gatito.getMove().name = "idle";
+        gatito.getMove().name = "idlepate";
         gatito.getMove().ms = 0.4f;
         loop = true;
+        gatito.stateTime = 0;
+        //depende de si está flipped
+    }
+
+    public void damage(Gatito gatito){
+        gatito.getMove().name = "idle";
+        gatito.getMove().ms = 0.8f;
+        loop = false;
+        gatito.addAction(Actions.moveBy(-5, 0, 0.4f));
         gatito.stateTime = 0;
         //depende de si está flipped
     }
