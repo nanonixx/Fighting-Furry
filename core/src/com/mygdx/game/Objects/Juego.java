@@ -2,7 +2,6 @@ package com.mygdx.game.Objects;
 
 import com.github.czyzby.websocket.data.WebSocketCloseCode;
 import com.mygdx.game.Cosingas;
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import main.java.Mensaje;
 
 public class Juego {
@@ -24,23 +23,27 @@ public class Juego {
                 break;
             case "GOKU":
                 //AQUÍ IRIA EL METODO PARA CAMBIAR LA SKIN DEL PJ
+                Cosingas.renderizador.pjSeleccionado("idlegoku");
                 System.out.println("AVERESEGOKU");
                 break;
             case "FURRIE":
+                Cosingas.renderizador.pjSeleccionado("idlemf");
                 System.out.println("F U R R I E");
                 break;
             case "LEE":
-                Cosingas.renderizador.pjSeleccionado("idle");
+                Cosingas.renderizador.pjSeleccionado("idlelee");
                 System.out.println("LEE");
                 break;
             case "JACKSON":
+                Cosingas.renderizador.pjSeleccionado("idleheehee");
                 System.out.println("JACKSON");
                 break;
             case "PATE":
-                Cosingas.renderizador.pjSeleccionado("idle");
+                Cosingas.renderizador.pjSeleccionado("idlepate");
                 System.out.println("PATE");
                 break;
             case "PUSSOLINI":
+                Cosingas.renderizador.pjSeleccionado("idlepusso");
                 System.out.println("PUSSOLINI");
                 break;
         }

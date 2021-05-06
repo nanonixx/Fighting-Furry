@@ -24,7 +24,7 @@ public class Gatito extends Actor {
     private int WIDTH = 250, HEIGHT = 350;
     private Move move;
 
-    private String character;
+    public String character;
 
 
     private boolean flipped; //true: mira hacia la derecha | false: mira hacia la izquierda
@@ -49,7 +49,7 @@ public class Gatito extends Actor {
         this.move = new Move(character, 0.4f);
         setSize(WIDTH, HEIGHT);
         setOrigin(center);
-        gatitoMoviendose = Assets.getAnimation(getMove().getName(), getMove().getMs(), Animation.PlayMode.LOOP);
+        gatitoMoviendose = Assets.getAnimation(getMove().getName(), 0.4f, Animation.PlayMode.LOOP);
     }
 
 

@@ -1,6 +1,5 @@
 package main.java.game;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import jakarta.websocket.Session;
 import main.java.Mensaje;
 

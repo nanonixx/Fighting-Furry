@@ -20,7 +20,7 @@ public class GameScreen extends BaseScreen {
         super(game);
     }
     Gatito P1 = new Gatito(300, 250, false, Cosingas.renderizador.pj);
-    Gatito P2 = new Gatito(750, 250, true, "base");
+    Gatito P2 = new Gatito(750, 250, true, "idle");
 
     private Texture background = new Texture("pui.png");
 
@@ -60,8 +60,8 @@ public class GameScreen extends BaseScreen {
             P2.getMove().punch(P2);
             P2.gatitoMoviendose = Assets.getAnimation(P2.getMove().getName(), P2.getMove().getMs(), P2.getMove().loopMode());
         }else if (P1.gatitoMoviendose.isAnimationFinished(P1.stateTime)){
-            P1.getMove().idle(P1);
-            P1.gatitoMoviendose = Assets.getAnimation(P1.getMove().getName(), P1.getMove().getMs(), P1.getMove().loopMode());
+            P2.getMove().idle(P1);
+            P2.gatitoMoviendose = Assets.getAnimation(P2.getMove().getName(), P2.getMove().getMs(), P2.getMove().loopMode());
         }
 
         stage.getBatch().begin();

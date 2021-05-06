@@ -8,4 +8,5 @@ public class Cosingas {
     public static Cliente cliente;
     public static Juego juego;
     public static Renderizador renderizador;
+
 }

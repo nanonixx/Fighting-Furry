@@ -60,7 +60,7 @@ public class Move {
     }
 
     public void idle(Gatito gatito){
-        gatito.getMove().name = "idlepate";
+        gatito.getMove().name = gatito.character;
         gatito.getMove().ms = 0.4f;
         loop = true;
         gatito.stateTime = 0;
