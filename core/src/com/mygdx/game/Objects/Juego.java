@@ -30,12 +30,14 @@ public class Juego {
                 System.out.println("F U R R I E");
                 break;
             case "LEE":
+                Cosingas.renderizador.pjSeleccionado("idle");
                 System.out.println("LEE");
                 break;
             case "JACKSON":
                 System.out.println("JACKSON");
                 break;
             case "PATE":
+                Cosingas.renderizador.pjSeleccionado("idle");
                 System.out.println("PATE");
                 break;
             case "PUSSOLINI":

@@ -19,7 +19,7 @@ public class GameScreen extends BaseScreen {
     public GameScreen(MyGdxGame game) {
         super(game);
     }
-    Gatito P1 = new Gatito(300, 250, false, "base");
+    Gatito P1 = new Gatito(300, 250, false, Cosingas.renderizador.pj);
     Gatito P2 = new Gatito(750, 250, true, "base");
 
     private Texture background = new Texture("pui.png");

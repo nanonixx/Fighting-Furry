@@ -14,6 +14,7 @@ public class Renderizador {
     Label label;
     Mano mano;
     public boolean irAPantallaJuego;
+    public String pj;
 
     public Renderizador(MyGdxGame game) {
         this.game = game;
@@ -30,6 +31,10 @@ public class Renderizador {
     public void irAPantallaJuego(){
         //Gdx.app.postRunnable(()->{game.getBaseScreen().setScreen(new GameScreen(game));});
         irAPantallaJuego = true;
+    }
+
+    public void pjSeleccionado(String pj){
+        this.pj = pj;
     }
 
 }
