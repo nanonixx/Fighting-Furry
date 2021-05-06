@@ -87,14 +87,14 @@ kick
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 11
+  index: 0
 kick
   rotate: false
   xy: 106, 77
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 0
+  index: 11
 kick
   rotate: false
   xy: 2, 148
@@ -102,13 +102,6 @@ kick
   orig: 52, 73
   offset: 0, 0
   index: 4
-kick
-  rotate: false
-  xy: 2, 148
-  size: 52, 73
-  orig: 52, 73
-  offset: 0, 0
-  index: 7
 kick
   rotate: false
   xy: 2, 148
@@ -123,6 +116,13 @@ kick
   orig: 52, 73
   offset: 0, 0
   index: 6
+kick
+  rotate: false
+  xy: 2, 148
+  size: 52, 73
+  orig: 52, 73
+  offset: 0, 0
+  index: 7
 kick
   rotate: false
   xy: 2, 74
@@ -220,14 +220,14 @@ punching
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 10
+  index: 16
 punching
   rotate: false
   xy: 158, 7
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 16
+  index: 10
 punching
   rotate: false
   xy: 210, 79
