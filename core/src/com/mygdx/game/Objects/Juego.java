@@ -72,6 +72,11 @@ public class Juego {
                 Cosingas.renderizador.pjSeleccionado("idlepusso2");
                 System.out.println("PUSSOLINI");
                 break;
+            case "CARTAS":
+                System.out.println("Cartas?????????");
+                break;
+            default:
+                System.out.println(mensaje.action);
         }
     }
 

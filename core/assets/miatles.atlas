@@ -1,285 +1,376 @@
 
 miatles.png
-size: 512, 256
+size: 1024, 256
 format: RGBA8888
 filter: Nearest, Nearest
 repeat: none
 bite
   rotate: false
-  xy: 2, 2
+  xy: 54, 15
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
 bite
   rotate: false
-  xy: 2, 2
+  xy: 54, 15
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 8
 bite
   rotate: false
-  xy: 321, 151
+  xy: 321, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
 bite
   rotate: false
-  xy: 321, 151
+  xy: 321, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 7
 bite
   rotate: false
-  xy: 373, 151
+  xy: 373, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 2
 bite
   rotate: false
-  xy: 373, 151
+  xy: 373, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 6
 bite
   rotate: false
-  xy: 425, 151
+  xy: 425, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 3
 bite
   rotate: false
-  xy: 425, 151
+  xy: 425, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 5
 bite
   rotate: false
-  xy: 54, 76
+  xy: 477, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 4
 idle
   rotate: false
-  xy: 54, 4
+  xy: 529, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
 idle
   rotate: false
-  xy: 106, 77
+  xy: 581, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
 kick
   rotate: false
-  xy: 106, 77
+  xy: 581, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
 kick
   rotate: false
-  xy: 106, 77
+  xy: 581, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 11
+idlegoku
+  rotate: false
+  xy: 2, 156
+  size: 50, 78
+  orig: 50, 78
+  offset: 0, 0
+  index: 0
+idlegoku
+  rotate: false
+  xy: 2, 76
+  size: 50, 78
+  orig: 50, 78
+  offset: 0, 0
+  index: 1
+idleheehee
+  rotate: false
+  xy: 633, 164
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 0
+idlehehe
+  rotate: false
+  xy: 633, 164
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: -1
+idleheehee
+  rotate: false
+  xy: 685, 164
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 1
+idlelee
+  rotate: false
+  xy: 737, 164
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 0
+idlelee
+  rotate: false
+  xy: 789, 164
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 1
+idlemf
+  rotate: false
+  xy: 841, 164
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 0
+idlemf
+  rotate: false
+  xy: 893, 164
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 1
+idlepate
+  rotate: false
+  xy: 945, 164
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 0
+idlepate
+  rotate: false
+  xy: 106, 89
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 1
+idlepusso
+  rotate: false
+  xy: 106, 17
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 0
+idlepusso
+  rotate: false
+  xy: 158, 92
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 1
 kick
   rotate: false
-  xy: 2, 148
+  xy: 54, 161
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
   index: 4
 kick
   rotate: false
-  xy: 2, 148
-  size: 52, 73
-  orig: 52, 73
-  offset: 0, 0
-  index: 5
-kick
-  rotate: false
-  xy: 2, 148
+  xy: 54, 161
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
   index: 6
 kick
   rotate: false
-  xy: 2, 148
+  xy: 54, 161
+  size: 52, 73
+  orig: 52, 73
+  offset: 0, 0
+  index: 5
+kick
+  rotate: false
+  xy: 54, 161
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
   index: 7
 kick
   rotate: false
-  xy: 2, 74
+  xy: 2, 2
   size: 50, 72
   orig: 50, 72
   offset: 0, 0
   index: 3
 kick
   rotate: false
-  xy: 56, 149
+  xy: 54, 87
   size: 50, 72
   orig: 50, 72
   offset: 0, 0
   index: 8
 kick
   rotate: false
-  xy: 106, 5
+  xy: 158, 20
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
 kick
   rotate: false
-  xy: 106, 5
+  xy: 158, 20
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 10
 kick
   rotate: false
-  xy: 158, 79
+  xy: 210, 92
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 2
 kick
   rotate: false
-  xy: 158, 79
+  xy: 210, 92
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 9
 punching
   rotate: false
-  xy: 108, 151
+  xy: 108, 164
   size: 52, 70
   orig: 52, 70
   offset: 0, 0
   index: 5
 punching
   rotate: false
-  xy: 162, 151
+  xy: 162, 164
   size: 51, 70
   orig: 51, 70
   offset: 0, 0
   index: 11
 punching
   rotate: false
-  xy: 162, 151
+  xy: 162, 164
   size: 51, 70
   orig: 51, 70
   offset: 0, 0
   index: 15
 punching
   rotate: false
-  xy: 215, 151
+  xy: 215, 164
   size: 51, 70
   orig: 51, 70
   offset: 0, 0
   index: 12
 punching
   rotate: false
-  xy: 215, 151
+  xy: 215, 164
   size: 51, 70
   orig: 51, 70
   offset: 0, 0
   index: 14
 punching
   rotate: false
-  xy: 268, 151
+  xy: 268, 164
   size: 51, 70
   orig: 51, 70
   offset: 0, 0
   index: 13
 punching
   rotate: false
-  xy: 158, 7
+  xy: 210, 20
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
 punching
   rotate: false
-  xy: 158, 7
+  xy: 210, 20
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 16
 punching
   rotate: false
-  xy: 158, 7
+  xy: 210, 20
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 10
 punching
   rotate: false
-  xy: 210, 79
+  xy: 262, 92
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
 punching
   rotate: false
-  xy: 210, 79
+  xy: 262, 92
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 9
 punching
   rotate: false
-  xy: 210, 7
+  xy: 262, 20
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 2
 punching
   rotate: false
-  xy: 262, 79
+  xy: 314, 92
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 3
 punching
   rotate: false
-  xy: 262, 7
+  xy: 314, 20
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 4
 punching
   rotate: false
-  xy: 314, 79
+  xy: 366, 92
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 6
 punching
   rotate: false
-  xy: 314, 79
+  xy: 366, 92
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 7
 punching
   rotate: false
-  xy: 314, 7
+  xy: 366, 20
   size: 50, 70
   orig: 50, 70
   offset: 0, 0

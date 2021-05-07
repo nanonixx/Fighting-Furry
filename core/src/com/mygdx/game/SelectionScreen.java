@@ -42,10 +42,10 @@ public class SelectionScreen extends BaseScreen {
                     Cosingas.cliente.enviar(new Mensaje("READY"));
                     Cosingas.cliente.enviar(new Mensaje(pjSeleccionado));
                 }
+//                setScreen(new GameScreen(game));
                 return super.touchDown(event, x, y, pointer, button);
             }
         });
-
 
         Image header = new Image(new Texture("selectFighter.png"));
         header.setPosition(366, 610);

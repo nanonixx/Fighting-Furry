@@ -3,6 +3,7 @@ package com.mygdx.game;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
+import com.badlogic.gdx.scenes.scene2d.actions.DelayAction;
 import com.mygdx.game.Objects.Gatito;
 
 public class Move {
@@ -36,6 +37,7 @@ public class Move {
         gatito.getMove().ms = 0.02f;
         loop = false;
         gatito.addAction(Actions.moveBy(15, 5, 2));
+        gatito.addAction(Actions.moveBy(-15, -5, 2));
         gatito.stateTime = 0;
         //depende de si está flipped, TODO
 //        gatito.addAction(Actions.moveBy(-30, -30, 2));

@@ -12,16 +12,17 @@ public class Mazo {
 
     Mazo(){
         //HAY QUE AÑADIR AQUÍ LAS CARTAS PERO VAN EN FUNCIÓN DEL PERSONAJE QUE SE ESCOJA AYUDA
+//        ... o no
         cartaList.addAll(Arrays.asList(
-                new Carta("ataque", 5),
-                new Carta("ataque", 10),
-                new Carta("ataque", 1),
-                new Carta("defensa", 5),
-                new Carta("defensa", 10),
-                new Carta("xataque", 2),
-                new Carta("xataque", 3),
-                new Carta("xdefensa", 2),
-                new Carta("xdefensa", 3)
+                //ataque
+                new Carta("zarpazo", 10, 1, "ataque"),
+                new Carta("mordisco", 15, 2, "ataque"),
+                //defensa
+                new Carta("bufido", 10, 1, "defensa"),
+                new Carta("enAlerta", 15, 2, "defensa"),
+                //curacion
+                new Carta("ronroneo", 15, 3, "curacion"),
+                new Carta("amasar", 10, 2, "curacion")
         ));
     }
 

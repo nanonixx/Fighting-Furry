@@ -5,11 +5,16 @@ import main.java.Mensaje;
 
 public class Carta {
     String nombre;
+    String descripcion;
+    String tipo;
     int valor;
+    int coste_cristal;
 
-    public Carta(String nombre, int valor) {
+    public Carta(String nombre, int valor, int coste, String tipo) {
         this.nombre = nombre;
         this.valor = valor;
+        this.coste_cristal = coste;
+        this.tipo = tipo;
     }
 
     public Carta(Mensaje.Carta carta){
