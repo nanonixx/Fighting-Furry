@@ -19,14 +19,15 @@ public class GameScreen extends BaseScreen {
     public GameScreen(MyGdxGame game) {
         super(game);
     }
-    Gatito P1 = new Gatito(300, 250, false, Cosingas.renderizador.pj);
-    Gatito P2 = new Gatito(750, 250, true, "idle");
+    Gatito P1 = new Gatito(300, 250, false, Cosingas.renderizador.pj1);
+    Gatito P2 = new Gatito(750, 250, true, Cosingas.renderizador.pj2.split("2")[0]);
 
     private Texture background = new Texture("pui.png");
 
     @Override
     public void show() {
-
+        System.out.println(Cosingas.renderizador.pj1);
+        System.out.println(Cosingas.renderizador.pj2);
         stage.addActor(P1);
         stage.addActor(P2);
 

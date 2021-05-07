@@ -22,7 +22,7 @@ public class Cliente {
 
             @Override
             public boolean onOpen(final WebSocket webSocket) {
-                Cosingas.juego.alConectar();
+                //Cosingas.juego.alConectar();
                 return FULLY_HANDLED;
             }
 

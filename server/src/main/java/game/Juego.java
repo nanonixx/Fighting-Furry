@@ -9,6 +9,8 @@ import java.util.Map;
 public class Juego {
     Map<String, Partida> partidaMap = new HashMap<>();
     Partida partida = new Partida();
+    String pj1;
+    String pj2;
 
     public void onOpen(Session cliente) {}
 
@@ -25,20 +27,31 @@ public class Juego {
                     if(!partida.faltaJugador()) {
                         partida.jugador1.send(new Mensaje("START"));
                         partida.jugador2.send(new Mensaje("START"));
-                        partida.repartirCartasIniciales();
-
-                        partida.jugador1.enviarCartas();
-                        partida.jugador2.enviarCartas();
+//                        partida.repartirCartasIniciales();
+//
+//                        partida.jugador1.enviarCartas();
+//                        partida.jugador2.enviarCartas();
                     }
                 }
             break;
             //PARA SABER EL PJ QUE SE SELECCIONA
 
             default:
-                if(cliente == partida.jugador1.session)
-                    partida.jugador1.send(new Mensaje(mensaje.action));
+                if(cliente == partida.jugador1.session){
+                    pj1 = mensaje.action;
+                }
                 else
-                    partida.jugador2.send(new Mensaje(mensaje.action));
+                    pj2 = mensaje.action;
+
+                if((pj1 != null) && (pj2 != null)){
+
+                    partida.jugador1.send(new Mensaje(pj1));
+                    partida.jugador1.send(new Mensaje(mensaje.action + "2"));
+
+                    partida.jugador2.send(new Mensaje(pj1));
+                    partida.jugador2.send(new Mensaje(pj2 + "2"));
+                }
+
                 break;
 //            case "goku":
 //                if(cliente == partida.jugador1.session)

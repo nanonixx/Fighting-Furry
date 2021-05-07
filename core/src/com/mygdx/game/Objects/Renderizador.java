@@ -14,7 +14,8 @@ public class Renderizador {
     Label label;
     Mano mano;
     public boolean irAPantallaJuego;
-    public String pj;
+    public String pj1;
+    public String pj2;
 
     public Renderizador(MyGdxGame game) {
         this.game = game;
@@ -34,7 +35,10 @@ public class Renderizador {
     }
 
     public void pjSeleccionado(String pj){
-        this.pj = pj;
+        if(pj.contains("2"))
+            this.pj2 = pj;
+        else
+            this.pj1 = pj;
     }
 
 }
