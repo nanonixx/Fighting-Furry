@@ -4,6 +4,8 @@ import com.github.czyzby.websocket.data.WebSocketCloseCode;
 import com.mygdx.game.Cosingas;
 import main.java.Mensaje;
 
+import java.security.CodeSigner;
+
 public class Juego {
     Mano mano;
 
@@ -17,10 +19,14 @@ public class Juego {
 
     public void mensaje(Mensaje mensaje){
         switch (mensaje.action) {
-            case "START":
+            case "ready_ok":
                 Cosingas.renderizador.mostrarMensaje("CONECTADO");
                 Cosingas.renderizador.irAPantallaJuego();
                 break;
+            case "start":
+                Cosingas.renderizador.pjSeleccionado(mensaje.gato, mensaje.gato2);
+                Cosingas.renderizador.ponerCartas(mensaje.mano);
+
             case "goku":
                 //AQUÍ IRIA EL METODO PARA CAMBIAR LA SKIN DEL PJ
                 Cosingas.renderizador.pjSeleccionado("idlegoku");
@@ -80,5 +86,11 @@ public class Juego {
         }
     }
 
-    public void jugarCarta(){}
+    public void jugarCarta(){
+
+    }
+
+    public void ready(String pjSeleccionado) {
+        Cosingas.cliente.enviar(Mensaje.ready(pjSeleccionado));
+    }
 }

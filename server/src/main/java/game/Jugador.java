@@ -7,12 +7,16 @@ public class Jugador {
 
     public Jugador oponente;
     int vida;
+    String gato;
+    Mazo mazo;
     Mano mano = new Mano();
     Session session;
 
-    public Jugador(Session session) {
+    public Jugador(Session session, String gato) {
         this.session = session;
         this.vida = 100;
+        this.gato = gato;
+        mazo = new Mazo(gato);
     }
 
     void send(Mensaje mensaje) {
@@ -27,4 +31,7 @@ public class Jugador {
         send(new Mensaje("CARTAS", mano.toMensaje()));
     }
 
+    public void robar() {
+        mano.cartaList.add(mazo.robar());
+    }
 }

@@ -10,8 +10,8 @@ public class Mazo {
     static Random random = new Random();
     List<Carta> cartaList = new ArrayList<>();
 
-    Mazo(){
-        //HAY QUE AÑADIR AQUÍ LAS CARTAS PERO VAN EN FUNCIÓN DEL PERSONAJE QUE SE ESCOJA AYUDA
+    Mazo(String gato){
+        //HAY QUE AÑADIR AQUI LAS CARTAS PERO VAN EN FUNCIÓN DEL PERSONAJE QUE SE ESCOJA AYUDA
 //        ... o no
         cartaList.addAll(Arrays.asList(
                 //ataque
@@ -24,6 +24,15 @@ public class Mazo {
                 new Carta("ronroneo", 15, 3, "curacion"),
                 new Carta("amasar", 10, 2, "curacion")
         ));
+
+        switch (gato) {
+            case "goku":
+                cartaList.addAll(Arrays.asList(
+                        new Carta("bufido", 10, 1, "defensa"),
+                        new Carta("enAlerta", 15, 2, "defensa")
+                ));
+                break;
+        }
     }
 
     Carta robar(){

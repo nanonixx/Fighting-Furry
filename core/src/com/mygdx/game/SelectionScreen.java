@@ -39,8 +39,7 @@ public class SelectionScreen extends BaseScreen {
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
                 if(pjSeleccionado != null){
-                    Cosingas.cliente.enviar(new Mensaje("READY"));
-                    Cosingas.cliente.enviar(new Mensaje(pjSeleccionado));
+                    Cosingas.juego.ready(pjSeleccionado);
                 }
 //                setScreen(new GameScreen(game));
                 return super.touchDown(event, x, y, pointer, button);

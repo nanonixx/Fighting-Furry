@@ -12,25 +12,21 @@ public class Juego {
     String pj1;
     String pj2;
 
-    public void onOpen(Session cliente) {}
-
-    public void onClose(Session cliente) {}
-
-    public void onError(Session session) {}
-
     public void onMessage(Session cliente, Mensaje mensaje) {
         switch(mensaje.action){
-            case "READY":
+            case "ready":
                 if (partida.faltaJugador()){
-                    partida.anyadirJugador(cliente);
+                    Jugador jugador = partida.anyadirJugador(cliente, mensaje.gato);
+
+                    if(jugador != null){
+                        jugador.send(Mensaje.readyOk());
+                    }
 
                     if(!partida.faltaJugador()) {
-                        partida.jugador1.send(new Mensaje("START"));
-                        partida.jugador2.send(new Mensaje("START"));
-//                        partida.repartirCartasIniciales();
-//
-//                        partida.jugador1.enviarCartas();
-//                        partida.jugador2.enviarCartas();
+                        partida.repartirCartasIniciales();
+
+                        partida.jugador1.send(Mensaje.start(partida.jugador1.gato, partida.jugador2.gato, partida.jugador1.mano.toMensaje(), partida.turnoBool));
+                        partida.jugador2.send(Mensaje.start(partida.jugador2.gato, partida.jugador1.gato, partida.jugador2.mano.toMensaje(), partida.turnoBool));
                     }
                 }
             break;
@@ -99,3 +95,17 @@ public class Juego {
 //        }
     }
 }
+
+/*
+
+ready (pers="goku") ->
+                    <-  ready_ok
+                                                    <-  ready (pers="merie")
+                     <-  start (p2, 4cartas, turno)
+                         start (p1, 4cartas, turno)  ->
+tirada(carta) ->
+               <-   tirada_ok(resultado, turno)  ->
+
+                                                    tirada(carta)
+
+ */

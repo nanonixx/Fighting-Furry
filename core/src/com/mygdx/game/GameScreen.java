@@ -31,6 +31,10 @@ public class GameScreen extends BaseScreen {
         stage.addActor(P1);
         stage.addActor(P2);
 
+        onclik(){
+            Cosigncas.juego.jugar(carta);
+        }
+
         //  no borrar :
 //        gatito.addAction(Actions.moveBy(30, 30, 1));
 //        gatito.addAction(Actions.rotateBy(360 * 10, 0.2f));

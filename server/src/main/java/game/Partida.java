@@ -1,43 +1,44 @@
 package main.java.game;
 
 import jakarta.websocket.Session;
-import main.java.Mensaje;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class Partida {
+    public boolean turnoBool;
     Jugador jugador1, jugador2;
-    Mazo mazo = new Mazo();
     Jugador turno;
 
     public boolean faltaJugador() {
         return jugador1 == null || jugador2 == null;
     }
 
-    public void anyadirJugador(Session session) {
+    public Jugador anyadirJugador(Session session, String gato) {
         if(jugador1 == null) {
-            jugador1 = new Jugador(session);
+            jugador1 = new Jugador(session, gato);
+            return jugador1;
         }
         else if(jugador2 == null && jugador1.session != session) {
-            jugador2 = new Jugador(session);
+            jugador2 = new Jugador(session, gato);
 
             jugador2.oponente = jugador1;
             jugador1.oponente = jugador2;
+
+            return jugador2;
         }
+        return null;
     }
 
     //metodo repartir cartas
     public void repartirCartasIniciales() {
-        jugador1.mano.cartaList.add(mazo.robar());
-        jugador1.mano.cartaList.add(mazo.robar());
-        jugador1.mano.cartaList.add(mazo.robar());
+        jugador1.robar();
+        jugador1.robar();
+        jugador1.robar();
 
-        jugador2.mano.cartaList.add(mazo.robar());
-        jugador2.mano.cartaList.add(mazo.robar());
-        jugador2.mano.cartaList.add(mazo.robar());
+        jugador2.robar();
+        jugador2.robar();
+        jugador2.robar();
 
         turno = jugador1;
+        turnoBool = false;
     }
     //metodo hacerJugada (ataque, defensa, restar vida rival..etc)
 
