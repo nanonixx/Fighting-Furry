@@ -10,8 +10,9 @@ public class Carta {
     int valor;
     int coste_cristal;
 
-    public Carta(String nombre, int valor, int coste, String tipo) {
+    public Carta(String nombre, String descripcion, int  coste, int valor, String tipo) {
         this.nombre = nombre;
+        this.descripcion = descripcion;
         this.valor = valor;
         this.coste_cristal = coste;
         this.tipo = tipo;
@@ -23,6 +24,6 @@ public class Carta {
     }
 
     Mensaje.Carta toMensaje(){
-        return new Mensaje.Carta(nombre, valor);
+        return new Mensaje.Carta(nombre, descripcion, coste_cristal, valor, tipo);
     }
 }

@@ -6,7 +6,6 @@ import com.github.czyzby.websocket.WebSocket;
 import com.github.czyzby.websocket.data.WebSocketCloseCode;
 import com.github.czyzby.websocket.data.WebSocketException;
 import com.github.czyzby.websocket.net.ExtendedNet;
-import com.mygdx.game.Objects.Juego;
 import main.java.Mensaje;
 
 public class Cliente {

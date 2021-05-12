@@ -69,12 +69,14 @@ public class Mensaje {
         public int valor;
         public String descripcion;
         public int costeMana;
+        public String tipo;
 
-        public Carta(){}
-
-        public Carta(String nombre, int valor) {
+        public Carta(String nombre, String descripcion, int coste_mana, int valor, String tipo) {
             this.nombre = nombre;
+            this.descripcion = descripcion;
+            this.costeMana = coste_mana;
             this.valor = valor;
+            this.tipo = tipo;
         }
     }
 

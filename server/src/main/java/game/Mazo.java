@@ -15,51 +15,51 @@ public class Mazo {
 //        ... o no
         cartaList.addAll(Arrays.asList(
                 //ataque
-                new Carta("zarpazo", 10, 1, "ataque"),
-                new Carta("mordisco", 15, 2, "ataque"),
+                new Carta("zarpazo","", 10, 1, "ataque"),
+                new Carta("mordisco","", 15, 2, "ataque"),
                 //defensa
-                new Carta("bufido", 10, 1, "defensa"),
-                new Carta("enAlerta", 15, 2, "defensa"),
+                new Carta("bufido","", 10, 1, "defensa"),
+                new Carta("enAlerta","", 15, 2, "defensa"),
                 //curacion
-                new Carta("ronroneo", 15, 3, "curacion"),
-                new Carta("amasar", 10, 2, "curacion")
+                new Carta("ronroneo","", 15, 3, "curacion"),
+                new Carta("amasar","", 10, 2, "curacion")
         ));
 
         switch (gato) {
             case "goku":
                 cartaList.addAll(Arrays.asList(
-                        new Carta("canvi de lloc instantani", 0, 3, "especial"),
-                        new Carta("kame", 25, 3, "especial")
+                        new Carta("canvi de lloc instantani","",0, 3, "especial"),
+                        new Carta("kame","", 25, 3, "especial")
                 ));
                 break;
             case "jackson":
                 cartaList.addAll(Arrays.asList(
-                        new Carta("heehee", 0, 3, "especial"),
-                        new Carta("antigravity lean", 5, 1, "especial")
+                        new Carta("heehee","", 0, 3, "especial"),
+                        new Carta("antigravity lean","", 5, 1, "especial")
                 ));
                 break;
             case "pate":
                 cartaList.addAll(Arrays.asList(
-                        new Carta("cabezazo", 5, 2, "especial"),
-                        new Carta("pisoton", 0, 1, "especial")
+                        new Carta("cabezazo","", 5, 2, "especial"),
+                        new Carta("pisoton","", 0, 1, "especial")
                 ));
                 break;
             case "pussolini":
                 cartaList.addAll(Arrays.asList(
-                        new Carta("autocracia", 0, 2, "especial"),
-                        new Carta("pacto de acero", 3, 3, "especial")
+                        new Carta("autocracia","", 0, 2, "especial"),
+                        new Carta("pacto de acero","", 3, 3, "especial")
                 ));
                 break;
             case "lee":
                 cartaList.addAll(Arrays.asList(
-                        new Carta("patada voladora", 25, 3, "especial"),
-                        new Carta("furia oriental", 5, 2, "especial")
+                        new Carta("patada voladora","", 25, 3, "especial"),
+                        new Carta("furia oriental","", 5, 2, "especial")
                 ));
                 break;
             case "furrie":
                 cartaList.addAll(Arrays.asList(
-                        new Carta("vomito radioactivo", 3, 3, "especial"),
-                        new Carta("polonio o plomo", 15, 3, "especial")
+                        new Carta("vomito radioactivo","", 3, 3, "especial"),
+                        new Carta("polonio o plomo","", 15, 3, "especial")
                 ));
                 break;
         }

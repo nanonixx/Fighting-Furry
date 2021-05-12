@@ -297,14 +297,14 @@ punching
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 16
+  index: 10
 punching
   rotate: false
   xy: 158, 20
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 10
+  index: 16
 punching
   rotate: false
   xy: 210, 92

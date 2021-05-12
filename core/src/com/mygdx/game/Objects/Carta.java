@@ -9,11 +9,14 @@ public class Carta extends MyActor {
     String descripcion;
     int coste_mana;
     int valor;
+    String tipo;
 
-    public Carta(String nombre, String descripcion, int coste_mana) {
+    public Carta(String nombre, String descripcion, int coste_mana, int valor, String tipo) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.coste_mana = coste_mana;
+        this.valor = valor;
+        this.tipo = tipo;
 
 
         //setSize(,);
@@ -23,18 +26,18 @@ public class Carta extends MyActor {
 
     }
 
-    public Carta(String nombre, int valor) {
-        this.nombre = nombre;
-    }
+//    public Carta(String nombre, int valor) {
+//        this.nombre = nombre;
+//    }
 
     //métodos: mensaje al server, repartir, lanzarCarta
 
     static Carta fromMensaje(Mensaje.Carta carta){
-        return new Carta(carta.nombre, carta.valor);
+        return new Carta(carta.nombre, carta.descripcion, carta.costeMana, carta.valor, carta.tipo);
     }
 
     Mensaje.Carta toMensaje(){
-        return new Mensaje.Carta(nombre, valor);
+        return new Mensaje.Carta(nombre, descripcion, coste_mana, valor, tipo);
     }
 
     public void accionRepartir(){}
