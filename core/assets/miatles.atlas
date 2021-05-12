@@ -67,121 +67,79 @@ bite
   orig: 50, 70
   offset: 0, 0
   index: 4
-idle
+furrie
   rotate: false
   xy: 529, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
-idle
+furrie
   rotate: false
   xy: 581, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
-kick
-  rotate: false
-  xy: 581, 164
-  size: 50, 70
-  orig: 50, 70
-  offset: 0, 0
-  index: 0
-kick
-  rotate: false
-  xy: 581, 164
-  size: 50, 70
-  orig: 50, 70
-  offset: 0, 0
-  index: 11
-idlegoku
+goku
   rotate: false
   xy: 2, 156
   size: 50, 78
   orig: 50, 78
   offset: 0, 0
   index: 0
-idlegoku
+goku
   rotate: false
   xy: 2, 76
   size: 50, 78
   orig: 50, 78
   offset: 0, 0
   index: 1
-idleheehee
+idle
   rotate: false
   xy: 633, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
-idlehehe
-  rotate: false
-  xy: 633, 164
-  size: 50, 70
-  orig: 50, 70
-  offset: 0, 0
-  index: -1
-idleheehee
+idle
   rotate: false
   xy: 685, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
-idlelee
+kick
+  rotate: false
+  xy: 685, 164
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 0
+kick
+  rotate: false
+  xy: 685, 164
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 11
+idlehehe
+  rotate: false
+  xy: 737, 164
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: -1
+jackson
   rotate: false
   xy: 737, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
-idlelee
+jackson
   rotate: false
   xy: 789, 164
-  size: 50, 70
-  orig: 50, 70
-  offset: 0, 0
-  index: 1
-idlemf
-  rotate: false
-  xy: 841, 164
-  size: 50, 70
-  orig: 50, 70
-  offset: 0, 0
-  index: 0
-idlemf
-  rotate: false
-  xy: 893, 164
-  size: 50, 70
-  orig: 50, 70
-  offset: 0, 0
-  index: 1
-idlepate
-  rotate: false
-  xy: 945, 164
-  size: 50, 70
-  orig: 50, 70
-  offset: 0, 0
-  index: 0
-idlepate
-  rotate: false
-  xy: 106, 89
-  size: 50, 70
-  orig: 50, 70
-  offset: 0, 0
-  index: 1
-idlepusso
-  rotate: false
-  xy: 106, 17
-  size: 50, 70
-  orig: 50, 70
-  offset: 0, 0
-  index: 0
-idlepusso
-  rotate: false
-  xy: 158, 92
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
@@ -199,6 +157,13 @@ kick
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
+  index: 5
+kick
+  rotate: false
+  xy: 54, 161
+  size: 52, 73
+  orig: 52, 73
+  offset: 0, 0
   index: 7
 kick
   rotate: false
@@ -207,13 +172,6 @@ kick
   orig: 52, 73
   offset: 0, 0
   index: 6
-kick
-  rotate: false
-  xy: 54, 161
-  size: 52, 73
-  orig: 52, 73
-  offset: 0, 0
-  index: 5
 kick
   rotate: false
   xy: 2, 2
@@ -230,32 +188,60 @@ kick
   index: 8
 kick
   rotate: false
-  xy: 158, 20
+  xy: 841, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
 kick
   rotate: false
-  xy: 158, 20
+  xy: 841, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 10
 kick
   rotate: false
-  xy: 210, 92
+  xy: 893, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 2
 kick
   rotate: false
-  xy: 210, 92
+  xy: 893, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 9
+lee
+  rotate: false
+  xy: 945, 164
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 0
+lee
+  rotate: false
+  xy: 106, 89
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 1
+pate
+  rotate: false
+  xy: 106, 17
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 0
+pate
+  rotate: false
+  xy: 158, 92
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 1
 punching
   rotate: false
   xy: 108, 164
@@ -300,78 +286,92 @@ punching
   index: 13
 punching
   rotate: false
-  xy: 210, 20
+  xy: 158, 20
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
 punching
   rotate: false
-  xy: 210, 20
-  size: 50, 70
-  orig: 50, 70
-  offset: 0, 0
-  index: 10
-punching
-  rotate: false
-  xy: 210, 20
+  xy: 158, 20
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 16
 punching
   rotate: false
-  xy: 262, 92
+  xy: 158, 20
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 10
+punching
+  rotate: false
+  xy: 210, 92
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
 punching
   rotate: false
-  xy: 262, 92
+  xy: 210, 92
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 9
 punching
   rotate: false
-  xy: 262, 20
+  xy: 210, 20
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 2
 punching
   rotate: false
-  xy: 314, 92
+  xy: 262, 92
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 3
 punching
   rotate: false
-  xy: 314, 20
+  xy: 262, 20
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 4
 punching
   rotate: false
-  xy: 366, 92
+  xy: 314, 92
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 6
 punching
   rotate: false
-  xy: 366, 92
+  xy: 314, 92
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 7
 punching
   rotate: false
-  xy: 366, 20
+  xy: 314, 20
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 8
+pussolini
+  rotate: false
+  xy: 366, 92
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 0
+pussolini
+  rotate: false
+  xy: 366, 20
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 1

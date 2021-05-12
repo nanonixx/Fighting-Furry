@@ -34,11 +34,12 @@ public class Renderizador {
         irAPantallaJuego = true;
     }
 
-    public void pjSeleccionado(String pj){
-        if(pj.contains("2"))
-            this.pj2 = pj;
-        else
-            this.pj1 = pj;
+    public void pjSeleccionado(String gato, String gato2){
+        this.pj1 = gato;
+        this.pj2 = gato2;
     }
 
+    public void ponerCartas(Mensaje.Mano mano) {
+
+    }
 }

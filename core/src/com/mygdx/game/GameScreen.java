@@ -20,7 +20,7 @@ public class GameScreen extends BaseScreen {
         super(game);
     }
     Gatito P1 = new Gatito(300, 250, false, Cosingas.renderizador.pj1);
-    Gatito P2 = new Gatito(750, 250, true, Cosingas.renderizador.pj2.split("2")[0]);
+    Gatito P2 = new Gatito(750, 250, true, Cosingas.renderizador.pj2);
 
     private Texture background = new Texture("pui.png");
 
@@ -30,10 +30,9 @@ public class GameScreen extends BaseScreen {
         System.out.println(Cosingas.renderizador.pj2);
         stage.addActor(P1);
         stage.addActor(P2);
-
-        onclik(){
-            Cosigncas.juego.jugar(carta);
-        }
+//        onclik(){
+//            Cosigncas.juego.jugar(carta);
+//        }
 
         //  no borrar :
 //        gatito.addAction(Actions.moveBy(30, 30, 1));
