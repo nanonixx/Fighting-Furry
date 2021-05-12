@@ -19,6 +19,7 @@ public class SelectionScreen extends BaseScreen {
     private boolean selected = false;
     private Texture background;
     Image pj = new Image();
+    Image cartel = new Image();
     private String pjSeleccionado = null;
 
     public SelectionScreen(MyGdxGame game) {
@@ -163,6 +164,7 @@ public class SelectionScreen extends BaseScreen {
         pj = new Image(new Texture("Selection/" + frame));
         pj.setPosition(160, 150);
         pj.setSize(304, 426);
+
         stage.addActor(pj);
     }
 

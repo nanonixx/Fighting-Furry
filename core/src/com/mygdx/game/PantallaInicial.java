@@ -24,7 +24,7 @@ public class PantallaInicial extends BaseScreen {
 
 
         ImageButton.ImageButtonStyle buttonStartStyle = new ImageButton.ImageButtonStyle();
-        BaseImageButton buttonPlay = new BaseImageButton("play_rojo.png", "play_rojo_botonado.png", 225, 110, 529, 152);
+        BaseImageButton buttonPlay = new BaseImageButton("play_rojo.png", "play_rojo_botonado.png", 205, 100, 400, 150);
         buttonPlay.addListener(new InputListener(){
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
@@ -35,20 +35,16 @@ public class PantallaInicial extends BaseScreen {
         stage.addActor(buttonPlay);
 
         ImageButton.ImageButtonStyle buttonQuitStyle = new ImageButton.ImageButtonStyle();
-        buttonQuitStyle.up = new TextureRegionDrawable(new TextureRegion(new Texture("quit.png")));
-        buttonQuitStyle.over = new TextureRegionDrawable(new TextureRegion(new Texture("quitpressed.png")));
-        ImageButton buttonQuit = new ImageButton(buttonQuitStyle);
-
+        BaseImageButton buttonQuit = new BaseImageButton("quit.png", "quit_botonado.png", 205, 100, 675, 150);
         buttonQuit.addListener(new InputListener(){
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                Gdx.app.exit();
                 System.exit(0);
                 return true;
             }
         });
 
-//        stage.middleCenter.addActor(buttonQuit);
+        stage.addActor(buttonQuit);
     }
 
     public void render(float delta) {
