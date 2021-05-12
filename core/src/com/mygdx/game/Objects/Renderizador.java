@@ -1,12 +1,9 @@
 package com.mygdx.game.Objects;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.mygdx.game.Config.MyLabel;
-import com.mygdx.game.GameScreen;
 import com.mygdx.game.MyGdxGame;
-import main.java.Mensaje;
 
 public class Renderizador {
 
@@ -39,7 +36,9 @@ public class Renderizador {
         this.pj2 = gato2;
     }
 
-    public void ponerCartas(Mensaje.Mano mano) {
-
+    public void ponerCartas(Mano mano) {
+        for (Carta c:mano.cartaList) {
+            game.getBaseScreen().stage.addActor(c);
+        }
     }
 }

@@ -1,6 +1,5 @@
 package com.mygdx.game.Objects;
 
-import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.utils.Align;
 import com.mygdx.game.Config.MyActor;
 import main.java.Mensaje;
@@ -9,6 +8,7 @@ public class Carta extends MyActor {
     String nombre;
     String descripcion;
     int coste_mana;
+    int valor;
 
     public Carta(String nombre, String descripcion, int coste_mana) {
         this.nombre = nombre;
@@ -32,6 +32,11 @@ public class Carta extends MyActor {
     static Carta fromMensaje(Mensaje.Carta carta){
         return new Carta(carta.nombre, carta.valor);
     }
+
+    Mensaje.Carta toMensaje(){
+        return new Mensaje.Carta(nombre, valor);
+    }
+
     public void accionRepartir(){}
 
     public void lanzarCarta(){}

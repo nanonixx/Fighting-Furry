@@ -66,6 +66,6 @@ public class Mazo {
     }
 
     Carta robar(){
-        return cartaList.remove(random.nextInt(cartaList.size()));
+        return cartaList.get(random.nextInt(cartaList.size()));
     }
 }

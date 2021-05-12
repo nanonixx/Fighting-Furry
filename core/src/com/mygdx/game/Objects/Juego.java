@@ -25,7 +25,7 @@ public class Juego {
             case "start":
                 Cosingas.renderizador.irAPantallaJuego();
                 Cosingas.renderizador.pjSeleccionado(mensaje.gato, mensaje.gato2);
-                Cosingas.renderizador.ponerCartas(mensaje.mano);
+                Cosingas.renderizador.ponerCartas(Mano.fromMensaje(mensaje.mano));
                 break;
 
             default:

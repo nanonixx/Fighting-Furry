@@ -67,6 +67,8 @@ public class Mensaje {
     public static class Carta {
         public String nombre;
         public int valor;
+        public String descripcion;
+        public int costeMana;
 
         public Carta(){}
 

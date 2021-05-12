@@ -1,18 +1,30 @@
 package com.mygdx.game.Objects;
 
-import com.badlogic.gdx.scenes.scene2d.ui.List;
 import com.mygdx.game.Config.MyActor;
+import main.java.Mensaje;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Mano extends MyActor {
 
-    List<Carta> mano;
+    public List<Carta> cartaList = new ArrayList<>();
 
     public Mano(List<Carta> mano) {
-        this.mano = mano;
+        this.cartaList = mano;
 
         //setSize(,); tamaño de la mano en pantalla
         //animacion
     }
 
+    Mensaje.Mano toMensaje(){
+        return new Mensaje.Mano(cartaList.stream().map(Carta::toMensaje).toArray(Mensaje.Carta[]::new));
+    }
+
+    static Mano fromMensaje(Mensaje.Mano mano){
+        return new Mano(Arrays.stream(mano.cartaList).map(Carta::fromMensaje).collect(Collectors.toList()));
+    }
     //
 }
