@@ -165,7 +165,11 @@ public class SelectionScreen extends BaseScreen {
         pj.setPosition(160, 150);
         pj.setSize(304, 426);
 
+        cartel = new Image(new Texture("Cartel/" + frame));
+        cartel.setPosition(115, 50);
+
         stage.addActor(pj);
+        stage.addActor(cartel);
     }
 
     public boolean selectPj(BaseImageButton frame, String framename) {
