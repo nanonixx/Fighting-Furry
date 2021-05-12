@@ -31,7 +31,7 @@ public class SelectionScreen extends BaseScreen {
         Cosingas.renderizador = new Renderizador(game);
         background = new Texture("fondaso.png");
 
-        BaseImageButton buttonReady = new BaseImageButton("readyButton.png", "readyButtonPressed.png", 240, 64, 525, 54);
+        BaseImageButton buttonReady = new BaseImageButton("select.png", "select_botonado.png", 190, 90, 805, 54);
         stage.addActor(buttonReady);
 
         //para testeo
@@ -46,35 +46,35 @@ public class SelectionScreen extends BaseScreen {
             }
         });
 
-        Image header = new Image(new Texture("selectFighter.png"));
-        header.setPosition(366, 610);
+//        Image header = new Image(new Texture("selectFighter.png"));
+//        header.setPosition(366, 610);
 
-        stage.topCenter.addActor(header);
+//        stage.topCenter.addActor(header);
 
         //FRAMES DE LOS PERSONAJES PARA LA SELECCIÓN
-        BaseImageButton gokuFrame = new BaseImageButton("gokuSelection.png", "gokuSelected.png", 107, 107, 491, 458);
+        BaseImageButton gokuFrame = new BaseImageButton("gokuSelection.png", "gokuSelected.png", 175, 175, 570, 420);
         gokuFrame.onEnter(() -> showPj(stage, "gokuitot.png"));
 
 
-        BaseImageButton furrieFrame = new BaseImageButton("furrieSelection.png", "furrieSelected.png", 107, 107, 491, 307);
+        BaseImageButton furrieFrame = new BaseImageButton("furrieSelection.png", "furrieSelected.png", 175, 175, 810, 420);
         furrieFrame.onEnter(() -> showPj(stage, "curie.png"));
 
-        BaseImageButton leeFrame = new BaseImageButton("leeSelection.png", "leeSelected.png", 107, 107, 491, 156);
+        BaseImageButton leeFrame = new BaseImageButton("leeSelection.png", "leeSelected.png", 175, 175, 1050, 420);
         leeFrame.onEnter(() -> {
             showPj(stage, "miaulee.png");
         });
 
-        BaseImageButton jacksonFrame = new BaseImageButton("miauchaelSelection.png", "miauchaelSelected.png", 107, 107, 662, 459);
+        BaseImageButton jacksonFrame = new BaseImageButton("miauchaelSelection.png", "miauchaelSelected.png", 175, 175, 570, 212);
         jacksonFrame.onEnter(() -> {
             showPj(stage, "heeHEE.png");
         });
 
-        BaseImageButton pateFrame = new BaseImageButton("pateSelection.png", "pateSelected.png", 107, 107, 662, 307);
+        BaseImageButton pateFrame = new BaseImageButton("pateSelection.png", "pateSelected.png", 175, 175, 810, 212);
         pateFrame.onEnter(() -> {
             showPj(stage, "pate2.png");
         });
 
-        BaseImageButton pussoliniFrame = new BaseImageButton("pussoliniSelection.png", "pussoliniSelected.png", 107, 107, 662, 156);
+        BaseImageButton pussoliniFrame = new BaseImageButton("pussoliniSelection.png", "pussoliniSelected.png", 175, 175, 1050, 212);
         pussoliniFrame.onEnter(() -> {
             showPj(stage, "PUSSOLINI.png");
         });
@@ -161,7 +161,7 @@ public class SelectionScreen extends BaseScreen {
     public void showPj(MyStage stage, String frame) {
         if (pj.getStage() != null) pj.remove();
         pj = new Image(new Texture("Selection/" + frame));
-        pj.setPosition(72, 131);
+        pj.setPosition(160, 150);
         pj.setSize(304, 426);
         stage.addActor(pj);
     }
