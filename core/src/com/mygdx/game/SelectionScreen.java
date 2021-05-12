@@ -161,6 +161,8 @@ public class SelectionScreen extends BaseScreen {
     //metodo para cargar los sprites cuando se seleccionan
     public void showPj(MyStage stage, String frame) {
         if (pj.getStage() != null) pj.remove();
+        if (cartel.getStage() != null) cartel.remove();
+
         pj = new Image(new Texture("Selection/" + frame));
         pj.setPosition(160, 150);
         pj.setSize(304, 426);
