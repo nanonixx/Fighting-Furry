@@ -7,9 +7,12 @@ import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
+import com.mygdx.game.Config.BaseImageButton;
 import com.mygdx.game.Config.BaseScreen;
 
 public class PantallaInicial extends BaseScreen {
+
+    private Texture background;
     public PantallaInicial(MyGdxGame game) {
         super(game);
     }
@@ -17,24 +20,19 @@ public class PantallaInicial extends BaseScreen {
     @Override
     public void show() {
 
-
+        background = new Texture("FondoInicio.png");
 
 
         ImageButton.ImageButtonStyle buttonStartStyle = new ImageButton.ImageButtonStyle();
-        buttonStartStyle.up = new TextureRegionDrawable(new TextureRegion(new Texture("readyButton.png")));
-        buttonStartStyle.over = new TextureRegionDrawable(new TextureRegion(new Texture("readyButtonPressed.png")));
-        ImageButton buttonStart = new ImageButton(buttonStartStyle);
-        buttonStart.setPosition(30,10);
-        //no cambia de tamaño, no se por qué
-        buttonStart.setSize(24*10, 10*10);
-        buttonStart.addListener(new InputListener(){
+        BaseImageButton buttonPlay = new BaseImageButton("play_rojo.png", "play_rojo_botonado.png", 225, 110, 529, 152);
+        buttonPlay.addListener(new InputListener(){
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
                 setScreen(new SelectionScreen(game));
                 return true;
             }
         });
-        stage.middleCenter.addActor(buttonStart);
+        stage.addActor(buttonPlay);
 
         ImageButton.ImageButtonStyle buttonQuitStyle = new ImageButton.ImageButtonStyle();
         buttonQuitStyle.up = new TextureRegionDrawable(new TextureRegion(new Texture("quit.png")));
@@ -50,6 +48,15 @@ public class PantallaInicial extends BaseScreen {
             }
         });
 
-        stage.middleCenter.addActor(buttonQuit);
+//        stage.middleCenter.addActor(buttonQuit);
+    }
+
+    public void render(float delta) {
+        stage.getBatch().begin();
+        stage.getBatch().draw(background, 0, 0);
+        stage.getBatch().end();
+
+        stage.act(delta);
+        stage.draw();
     }
 }
