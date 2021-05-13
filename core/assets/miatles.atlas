@@ -157,14 +157,14 @@ kick
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
-  index: 7
+  index: 5
 kick
   rotate: false
   xy: 58, 140
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
-  index: 5
+  index: 7
 kick
   rotate: false
   xy: 58, 140
@@ -227,14 +227,14 @@ patadavoladora
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 10
+  index: 0
 patadavoladora
   rotate: false
   xy: 317, 79
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 0
+  index: 10
 lee
   rotate: false
   xy: 317, 7
@@ -255,14 +255,14 @@ patadavoladora
   size: 57, 78
   orig: 57, 78
   offset: 0, 0
-  index: 6
+  index: 5
 patadavoladora
   rotate: false
   xy: 2, 215
   size: 57, 78
   orig: 57, 78
   offset: 0, 0
-  index: 5
+  index: 6
 patadavoladora
   rotate: false
   xy: 2, 139
