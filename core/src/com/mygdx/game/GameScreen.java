@@ -22,8 +22,8 @@ public class GameScreen extends BaseScreen {
     Gatito P1 = new Gatito(300, 250, false, Cosingas.renderizador.pj1);
     Gatito P2 = new Gatito(750, 250, true, Cosingas.renderizador.pj2);
 
-    private Texture background = new Texture("pui.png");
-//    private Texture background = new Texture("yMLAGVx.gif");
+//    private Texture background = new Texture("pui.png");
+    private Texture background = new Texture("yMLAGVx.gif");
 
     @Override
     public void show() {
@@ -35,7 +35,7 @@ public class GameScreen extends BaseScreen {
 //            Cosigncas.juego.jugar(carta);
 //        }
 
-        //  no borrar :
+     //  no borrar :
 //        gatito.addAction(Actions.moveBy(30, 30, 1));
 //        gatito.addAction(Actions.rotateBy(360 * 10, 0.2f));
 

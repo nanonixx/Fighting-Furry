@@ -1,9 +1,7 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.graphics.g2d.Animation;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
-import com.badlogic.gdx.scenes.scene2d.actions.DelayAction;
 import com.mygdx.game.Objects.Gatito;
 
 public class Move {
@@ -37,6 +35,11 @@ public class Move {
         gatito.getMove().ms = 0.02f;
         loop = false;
         gatito.addAction(Actions.moveBy(15, 5, 2));
+        try {
+            Thread.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         gatito.addAction(Actions.moveBy(-15, -5, 2));
         gatito.stateTime = 0;
         //depende de si está flipped, TODO
@@ -57,6 +60,7 @@ public class Move {
         gatito.getMove().ms = 0.08f;
         loop = false;
         gatito.addAction(Actions.moveBy(-50, 0, 5));
+
         gatito.stateTime = 0;
         //depende de si está flipped
     }

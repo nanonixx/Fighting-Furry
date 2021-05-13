@@ -115,14 +115,14 @@ kick
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 0
+  index: 11
 kick
   rotate: false
   xy: 850, 164
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 11
+  index: 0
 idlehehe
   rotate: false
   xy: 902, 164
@@ -157,13 +157,6 @@ kick
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
-  index: 7
-kick
-  rotate: false
-  xy: 113, 161
-  size: 52, 73
-  orig: 52, 73
-  offset: 0, 0
   index: 6
 kick
   rotate: false
@@ -172,6 +165,13 @@ kick
   orig: 52, 73
   offset: 0, 0
   index: 5
+kick
+  rotate: false
+  xy: 113, 161
+  size: 52, 73
+  orig: 52, 73
+  offset: 0, 0
+  index: 7
 kick
   rotate: false
   xy: 2, 2
@@ -374,14 +374,14 @@ punching
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 10
+  index: 16
 punching
   rotate: false
   xy: 474, 92
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 16
+  index: 10
 punching
   rotate: false
   xy: 526, 92
