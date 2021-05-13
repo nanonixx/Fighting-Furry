@@ -157,6 +157,13 @@ kick
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
+  index: 7
+kick
+  rotate: false
+  xy: 58, 140
+  size: 52, 73
+  orig: 52, 73
+  offset: 0, 0
   index: 5
 kick
   rotate: false
@@ -165,13 +172,6 @@ kick
   orig: 52, 73
   offset: 0, 0
   index: 6
-kick
-  rotate: false
-  xy: 58, 140
-  size: 52, 73
-  orig: 52, 73
-  offset: 0, 0
-  index: 7
 kick
   rotate: false
   xy: 112, 146

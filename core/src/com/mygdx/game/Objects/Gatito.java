@@ -28,7 +28,8 @@ public class Gatito extends MyActor {
 
     public Gatito(int dx, int dy, boolean flipped, String character) {
         WIDTH = 250;
-        HEIGHT = 350;
+        if (character.equals("goku")) HEIGHT = 390;
+        else HEIGHT = 350;
         this.dx = dx;
         this.dy = dy;
         this.character = character; //no se usa de momento

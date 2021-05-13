@@ -35,11 +35,14 @@ public class Move {
         gatito.getMove().ms = 0.02f;
         loop = false;
         gatito.addAction(Actions.moveBy(15, 5, 2));
-        try {
-            Thread.sleep(5);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        //depende de si está flipped, TODO
+//        gatito.addAction(Actions.moveBy(-30, -30, 2));
+    }
+
+    public void kick2(Gatito gatito){
+        gatito.getMove().name = "kick";
+        gatito.getMove().ms = 0.02f;
+        loop = false;
         gatito.addAction(Actions.moveBy(-15, -5, 2));
         gatito.stateTime = 0;
         //depende de si está flipped, TODO
@@ -81,4 +84,5 @@ public class Move {
         gatito.stateTime = 0;
         //depende de si está flipped
     }
+
 }
