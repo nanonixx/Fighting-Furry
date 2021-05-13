@@ -18,7 +18,7 @@ public class Mensaje {
 
     public static Mensaje readyOk(){
         Mensaje mensaje = new Mensaje();
-        mensaje.action = "ready";
+        mensaje.action = "ready_ok";
         return mensaje;
     }
 
@@ -34,6 +34,7 @@ public class Mensaje {
         mensaje.gato = gato;
         mensaje.gato2 = gato2;
         mensaje.turno = turnoBool;
+        mensaje.mano = mano;
         return mensaje;
     }
 
@@ -70,6 +71,8 @@ public class Mensaje {
         public String descripcion;
         public int costeMana;
         public String tipo;
+
+        public Carta(){}
 
         public Carta(String nombre, String descripcion, int coste_mana, int valor, String tipo) {
             this.nombre = nombre;

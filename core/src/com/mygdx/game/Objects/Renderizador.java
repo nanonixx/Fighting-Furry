@@ -9,7 +9,7 @@ public class Renderizador {
 
     MyGdxGame game;
     Label label;
-    Mano mano;
+    public Mano mano;
     public boolean irAPantallaJuego;
     public String pj1;
     public String pj2;
@@ -37,8 +37,6 @@ public class Renderizador {
     }
 
     public void ponerCartas(Mano mano) {
-        for (Carta c:mano.cartaList) {
-            game.getBaseScreen().stage.addActor(c);
-        }
+        this.mano = mano;
     }
 }

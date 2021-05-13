@@ -1,6 +1,8 @@
 package com.mygdx.game.Objects;
 
+import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.utils.Align;
+import com.mygdx.game.Assets;
 import com.mygdx.game.Config.MyActor;
 import main.java.Mensaje;
 
@@ -23,6 +25,7 @@ public class Carta extends MyActor {
         setOrigin(Align.center);
 
         //aquí poner la animación que hará la carta
+        animation = Assets.getAnimation("pruebaCarta", 10, Animation.PlayMode.LOOP);
 
     }
 
