@@ -1,10 +1,11 @@
 package com.mygdx.game.Objects;
 
 import com.badlogic.gdx.graphics.g2d.Animation;
-import com.badlogic.gdx.utils.Align;
 import com.mygdx.game.Assets;
 import com.mygdx.game.Config.MyActor;
 import main.java.Mensaje;
+
+import static com.badlogic.gdx.utils.Align.center;
 
 public class Carta extends MyActor {
     String nombre;
@@ -19,15 +20,15 @@ public class Carta extends MyActor {
         this.coste_mana = coste_mana;
         this.valor = valor;
         this.tipo = tipo;
-        WIDTH = 550;
-        HEIGHT = 350;
+//        WIDTH = 550;
+//        HEIGHT = 350;
 
-
+        setSize(172, 234);
+        setOrigin(center);
         //setSize(,);
-        setOrigin(Align.center);
+        //setOrigin(Align.center);
 
-        //aquí poner la animación que hará la carta
-        animation = Assets.getAnimation("pruebaCarta", 10, Animation.PlayMode.NORMAL);
+        animation = Assets.getAnimation("pruebaCarta", 10, Animation.PlayMode.LOOP);
 
     }
 
