@@ -10,7 +10,7 @@ public class Carta {
     int valor;
     int coste_cristal;
 
-    public Carta(String nombre, String descripcion, int  coste, int valor, String tipo) {
+    public Carta(String nombre, String descripcion, int valor, int coste, String tipo) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.valor = valor;

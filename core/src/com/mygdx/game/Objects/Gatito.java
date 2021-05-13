@@ -22,6 +22,7 @@ public class Gatito extends MyActor {
     public boolean envenenado = false;
     public String character;
 
+
     public int defBoost = 0;
     public int atBoost; //lo que le sube o le baja añgo en ese turno
     //reiniciar a 0 en cada turno en el GameScreen pls

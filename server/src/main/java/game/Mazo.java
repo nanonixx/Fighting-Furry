@@ -40,7 +40,7 @@ public class Mazo {
                 break;
             case "pate":
                 cartaList.addAll(Arrays.asList(
-                        new Carta("cabezazo","", 5, 2, "especial"),
+                        new Carta("cabezazo","", -5, 2, "especial"),
                         new Carta("pisoton","", 0, 1, "especial")
                 ));
                 break;

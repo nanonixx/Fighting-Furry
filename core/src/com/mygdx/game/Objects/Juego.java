@@ -59,11 +59,11 @@ public class Juego {
                         break;
 
                     case "antigravity lean":
-                        activo.atBoost = 5;
+                        activo.atBoost = carta.valor;
                         break;
 
                     case "cabezazo":
-                        rival.atBoost = -5;
+                        rival.atBoost = carta.valor;
                         //comprobar que si el ataque es menos de 5 no
                         // le suba vida al otro, se queda en 0
                         break;
@@ -73,7 +73,7 @@ public class Juego {
                         break;
 
                     case "pacto de acero":
-                        activo.defBoost = 3;
+                        activo.defBoost = carta.valor;
                         break;
 
                     case "furia oriental":
@@ -87,7 +87,7 @@ public class Juego {
 
                     case "polonio o plomo":
                         if (rival.envenenado) rival.salud -= 25;
-                        else rival.salud -= 15;
+                        else rival.salud -= carta.valor;
                         break;
                 }
 
