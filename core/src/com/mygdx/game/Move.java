@@ -8,10 +8,9 @@ import com.mygdx.game.Objects.Gatito;
 
 public class Move {
 
-   private float ms;
-   private String name;
-   private boolean loop = true;
-   private Gatito gatito;
+    private float ms;
+    private String name;
+    private boolean loop = true;
 
     public float getMs() {
         return ms;
@@ -21,10 +20,9 @@ public class Move {
         return name;
     }
 
-
-    public Move(Gatito gato, float ms) {
+    public Move(String name, float ms) {
         this.ms = ms;
-        this.gatito = gato;
+        this.name = name;
     }
 
     public Animation.PlayMode loopMode() {
@@ -34,7 +32,7 @@ public class Move {
     }
 
 
-    public void kick(){
+    public void kick(Gatito gatito){
         gatito.getMove().name = "kick";
         gatito.getMove().ms = 0.02f;
         loop = false;
@@ -45,7 +43,7 @@ public class Move {
 //        gatito.addAction(Actions.moveBy(-30, -30, 2));
     }
 
-    public void punch(){
+    public void punch(Gatito gatito){
         gatito.getMove().name = "punching";
         gatito.getMove().ms = 0.03f;
         loop = true;
@@ -54,7 +52,7 @@ public class Move {
         //depende de si está flipped
     }
 
-    public void bite(){
+    public void bite(Gatito gatito, float delta){
         gatito.getMove().name = "bite";
         gatito.getMove().ms = 0.08f;
         loop = false;
@@ -63,7 +61,7 @@ public class Move {
         //depende de si está flipped
     }
 
-    public void idle(){
+    public void idle(Gatito gatito){
         gatito.getMove().name = gatito.character;
         gatito.getMove().ms = 0.4f;
         loop = true;
@@ -71,7 +69,7 @@ public class Move {
         //depende de si está flipped
     }
 
-    public void damage(){
+    public void damage(Gatito gatito){
         gatito.getMove().name = "idle";
         gatito.getMove().ms = 0.8f;
         loop = false;
