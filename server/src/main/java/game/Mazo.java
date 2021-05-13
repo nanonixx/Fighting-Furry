@@ -29,7 +29,7 @@ public class Mazo {
             case "goku":
                 cartaList.addAll(Arrays.asList(
                         new Carta("canvi de lloc instantani","",0, 3, "especial"),
-                        new Carta("kame","", 25, 3, "especial")
+                        new Carta("kame","", 25, 3, "ataque")
                 ));
                 break;
             case "jackson":
@@ -52,7 +52,7 @@ public class Mazo {
                 break;
             case "lee":
                 cartaList.addAll(Arrays.asList(
-                        new Carta("patada voladora","", 25, 3, "especial"),
+                        new Carta("patada voladora","", 25, 3, "ataque"),
                         new Carta("furia oriental","", 5, 2, "especial")
                 ));
                 break;

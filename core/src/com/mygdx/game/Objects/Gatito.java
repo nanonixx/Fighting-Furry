@@ -16,7 +16,15 @@ public class Gatito extends MyActor {
 
     private Move move;
 
+    public int salud = 100;
+    public int cristales = 3;
+    public int defensa = 0;
+    public boolean envenenado = false;
     public String character;
+
+    public int defBoost = 0;
+    public int atBoost; //lo que le sube o le baja añgo en ese turno
+    //reiniciar a 0 en cada turno en el GameScreen pls
 
     public Move getMove() {
         return move;
@@ -30,8 +38,10 @@ public class Gatito extends MyActor {
         WIDTH = 250;
         if (character.equals("goku")) HEIGHT = 390;
         else HEIGHT = 350;
+
         this.dx = dx;
         this.dy = dy;
+
         this.character = character; //no se usa de momento
         this.flipped = flipped;
         this.move = new Move(character, 0.4f);
