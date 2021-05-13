@@ -46,7 +46,7 @@ public class Gatito extends Actor {
         this.dy = dy;
         this.character = character; //no se usa de momento
         this.flipped = flipped;
-        this.move = new Move(character, 0.4f);
+        this.move = new Move(this, 0.4f);
         setSize(WIDTH, HEIGHT);
         setOrigin(center);
         gatitoMoviendose = Assets.getAnimation(getMove().getName(), 0.4f, Animation.PlayMode.LOOP);
