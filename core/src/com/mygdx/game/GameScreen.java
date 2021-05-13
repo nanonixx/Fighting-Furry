@@ -25,7 +25,17 @@ public class GameScreen extends BaseScreen {
         stage.addActor(P1);
         stage.addActor(P2);
 
-        stage.addActor(Cosingas.renderizador.mano.cartaList.get(0));
+        System.out.println(Cosingas.renderizador.mano.cartaList.get(0));
+
+        for (int i = 0; i <3 ; i++) {
+
+            if(i == 0) Cosingas.renderizador.mano.cartaList.get(i).setPosition(Cosingas.renderizador.mano.dx,Cosingas.renderizador.mano.dy);
+            else if(i == 1) Cosingas.renderizador.mano.cartaList.get(i).setPosition(Cosingas.renderizador.mano.dx+180,Cosingas.renderizador.mano.dy);
+            else Cosingas.renderizador.mano.cartaList.get(i).setPosition(Cosingas.renderizador.mano.dx+180*2,Cosingas.renderizador.mano.dy);
+
+            stage.addActor(Cosingas.renderizador.mano.cartaList.get(i));
+
+        }
 //        onclik(){
 //            Cosigncas.juego.jugar(carta);
 //        }
