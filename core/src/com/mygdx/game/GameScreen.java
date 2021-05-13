@@ -46,22 +46,22 @@ public class GameScreen extends BaseScreen {
         //Testingo P1:
         if(Gdx.input.isKeyPressed(Input.Keys.ENTER)) {
            P1.getMove().kick(P1);
-            P1.gatitoMoviendose = Assets.getAnimation(P1.getMove().getName(), P1.getMove().getMs(), P1.getMove().loopMode());
+            P1.animation = Assets.getAnimation(P1.getMove().getName(), P1.getMove().getMs(), P1.getMove().loopMode());
         }
         //cuando el gato deje de hacer la animación vuelve a idle
-        else if (P1.gatitoMoviendose.isAnimationFinished(P1.stateTime)){
+        else if (P1.animation.isAnimationFinished(P1.stateTime)){
             P1.getMove().idle(P1);
-            P1.gatitoMoviendose = Assets.getAnimation(P1.getMove().getName(), P1.getMove().getMs(), P1.getMove().loopMode());
+            P1.animation = Assets.getAnimation(P1.getMove().getName(), P1.getMove().getMs(), P1.getMove().loopMode());
         }
 
 
         //Testingo P2:
         if(Gdx.input.isKeyPressed(Input.Keys.SPACE)) {
             P2.getMove().punch(P2);
-            P2.gatitoMoviendose = Assets.getAnimation(P2.getMove().getName(), P2.getMove().getMs(), P2.getMove().loopMode());
-        }else if (P1.gatitoMoviendose.isAnimationFinished(P1.stateTime)){
+            P2.animation = Assets.getAnimation(P2.getMove().getName(), P2.getMove().getMs(), P2.getMove().loopMode());
+        }else if (P1.animation.isAnimationFinished(P1.stateTime)){
             P2.getMove().idle(P2);
-            P2.gatitoMoviendose = Assets.getAnimation(P2.getMove().getName(), P2.getMove().getMs(), P2.getMove().loopMode());
+            P2.animation = Assets.getAnimation(P2.getMove().getName(), P2.getMove().getMs(), P2.getMove().loopMode());
         }
 
         stage.getBatch().begin();

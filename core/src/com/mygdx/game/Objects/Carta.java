@@ -19,13 +19,15 @@ public class Carta extends MyActor {
         this.coste_mana = coste_mana;
         this.valor = valor;
         this.tipo = tipo;
+        WIDTH = 550;
+        HEIGHT = 350;
 
 
         //setSize(,);
         setOrigin(Align.center);
 
         //aquí poner la animación que hará la carta
-        animation = Assets.getAnimation("pruebaCarta", 10, Animation.PlayMode.LOOP);
+        animation = Assets.getAnimation("pruebaCarta", 10, Animation.PlayMode.NORMAL);
 
     }
 
