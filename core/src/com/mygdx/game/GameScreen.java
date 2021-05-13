@@ -34,7 +34,17 @@ public class GameScreen extends BaseScreen {
             else Cosingas.renderizador.mano.cartaList.get(i).setPosition(Cosingas.renderizador.mano.dx+250*2,Cosingas.renderizador.mano.dy);
 
             stage.addActor(Cosingas.renderizador.mano.cartaList.get(i));
+            System.out.println(Cosingas.renderizador.mano.cartaList.get(i).nombre);
 
+        }
+
+        while(!Cosingas.renderizador.acabat){
+            /*
+            si es el turno del cliente
+                hacer jugada
+                pasarla al server
+                el server
+             */
         }
 //        onclik(){
 //            Cosigncas.juego.jugar(carta);

@@ -4,10 +4,7 @@ import com.github.czyzby.websocket.data.WebSocketCloseCode;
 import com.mygdx.game.Cosingas;
 import main.java.Mensaje;
 
-import java.security.CodeSigner;
-
 public class Juego {
-    Mano mano;
 
 
 //    public void alConectar(){
@@ -26,6 +23,7 @@ public class Juego {
                 Cosingas.renderizador.irAPantallaJuego();
                 Cosingas.renderizador.pjSeleccionado(mensaje.gato, mensaje.gato2);
                 Cosingas.renderizador.ponerCartas(Mano.fromMensaje(mensaje.mano));
+                Cosingas.renderizador.torn = mensaje.turno;
                 break;
 
             default:

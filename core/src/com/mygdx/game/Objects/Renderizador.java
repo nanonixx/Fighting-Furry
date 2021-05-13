@@ -13,6 +13,8 @@ public class Renderizador {
     public boolean irAPantallaJuego;
     public String pj1;
     public String pj2;
+    public boolean acabat = false;
+    public boolean torn;
 
     public Renderizador(MyGdxGame game) {
         this.game = game;

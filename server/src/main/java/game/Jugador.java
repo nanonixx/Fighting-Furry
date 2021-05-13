@@ -11,6 +11,7 @@ public class Jugador {
     Mazo mazo;
     Mano mano = new Mano();
     Session session;
+    public boolean torn;
 
     public Jugador(Session session, String gato) {
         this.session = session;

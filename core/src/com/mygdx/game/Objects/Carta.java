@@ -8,7 +8,7 @@ import main.java.Mensaje;
 import static com.badlogic.gdx.utils.Align.center;
 
 public class Carta extends MyActor {
-    String nombre;
+    public String nombre;
     String descripcion;
     int coste_mana;
     int valor;
