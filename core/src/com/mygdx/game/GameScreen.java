@@ -5,7 +5,6 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.mygdx.game.Config.BaseScreen;
 import com.mygdx.game.Config.MyLabel;
 import com.mygdx.game.Objects.Gatito;
@@ -63,6 +62,8 @@ public class GameScreen extends BaseScreen {
 //        gatito.addAction(Actions.moveBy(30, 30, 1));
 //        gatito.addAction(Actions.rotateBy(360 * 10, 0.2f));
         Cosingas.renderizador.mano.cartaList.get(0).addListener(() -> Cosingas.renderizador.touched(Cosingas.renderizador.mano.cartaList.get(0), P1, P2));
+        Cosingas.renderizador.mano.cartaList.get(1).addListener(() -> Cosingas.renderizador.touched(Cosingas.renderizador.mano.cartaList.get(1), P1, P2));
+        Cosingas.renderizador.mano.cartaList.get(2).addListener(() -> Cosingas.renderizador.touched(Cosingas.renderizador.mano.cartaList.get(2), P1, P2));
 
     }
 
@@ -71,6 +72,8 @@ public class GameScreen extends BaseScreen {
         Gdx.gl.glClearColor(0f, 0f, 0f, 0);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
+        saludP1.setText(P1.salud);
+        saludP2.setText(P2.salud);
         //Testingo P1:
         if(Gdx.input.isKeyPressed(Input.Keys.ENTER)) {
            P1.getMove().kick(P1);
