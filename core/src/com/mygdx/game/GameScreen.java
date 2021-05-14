@@ -18,7 +18,7 @@ public class GameScreen extends BaseScreen {
     Gatito P2 = new Gatito(750, 270, true, Cosingas.renderizador.pj2);
 
     MyLabel saludP1 = new MyLabel(String.valueOf(P1.salud), Color.BLACK, 100f, 600f);
-    MyLabel saludP2 = new MyLabel(String.valueOf(P2.salud), Color.BLACK, 800f, 600f);
+    MyLabel saludP2 = new MyLabel(String.valueOf(P2.salud), Color.BLACK, 1050f, 600f);
 
 //    private Texture background = new Texture("pui.png");
     private Texture background = new Texture("fondo_desierto.png");
