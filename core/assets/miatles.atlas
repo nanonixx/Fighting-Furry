@@ -115,14 +115,14 @@ kick
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 11
+  index: 0
 kick
   rotate: false
   xy: 265, 7
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 0
+  index: 11
 idlehehe
   rotate: false
   xy: 208, 439
@@ -164,14 +164,14 @@ kick
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
-  index: 7
+  index: 6
 kick
   rotate: false
   xy: 58, 140
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
-  index: 6
+  index: 7
 kick
   rotate: false
   xy: 112, 146

@@ -12,10 +12,11 @@ public class GameScreen extends BaseScreen {
     public GameScreen(MyGdxGame game) {
         super(game);
     }
-    Gatito P1 = new Gatito(300, 250, false, Cosingas.renderizador.pj1);
-    Gatito P2 = new Gatito(750, 250, true, Cosingas.renderizador.pj2);
+    Gatito P1 = new Gatito(300, 270, false, Cosingas.renderizador.pj1);
+    Gatito P2 = new Gatito(750, 270, true, Cosingas.renderizador.pj2);
 
-    private Texture background = new Texture("pui.png");
+//    private Texture background = new Texture("pui.png");
+    private Texture background = new Texture("fondo_desierto.png");
 //    private Texture background = new Texture("yMLAGVx.gif");
 
     @Override
@@ -38,14 +39,14 @@ public class GameScreen extends BaseScreen {
 
         }
 
-        while(!Cosingas.renderizador.acabat){
+//        while(!Cosingas.renderizador.acabat){
             /*
             si es el turno del cliente
                 hacer jugada
                 pasarla al server
                 el server
              */
-        }
+//        }
 //        onclik(){
 //            Cosigncas.juego.jugar(carta);
 //        }
