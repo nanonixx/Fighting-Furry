@@ -26,7 +26,7 @@ public class Juego {
                 Cosingas.renderizador.torn = mensaje.turno;
                 break;
             case "jugadaOk":
-
+                //Cosingas.renderizador.jugadaOk();
                 break;
             default:
                 System.out.println(mensaje.action);
@@ -34,9 +34,21 @@ public class Juego {
     }
 
     public void jugarCarta(Carta carta, Gatito activo, Gatito rival){
+        int damages;
         switch (carta.tipo){
             case "ataque":
-                 rival.salud -= carta.valor;
+                if(rival.defensa == 0)
+                    rival.salud -= carta.valor;
+                else{
+                    if(rival.defensa - carta.valor >= 0)
+                        rival.defensa -= carta.valor;
+                    else{
+                        damages = carta.valor - rival.defensa;
+                        rival.defensa = 0;
+                        rival.salud -= damages;
+
+                    }
+                }
                 break;
 
             case "defensa":
@@ -44,7 +56,10 @@ public class Juego {
                 break;
 
             case "curacion":
-                activo.salud += carta.valor;
+                if(activo.salud + carta.valor <= 100)
+                    activo.salud += carta.valor;
+                else
+                    activo.salud = 100;
                 break;
 
             case "especial":
@@ -110,16 +125,4 @@ public class Juego {
         Cosingas.cliente.enviar(Mensaje.ready(pjSeleccionado));
     }
 
-    //PRUEBA DEL MENSAJE QUE HABRIA QUE ENVIAR
-//    public void jugarCarta(Carta carta) {
-//        System.out.println("SE JUEGA LA CARTA");
-//
-//        Mensaje.Carta mCarta = new Mensaje.Carta();
-//        mCarta.nombre = carta.nombre;
-//        mCarta.valor = carta.valor;
-//        mCarta.costeMana = carta.coste_mana;
-//        mCarta.tipo = carta.tipo;
-//
-//        Cosingas.cliente.enviar(Mensaje.jugada(mCarta));
-//    }
 }

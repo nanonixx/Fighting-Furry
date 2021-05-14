@@ -1,6 +1,8 @@
 package com.mygdx.game.Objects;
 
 import com.badlogic.gdx.graphics.g2d.Animation;
+import com.badlogic.gdx.math.Interpolation;
+import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.mygdx.game.Assets;
 import com.mygdx.game.Config.MyActor;
 import main.java.Mensaje;
@@ -9,10 +11,10 @@ import static com.badlogic.gdx.utils.Align.center;
 
 public class Carta extends MyActor {
     public String nombre;
-    String descripcion;
-    int coste_mana;
-    int valor;
-    String tipo;
+    public String descripcion;
+    public int coste_mana;
+    public int valor;
+    public String tipo;
 
     public Carta(String nombre, String descripcion, int coste_mana, int valor, String tipo) {
         this.nombre = nombre;
@@ -50,7 +52,22 @@ public class Carta extends MyActor {
 
     public void accionRepartir(){}
 
-    public void lanzarCarta(){}
+    public void lanzarCarta(float x, float y){
+        addAction(
+                Actions.sequence(
+                        Actions.parallel(
+                                Actions.rotateBy(40, 0.4f, Interpolation.fastSlow),
+                                Actions.moveTo(x/2, y/2, 0.4f, Interpolation.fastSlow)
+                        ),
+                        Actions.parallel(
+                                Actions.rotateBy(-40, 0.3f, Interpolation.fastSlow),
+                                Actions.moveTo(x, y, 0.3f, Interpolation.fastSlow)
+                        ),
+                        Actions.fadeOut(1f),
+                        Actions.hide()
+                )
+        );
+    }
 
     public void asignarSkinCarta(String nombre){
         switch(nombre){

@@ -1,538 +1,664 @@
 
 miatles.png
-size: 1024, 512
+size: 1024, 1024
 format: RGBA8888
 filter: Nearest, Nearest
 repeat: none
+alertaMaxima
+  rotate: false
+  xy: 2, 805
+  size: 152, 214
+  orig: 152, 214
+  offset: 0, 0
+  index: -1
+amasar
+  rotate: false
+  xy: 2, 589
+  size: 152, 214
+  orig: 152, 214
+  offset: 0, 0
+  index: -1
+antiGravity
+  rotate: false
+  xy: 156, 805
+  size: 152, 214
+  orig: 152, 214
+  offset: 0, 0
+  index: -1
+autocracia
+  rotate: false
+  xy: 2, 373
+  size: 152, 214
+  orig: 152, 214
+  offset: 0, 0
+  index: -1
 bite
   rotate: false
-  xy: 156, 204
+  xy: 926, 869
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
 bite
   rotate: false
-  xy: 156, 204
+  xy: 926, 869
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 8
 bite
   rotate: false
-  xy: 208, 211
+  xy: 772, 579
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
 bite
   rotate: false
-  xy: 208, 211
+  xy: 772, 579
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 7
 bite
   rotate: false
-  xy: 480, 438
+  xy: 824, 659
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 2
 bite
   rotate: false
-  xy: 480, 438
+  xy: 824, 659
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 6
 bite
   rotate: false
-  xy: 156, 132
+  xy: 221, 85
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 3
 bite
   rotate: false
-  xy: 156, 132
+  xy: 221, 85
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 5
 bite
   rotate: false
-  xy: 208, 139
+  xy: 772, 507
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 4
+bufido
+  rotate: false
+  xy: 156, 589
+  size: 152, 214
+  orig: 152, 214
+  offset: 0, 0
+  index: -1
+cabezazo
+  rotate: false
+  xy: 310, 805
+  size: 152, 214
+  orig: 152, 214
+  offset: 0, 0
+  index: -1
+furiaOriental
+  rotate: false
+  xy: 2, 157
+  size: 152, 214
+  orig: 152, 214
+  offset: 0, 0
+  index: -1
 furrie
   rotate: false
-  xy: 532, 438
+  xy: 824, 587
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
 furrie
   rotate: false
-  xy: 584, 438
+  xy: 273, 85
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
 goku
   rotate: false
-  xy: 156, 350
+  xy: 772, 725
   size: 50, 78
   orig: 50, 78
   offset: 0, 0
   index: 0
 goku
   rotate: false
-  xy: 215, 430
+  xy: 926, 941
   size: 50, 78
   orig: 50, 78
   offset: 0, 0
   index: 1
+hehe
+  rotate: false
+  xy: 156, 373
+  size: 152, 214
+  orig: 152, 214
+  offset: 0, 0
+  index: -1
 idle
   rotate: false
-  xy: 636, 438
+  xy: 772, 435
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
 idle
   rotate: false
-  xy: 688, 438
+  xy: 824, 515
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
 kick
   rotate: false
-  xy: 688, 438
+  xy: 824, 515
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 11
 kick
   rotate: false
-  xy: 688, 438
+  xy: 824, 515
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
 idlehehe
   rotate: false
-  xy: 740, 438
+  xy: 325, 85
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: -1
+imagenReflejo
+  rotate: false
+  xy: 310, 589
+  size: 152, 214
+  orig: 152, 214
+  offset: 0, 0
+  index: -1
 jackson
   rotate: false
-  xy: 792, 438
+  xy: 824, 443
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
 jackson
   rotate: false
-  xy: 844, 438
+  xy: 377, 85
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
+kame
+  rotate: false
+  xy: 464, 805
+  size: 152, 214
+  orig: 152, 214
+  offset: 0, 0
+  index: -1
 kick
   rotate: false
-  xy: 208, 355
+  xy: 2, 2
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
   index: 4
 kick
   rotate: false
-  xy: 208, 355
+  xy: 2, 2
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
   index: 6
 kick
   rotate: false
-  xy: 208, 355
+  xy: 2, 2
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
   index: 5
 kick
   rotate: false
-  xy: 208, 355
+  xy: 2, 2
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
   index: 7
 kick
   rotate: false
-  xy: 156, 276
+  xy: 772, 651
   size: 50, 72
   orig: 50, 72
   offset: 0, 0
   index: 3
 kick
   rotate: false
-  xy: 58, 4
+  xy: 824, 731
   size: 50, 72
   orig: 50, 72
   offset: 0, 0
   index: 8
 kick
   rotate: false
-  xy: 896, 438
+  xy: 429, 85
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
 kick
   rotate: false
-  xy: 896, 438
+  xy: 429, 85
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 10
 kick
   rotate: false
-  xy: 948, 438
+  xy: 481, 85
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 2
 kick
   rotate: false
-  xy: 948, 438
+  xy: 481, 85
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 9
 lee
   rotate: false
-  xy: 110, 6
+  xy: 533, 85
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
 patadavoladora
   rotate: false
-  xy: 110, 6
+  xy: 533, 85
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
 patadavoladora
   rotate: false
-  xy: 110, 6
+  xy: 533, 85
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 10
 lee
   rotate: false
-  xy: 262, 358
+  xy: 876, 733
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
+mordisco
+  rotate: false
+  xy: 156, 157
+  size: 152, 214
+  orig: 152, 214
+  offset: 0, 0
+  index: -1
+pactoAcero
+  rotate: false
+  xy: 310, 373
+  size: 152, 214
+  orig: 152, 214
+  offset: 0, 0
+  index: -1
 patadaPRUEBA
   rotate: false
-  xy: 2, 294
+  xy: 464, 589
+  size: 152, 214
+  orig: 152, 214
+  offset: 0, 0
+  index: -1
+patadaVoladora
+  rotate: false
+  xy: 618, 805
   size: 152, 214
   orig: 152, 214
   offset: 0, 0
   index: -1
 patadavoladora
   rotate: false
-  xy: 156, 430
+  xy: 2, 77
   size: 57, 78
   orig: 57, 78
   offset: 0, 0
   index: 4
 patadavoladora
   rotate: false
-  xy: 156, 430
-  size: 57, 78
-  orig: 57, 78
-  offset: 0, 0
-  index: 6
-patadavoladora
-  rotate: false
-  xy: 156, 430
+  xy: 2, 77
   size: 57, 78
   orig: 57, 78
   offset: 0, 0
   index: 5
 patadavoladora
   rotate: false
-  xy: 2, 2
+  xy: 2, 77
+  size: 57, 78
+  orig: 57, 78
+  offset: 0, 0
+  index: 6
+patadavoladora
+  rotate: false
+  xy: 618, 297
   size: 54, 74
   orig: 54, 74
   offset: 0, 0
   index: 3
 patadavoladora
   rotate: false
-  xy: 2, 2
+  xy: 618, 297
   size: 54, 74
   orig: 54, 74
   offset: 0, 0
   index: 7
 patadavoladora
   rotate: false
-  xy: 267, 435
+  xy: 61, 82
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
   index: 2
 patadavoladora
   rotate: false
-  xy: 267, 435
+  xy: 61, 82
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
   index: 8
 patadavoladora
   rotate: false
-  xy: 262, 286
+  xy: 876, 661
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
 patadavoladora
   rotate: false
-  xy: 262, 286
+  xy: 876, 661
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 9
 pate
   rotate: false
-  xy: 260, 211
+  xy: 876, 589
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
 pate
   rotate: false
-  xy: 260, 139
+  xy: 876, 517
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
+pisoton
+  rotate: false
+  xy: 310, 157
+  size: 152, 214
+  orig: 152, 214
+  offset: 0, 0
+  index: -1
+polonioPlomo
+  rotate: false
+  xy: 464, 373
+  size: 152, 214
+  orig: 152, 214
+  offset: 0, 0
+  index: -1
 pruebaCarta
   rotate: false
-  xy: 2, 78
+  xy: 618, 589
   size: 152, 214
   orig: 152, 214
   offset: 0, 0
   index: -1
 punching
   rotate: false
-  xy: 208, 283
+  xy: 618, 225
   size: 52, 70
   orig: 52, 70
   offset: 0, 0
   index: 5
 punching
   rotate: false
-  xy: 321, 438
+  xy: 674, 301
   size: 51, 70
   orig: 51, 70
   offset: 0, 0
   index: 11
 punching
   rotate: false
-  xy: 321, 438
+  xy: 674, 301
   size: 51, 70
   orig: 51, 70
   offset: 0, 0
   index: 15
 punching
   rotate: false
-  xy: 374, 438
+  xy: 115, 85
   size: 51, 70
   orig: 51, 70
   offset: 0, 0
   index: 12
 punching
   rotate: false
-  xy: 374, 438
+  xy: 115, 85
   size: 51, 70
   orig: 51, 70
   offset: 0, 0
   index: 14
 punching
   rotate: false
-  xy: 427, 438
+  xy: 168, 85
   size: 51, 70
   orig: 51, 70
   offset: 0, 0
   index: 13
 punching
   rotate: false
-  xy: 314, 363
+  xy: 876, 445
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
 punching
   rotate: false
-  xy: 314, 363
-  size: 50, 70
-  orig: 50, 70
-  offset: 0, 0
-  index: 10
-punching
-  rotate: false
-  xy: 314, 363
+  xy: 876, 445
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 16
 punching
   rotate: false
-  xy: 314, 291
+  xy: 876, 445
+  size: 50, 70
+  orig: 50, 70
+  offset: 0, 0
+  index: 10
+punching
+  rotate: false
+  xy: 618, 153
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
 punching
   rotate: false
-  xy: 314, 291
+  xy: 618, 153
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 9
 punching
   rotate: false
-  xy: 366, 366
+  xy: 727, 301
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 2
 punching
   rotate: false
-  xy: 366, 294
+  xy: 585, 81
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 3
 punching
   rotate: false
-  xy: 418, 366
+  xy: 637, 81
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 4
 punching
   rotate: false
-  xy: 418, 294
+  xy: 670, 153
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 6
 punching
   rotate: false
-  xy: 418, 294
+  xy: 670, 153
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 7
 punching
   rotate: false
-  xy: 470, 366
+  xy: 672, 225
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 8
 pusso_punch
   rotate: false
-  xy: 470, 294
+  xy: 724, 229
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
 pusso_punch
   rotate: false
-  xy: 522, 366
+  xy: 689, 81
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
 pusso_punch
   rotate: false
-  xy: 522, 294
+  xy: 722, 153
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 2
 pusso_punch
   rotate: false
-  xy: 574, 366
+  xy: 741, 81
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 3
 pusso_punch
   rotate: false
-  xy: 574, 294
+  xy: 56, 5
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 4
 pusso_punch
   rotate: false
-  xy: 626, 366
+  xy: 776, 229
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 5
 pusso_punch
   rotate: false
-  xy: 626, 294
+  xy: 774, 157
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 6
 pusso_punch
   rotate: false
-  xy: 678, 366
+  xy: 793, 85
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 7
 pusso_punch
   rotate: false
-  xy: 678, 294
+  xy: 826, 157
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 8
 pusso_punch
   rotate: false
-  xy: 730, 366
+  xy: 845, 85
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 9
 pussolini
   rotate: false
-  xy: 730, 294
+  xy: 108, 10
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 0
 pussolini
   rotate: false
-  xy: 782, 366
+  xy: 160, 13
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
   index: 1
+ronroneo
+  rotate: false
+  xy: 772, 805
+  size: 152, 214
+  orig: 152, 214
+  offset: 0, 0
+  index: -1
+vomitoRadioactivo
+  rotate: false
+  xy: 464, 157
+  size: 152, 214
+  orig: 152, 214
+  offset: 0, 0
+  index: -1
+zarpazo
+  rotate: false
+  xy: 618, 373
+  size: 152, 214
+  orig: 152, 214
+  offset: 0, 0
+  index: -1

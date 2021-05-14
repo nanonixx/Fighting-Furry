@@ -43,7 +43,8 @@ public class Renderizador {
     }
 
     public void touched(Carta carta, Gatito propio, Gatito rival) {
-        //Cosingas.renderizador.mano.cartaList.remove(carta);
+        carta.lanzarCarta(560,296);
+        Cosingas.renderizador.mano.cartaList.remove(carta);
         Cosingas.juego.jugarCarta(carta, propio, rival);
     }
 

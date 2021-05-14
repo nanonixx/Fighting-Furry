@@ -20,6 +20,9 @@ public class GameScreen extends BaseScreen {
     MyLabel saludP1 = new MyLabel(String.valueOf(P1.salud), Color.BLACK, 100f, 600f);
     MyLabel saludP2 = new MyLabel(String.valueOf(P2.salud), Color.BLACK, 1050f, 600f);
 
+    MyLabel manaP1 = new MyLabel(String.valueOf(P1.cristales), Color.BLACK, 100f, 550f);
+    MyLabel manaP2 = new MyLabel(String.valueOf(P2.cristales), Color.BLACK, 1050f, 550f);
+
 //    private Texture background = new Texture("pui.png");
     private Texture background = new Texture("fondo_desierto.png");
 //    private Texture background = new Texture("yMLAGVx.gif");
@@ -32,6 +35,8 @@ public class GameScreen extends BaseScreen {
         stage.addActor(P2);
         stage.addActor(saludP1);
         stage.addActor(saludP2); //no se si hay que meter en bucle
+        stage.addActor(manaP1);
+        stage.addActor(manaP2);
 
         System.out.println(Cosingas.renderizador.mano.cartaList.get(0));
 
@@ -61,9 +66,29 @@ public class GameScreen extends BaseScreen {
      //  no borrar :
 //        gatito.addAction(Actions.moveBy(30, 30, 1));
 //        gatito.addAction(Actions.rotateBy(360 * 10, 0.2f));
-        Cosingas.renderizador.mano.cartaList.get(0).addListener(() -> Cosingas.renderizador.touched(Cosingas.renderizador.mano.cartaList.get(0), P1, P2));
-        Cosingas.renderizador.mano.cartaList.get(1).addListener(() -> Cosingas.renderizador.touched(Cosingas.renderizador.mano.cartaList.get(1), P1, P2));
-        Cosingas.renderizador.mano.cartaList.get(2).addListener(() -> Cosingas.renderizador.touched(Cosingas.renderizador.mano.cartaList.get(2), P1, P2));
+
+        //TODO ARREGLAR LOS LISTENERS PARA CUANDO LA MANO NO ESTÉ ENTERA (1-2 CARTAS)
+        Cosingas.renderizador.mano.cartaList.get(0).addListener(() -> {
+            if(P1.cristales >= Cosingas.renderizador.mano.cartaList.get(0).coste_mana){
+                P1.cristales -= Cosingas.renderizador.mano.cartaList.get(0).coste_mana;
+                Cosingas.renderizador.touched(Cosingas.renderizador.mano.cartaList.get(0), P1, P2);
+            }
+
+        });
+        Cosingas.renderizador.mano.cartaList.get(1).addListener(() -> {
+            if(P1.cristales >= Cosingas.renderizador.mano.cartaList.get(1).coste_mana){
+                P1.cristales -= Cosingas.renderizador.mano.cartaList.get(1).coste_mana;
+                Cosingas.renderizador.touched(Cosingas.renderizador.mano.cartaList.get(1), P1, P2);
+            }
+        });
+        Cosingas.renderizador.mano.cartaList.get(2).addListener(() -> {
+            if(P1.cristales >= Cosingas.renderizador.mano.cartaList.get(2).coste_mana) {
+                P1.cristales -= Cosingas.renderizador.mano.cartaList.get(2).coste_mana;
+                Cosingas.renderizador.touched(Cosingas.renderizador.mano.cartaList.get(2), P1, P2);
+            }
+        });
+
+
 
     }
 
@@ -74,6 +99,8 @@ public class GameScreen extends BaseScreen {
 
         saludP1.setText(P1.salud);
         saludP2.setText(P2.salud);
+        manaP1.setText(P1.cristales);
+        manaP2.setText(P2.cristales);
         //Testingo P1:
         if(Gdx.input.isKeyPressed(Input.Keys.ENTER)) {
            P1.getMove().kick(P1);
