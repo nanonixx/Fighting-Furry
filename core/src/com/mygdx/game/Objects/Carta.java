@@ -28,8 +28,10 @@ public class Carta extends MyActor {
         //setSize(,);
         //setOrigin(Align.center);
 
-        animation = Assets.getAnimation("pruebaCarta", 10, Animation.PlayMode.LOOP);
+        //asignarSkinCarta(nombre);
+        animation = Assets.getAnimation("patadaPRUEBA", 10, Animation.PlayMode.LOOP);
 
+//        addListener(() -> Cosingas.renderizador.touched(Carta.this));
     }
 
 //    public Carta(String nombre, int valor) {
@@ -49,5 +51,64 @@ public class Carta extends MyActor {
     public void accionRepartir(){}
 
     public void lanzarCarta(){}
+
+    public void asignarSkinCarta(String nombre){
+        switch(nombre){
+            case "zarpazo":
+                animation = Assets.getAnimation("zarpazo", 10, Animation.PlayMode.LOOP);
+                break;
+            case "mordisco":
+                animation = Assets.getAnimation("mordisco", 10, Animation.PlayMode.LOOP);
+                break;
+            case "bufido":
+                animation = Assets.getAnimation("bufido", 10, Animation.PlayMode.LOOP);
+                break;
+            case "enAlerta":
+                animation = Assets.getAnimation("enAlerta", 10, Animation.PlayMode.LOOP);
+                break;
+            case "ronroneo":
+                animation = Assets.getAnimation("ronroneo", 10, Animation.PlayMode.LOOP);
+                break;
+            case "amasar":
+                animation = Assets.getAnimation("amasar", 10, Animation.PlayMode.LOOP);
+                break;
+            case "canvi de lloc instantani":
+                animation = Assets.getAnimation("canviDeLlocInstantani", 10, Animation.PlayMode.LOOP);
+                break;
+            case "kame":
+                animation = Assets.getAnimation("kame", 10, Animation.PlayMode.LOOP);
+                break;
+            case "heehee":
+                animation = Assets.getAnimation("heehee", 10, Animation.PlayMode.LOOP);
+                break;
+            case "antigravity lean":
+                animation = Assets.getAnimation("antiGravity", 10, Animation.PlayMode.LOOP);
+                break;
+            case "cabezazo":
+                animation = Assets.getAnimation("cabezazo", 10, Animation.PlayMode.LOOP);
+                break;
+            case "pisoton":
+                animation = Assets.getAnimation("pisoton", 10, Animation.PlayMode.LOOP);
+                break;
+            case "autocracia":
+                animation = Assets.getAnimation("autocracia", 10, Animation.PlayMode.LOOP);
+                break;
+            case "pacto de acero":
+                animation = Assets.getAnimation("pactoDeAcero", 10, Animation.PlayMode.LOOP);
+                break;
+            case "patada voladora":
+                animation = Assets.getAnimation("patadaVoladora", 10, Animation.PlayMode.LOOP);
+                break;
+            case "furia oriental":
+                animation = Assets.getAnimation("furiaOriental", 10, Animation.PlayMode.LOOP);
+                break;
+            case "vomito radioactivo":
+                animation = Assets.getAnimation("vomitoRadioactivo", 10, Animation.PlayMode.LOOP);
+                break;
+            case "polonio o plomo":
+                animation = Assets.getAnimation("polonioPlomo", 10, Animation.PlayMode.LOOP);
+                break;
+        }
+    }
 
 }

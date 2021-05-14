@@ -3,6 +3,7 @@ package com.mygdx.game.Objects;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.mygdx.game.Config.MyLabel;
+import com.mygdx.game.Cosingas;
 import com.mygdx.game.MyGdxGame;
 
 public class Renderizador {
@@ -13,7 +14,6 @@ public class Renderizador {
     public boolean irAPantallaJuego;
     public String pj1;
     public String pj2;
-    public boolean acabat = false;
     public boolean torn;
 
     public Renderizador(MyGdxGame game) {
@@ -41,4 +41,9 @@ public class Renderizador {
     public void ponerCartas(Mano mano) {
         this.mano = mano;
     }
+
+    public void touched(Carta carta, Gatito propio, Gatito rival) {
+        Cosingas.juego.jugarCarta(carta, propio, rival);
+    }
+
 }

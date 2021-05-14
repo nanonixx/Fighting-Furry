@@ -25,7 +25,9 @@ public class Juego {
                 Cosingas.renderizador.ponerCartas(Mano.fromMensaje(mensaje.mano));
                 Cosingas.renderizador.torn = mensaje.turno;
                 break;
+            case "jugadaOk":
 
+                break;
             default:
                 System.out.println(mensaje.action);
         }
@@ -92,9 +94,32 @@ public class Juego {
             break;
         }
 
+        //LA IDEA ES QUE UNA VEZ PROCESADA LA JUGADA A NIVEL LOCAL ENVIEMOS LA CARTA AL SERVER Y QUE LA PASE AL RIVAL PARA PROCESARLA
+        System.out.println("SE JUEGA LA CARTA");
+
+        Mensaje.Carta mCarta = new Mensaje.Carta();
+        mCarta.nombre = carta.nombre;
+        mCarta.valor = carta.valor;
+        mCarta.costeMana = carta.coste_mana;
+        mCarta.tipo = carta.tipo;
+        Cosingas.cliente.enviar(Mensaje.jugada(mCarta));
+
     }
 
     public void ready(String pjSeleccionado) {
         Cosingas.cliente.enviar(Mensaje.ready(pjSeleccionado));
     }
+
+    //PRUEBA DEL MENSAJE QUE HABRIA QUE ENVIAR
+//    public void jugarCarta(Carta carta) {
+//        System.out.println("SE JUEGA LA CARTA");
+//
+//        Mensaje.Carta mCarta = new Mensaje.Carta();
+//        mCarta.nombre = carta.nombre;
+//        mCarta.valor = carta.valor;
+//        mCarta.costeMana = carta.coste_mana;
+//        mCarta.tipo = carta.tipo;
+//
+//        Cosingas.cliente.enviar(Mensaje.jugada(mCarta));
+//    }
 }

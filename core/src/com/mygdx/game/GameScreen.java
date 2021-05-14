@@ -54,7 +54,7 @@ public class GameScreen extends BaseScreen {
      //  no borrar :
 //        gatito.addAction(Actions.moveBy(30, 30, 1));
 //        gatito.addAction(Actions.rotateBy(360 * 10, 0.2f));
-
+        Cosingas.renderizador.mano.cartaList.get(0).addListener(() -> Cosingas.renderizador.touched(Cosingas.renderizador.mano.cartaList.get(0), P1, P2));
 
     }
 
@@ -62,7 +62,6 @@ public class GameScreen extends BaseScreen {
     public void render(float delta) {
         Gdx.gl.glClearColor(0f, 0f, 0f, 0);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-
 
         //Testingo P1:
         if(Gdx.input.isKeyPressed(Input.Keys.ENTER)) {

@@ -28,7 +28,10 @@ public class Juego {
                     }
                 }
             break;
-            //PARA SABER EL PJ QUE SE SELECCIONA
+            case "jugada":
+                System.out.println("llega la carta");
+                //aqui habria que enviar al rival un mensaje.jugadaOk() que de los datos de la jugada que ha hecho el otro
+                break;
 
         }
 //        else if (mensaje.action.equals("JUGADA")){

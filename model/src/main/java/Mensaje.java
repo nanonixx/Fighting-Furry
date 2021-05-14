@@ -38,6 +38,21 @@ public class Mensaje {
         return mensaje;
     }
 
+    //el mensaje de la jugada con la carta a procesar
+    public static Mensaje jugada(Carta carta){
+        Mensaje mensaje = new Mensaje();
+        mensaje.action = "jugada";
+        mensaje.carta = carta;
+        return mensaje;
+    }
+
+    public static Mensaje jugadaOk(){
+        Mensaje mensaje = new Mensaje();
+        mensaje.action = "jugadaOk";
+
+        return mensaje;
+    }
+
 
     public Mensaje(){}
 
