@@ -28,8 +28,8 @@ public class Carta extends MyActor {
         //setSize(,);
         //setOrigin(Align.center);
 
-        //asignarSkinCarta(nombre);
-        animation = Assets.getAnimation("patadaPRUEBA", 10, Animation.PlayMode.LOOP);
+        asignarSkinCarta(nombre);
+        //animation = Assets.getAnimation("patadaPRUEBA", 10, Animation.PlayMode.LOOP);
 
 //        addListener(() -> Cosingas.renderizador.touched(Carta.this));
     }
@@ -64,7 +64,7 @@ public class Carta extends MyActor {
                 animation = Assets.getAnimation("bufido", 10, Animation.PlayMode.LOOP);
                 break;
             case "enAlerta":
-                animation = Assets.getAnimation("enAlerta", 10, Animation.PlayMode.LOOP);
+                animation = Assets.getAnimation("alertaMaxima", 10, Animation.PlayMode.LOOP);
                 break;
             case "ronroneo":
                 animation = Assets.getAnimation("ronroneo", 10, Animation.PlayMode.LOOP);
@@ -73,13 +73,13 @@ public class Carta extends MyActor {
                 animation = Assets.getAnimation("amasar", 10, Animation.PlayMode.LOOP);
                 break;
             case "canvi de lloc instantani":
-                animation = Assets.getAnimation("canviDeLlocInstantani", 10, Animation.PlayMode.LOOP);
+                animation = Assets.getAnimation("imagenReflejo", 10, Animation.PlayMode.LOOP);
                 break;
             case "kame":
                 animation = Assets.getAnimation("kame", 10, Animation.PlayMode.LOOP);
                 break;
             case "heehee":
-                animation = Assets.getAnimation("heehee", 10, Animation.PlayMode.LOOP);
+                animation = Assets.getAnimation("hehe", 10, Animation.PlayMode.LOOP);
                 break;
             case "antigravity lean":
                 animation = Assets.getAnimation("antiGravity", 10, Animation.PlayMode.LOOP);
@@ -94,7 +94,7 @@ public class Carta extends MyActor {
                 animation = Assets.getAnimation("autocracia", 10, Animation.PlayMode.LOOP);
                 break;
             case "pacto de acero":
-                animation = Assets.getAnimation("pactoDeAcero", 10, Animation.PlayMode.LOOP);
+                animation = Assets.getAnimation("pactoAcero", 10, Animation.PlayMode.LOOP);
                 break;
             case "patada voladora":
                 animation = Assets.getAnimation("patadaVoladora", 10, Animation.PlayMode.LOOP);
