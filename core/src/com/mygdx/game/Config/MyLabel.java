@@ -27,9 +27,11 @@ public class MyLabel extends Label {
         getStyle().font.getData().setScale(0.5f);
     }
 
-    public MyLabel(CharSequence charSequence, Color color){
+    public MyLabel(CharSequence charSequence, Color color, float x, float y){
         this(color);
         setText(charSequence);
+        setPosition(x, y);
+        setFontScale(3f);
     }
 
     public MyLabel(float x, float y, Color color){

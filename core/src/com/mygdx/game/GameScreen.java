@@ -2,9 +2,12 @@ package com.mygdx.game;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.mygdx.game.Config.BaseScreen;
+import com.mygdx.game.Config.MyLabel;
 import com.mygdx.game.Objects.Gatito;
 
 public class GameScreen extends BaseScreen {
@@ -14,6 +17,9 @@ public class GameScreen extends BaseScreen {
     }
     Gatito P1 = new Gatito(300, 270, false, Cosingas.renderizador.pj1);
     Gatito P2 = new Gatito(750, 270, true, Cosingas.renderizador.pj2);
+
+    MyLabel saludP1 = new MyLabel(String.valueOf(P1.salud), Color.BLACK, 100f, 600f);
+    MyLabel saludP2 = new MyLabel(String.valueOf(P2.salud), Color.BLACK, 800f, 600f);
 
 //    private Texture background = new Texture("pui.png");
     private Texture background = new Texture("fondo_desierto.png");
@@ -25,6 +31,8 @@ public class GameScreen extends BaseScreen {
         System.out.println(Cosingas.renderizador.pj2);
         stage.addActor(P1);
         stage.addActor(P2);
+        stage.addActor(saludP1);
+        stage.addActor(saludP2); //no se si hay que meter en bucle
 
         System.out.println(Cosingas.renderizador.mano.cartaList.get(0));
 
@@ -88,6 +96,7 @@ public class GameScreen extends BaseScreen {
 
         stage.getBatch().begin();
         stage.getBatch().draw(background, 0, 0);
+
         stage.getBatch().end();
         stage.act(delta);
         stage.draw();
