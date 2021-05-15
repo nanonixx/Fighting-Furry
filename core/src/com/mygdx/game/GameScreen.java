@@ -92,9 +92,11 @@ public class GameScreen extends BaseScreen {
 
         //para poner la carta que juega el rival
         if(Cosingas.renderizador.jugadaOk){
+
+
             stage.addActor(Cosingas.renderizador.carta);
             Cosingas.renderizador.carta.mostrarCarta(560, 296);
-
+            Cosingas.juego.procesarJugada(Cosingas.renderizador.carta, P1, P2);
             Cosingas.renderizador.jugadaOk = false;
 
         }

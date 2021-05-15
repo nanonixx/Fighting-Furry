@@ -126,4 +126,78 @@ public class Juego {
         Cosingas.cliente.enviar(Mensaje.ready(pjSeleccionado));
     }
 
+    public void procesarJugada(Carta carta, Gatito destPlayer, Gatito sourcePlayer) {
+        int damages;
+
+        sourcePlayer.cristales -= carta.coste_mana;
+
+        switch(carta.tipo){
+            case "ataque":
+                if(destPlayer.defensa == 0)
+                    destPlayer.salud -= carta.valor;
+                else{
+                    if(destPlayer.defensa - carta.valor >= 0)
+                        destPlayer.defensa -= carta.valor;
+                    else{
+                        damages = carta.valor - destPlayer.defensa;
+                        destPlayer.defensa = 0;
+                        destPlayer.salud -= damages;
+
+                    }
+                }
+                break;
+            case "defensa":
+                sourcePlayer.defensa += carta.valor;
+                break;
+            case "curacion":
+                if(sourcePlayer.salud + carta.valor <= 100)
+                    sourcePlayer.salud += carta.valor;
+                else
+                    sourcePlayer.salud = 100;
+                break;
+            case "especial":
+                switch(carta.nombre){
+                    case "canvi de lloc instantani":
+                        //TODO
+                        break;
+
+                    case "heehee":
+                        //TODO
+                        break;
+
+                    case "antigravity lean":
+                        sourcePlayer.atBoost = carta.valor;
+                        break;
+
+                    case "cabezazo":
+                        destPlayer.atBoost = carta.valor;
+                        //comprobar que si el ataque es menos de 5 no
+                        // le suba vida al otro, se queda en 0
+                        break;
+
+                    case "pisoton":
+                        //TODO
+                        break;
+
+                    case "pacto de acero":
+                        sourcePlayer.defBoost = carta.valor;
+                        break;
+
+                    case "furia oriental":
+                        destPlayer.salud -= 3 + Math.random() * 5;
+                        //entre 3 y 5 de damage
+                        break;
+
+                    case "vomito radioactivo":
+                        destPlayer.envenenado = true;
+                        break;
+
+                    case "polonio o plomo":
+                        if (destPlayer.envenenado) destPlayer.salud -= 25;
+                        else destPlayer.salud -= carta.valor;
+                        break;
+                }
+                break;
+        }
+    }
 }

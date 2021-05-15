@@ -171,14 +171,14 @@ kick
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 11
+  index: 0
 kick
   rotate: false
   xy: 824, 515
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 0
+  index: 11
 idlehehe
   rotate: false
   xy: 325, 85
@@ -297,14 +297,14 @@ patadavoladora
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 0
+  index: 10
 patadavoladora
   rotate: false
   xy: 533, 85
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 10
+  index: 0
 lee
   rotate: false
   xy: 876, 733
