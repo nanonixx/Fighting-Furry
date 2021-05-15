@@ -219,33 +219,4 @@ public class Juego {
         }
     }
 
-    public void hacerTurno(Gatito P1, Gatito P2, BaseImageButton endTurn) {
-        Cosingas.renderizador.mano.cartaList.get(0).addListener(() -> {
-            if(P1.cristales >= Cosingas.renderizador.mano.cartaList.get(0).coste_mana){
-                P1.cristales -= Cosingas.renderizador.mano.cartaList.get(0).coste_mana;
-                Cosingas.renderizador.touched(Cosingas.renderizador.mano.cartaList.get(0), P1, P2);
-            }
-
-        });
-        Cosingas.renderizador.mano.cartaList.get(1).addListener(() -> {
-            if(P1.cristales >= Cosingas.renderizador.mano.cartaList.get(1).coste_mana){
-                P1.cristales -= Cosingas.renderizador.mano.cartaList.get(1).coste_mana;
-                Cosingas.renderizador.touched(Cosingas.renderizador.mano.cartaList.get(1), P1, P2);
-            }
-        });
-        Cosingas.renderizador.mano.cartaList.get(2).addListener(() -> {
-            if(P1.cristales >= Cosingas.renderizador.mano.cartaList.get(2).coste_mana) {
-                P1.cristales -= Cosingas.renderizador.mano.cartaList.get(2).coste_mana;
-                Cosingas.renderizador.touched(Cosingas.renderizador.mano.cartaList.get(2), P1, P2);
-            }
-        });
-
-        endTurn.addListener(new InputListener() {
-            @Override
-            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                Cosingas.juego.changeTurn();
-                return super.touchDown(event, x, y, pointer, button);
-            }
-        });
-    }
 }
