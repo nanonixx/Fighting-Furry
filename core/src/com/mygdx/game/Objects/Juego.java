@@ -26,7 +26,8 @@ public class Juego {
                 Cosingas.renderizador.torn = mensaje.turno;
                 break;
             case "jugadaOk":
-                //Cosingas.renderizador.jugadaOk();
+                System.out.println("\n"+mensaje.carta.nombre);
+                Cosingas.renderizador.jugadaOk(mensaje.carta);
                 break;
             default:
                 System.out.println(mensaje.action);

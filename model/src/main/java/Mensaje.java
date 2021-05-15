@@ -46,8 +46,9 @@ public class Mensaje {
         return mensaje;
     }
 
-    public static Mensaje jugadaOk(){
+    public static Mensaje jugadaOk(Carta carta){
         Mensaje mensaje = new Mensaje();
+        mensaje.carta = carta;
         mensaje.action = "jugadaOk";
 
         return mensaje;

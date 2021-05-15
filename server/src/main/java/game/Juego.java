@@ -30,6 +30,11 @@ public class Juego {
             break;
             case "jugada":
                 System.out.println("llega la carta");
+                if(cliente.equals(partida.jugador1.session)){
+                    partida.jugador2.send(Mensaje.jugadaOk(mensaje.carta));
+                } else{
+                    partida.jugador1.send(Mensaje.jugadaOk(mensaje.carta));
+                }
                 //aqui habria que enviar al rival un mensaje.jugadaOk() que de los datos de la jugada que ha hecho el otro
                 break;
 

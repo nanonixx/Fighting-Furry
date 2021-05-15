@@ -5,6 +5,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.mygdx.game.Config.MyLabel;
 import com.mygdx.game.Cosingas;
 import com.mygdx.game.MyGdxGame;
+import main.java.Mensaje;
 
 public class Renderizador {
 
@@ -15,6 +16,9 @@ public class Renderizador {
     public String pj1;
     public String pj2;
     public boolean torn;
+
+    public Carta carta;
+    public boolean jugadaOk = false;
 
     public Renderizador(MyGdxGame game) {
         this.game = game;
@@ -48,4 +52,8 @@ public class Renderizador {
         Cosingas.juego.jugarCarta(carta, propio, rival);
     }
 
+    public void jugadaOk(Mensaje.Carta carta) {
+        this.carta = new Carta(carta.nombre, carta.descripcion, carta.costeMana, carta.valor, carta.tipo);
+        jugadaOk = true;
+    }
 }

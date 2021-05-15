@@ -2,6 +2,7 @@ package com.mygdx.game.Objects;
 
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.math.Interpolation;
+import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.mygdx.game.Assets;
 import com.mygdx.game.Config.MyActor;
@@ -50,7 +51,16 @@ public class Carta extends MyActor {
         return new Mensaje.Carta(nombre, descripcion, coste_mana, valor, tipo);
     }
 
-    public void accionRepartir(){}
+    public void mostrarCarta(float x, float y){
+        setPosition(x,y);
+        addAction(
+                Actions.sequence(
+                        Actions.fadeOut(1f),
+                        Actions.hide()
+                )
+        );
+
+    }
 
     public void lanzarCarta(float x, float y){
         addAction(

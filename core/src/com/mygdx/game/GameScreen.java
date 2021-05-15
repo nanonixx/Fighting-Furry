@@ -51,18 +51,6 @@ public class GameScreen extends BaseScreen {
 
         }
 
-//        while(!Cosingas.renderizador.acabat){
-            /*
-            si es el turno del cliente
-                hacer jugada
-                pasarla al server
-                el server
-             */
-//        }
-//        onclik(){
-//            Cosigncas.juego.jugar(carta);
-//        }
-
      //  no borrar :
 //        gatito.addAction(Actions.moveBy(30, 30, 1));
 //        gatito.addAction(Actions.rotateBy(360 * 10, 0.2f));
@@ -101,6 +89,15 @@ public class GameScreen extends BaseScreen {
         saludP2.setText(P2.salud);
         manaP1.setText(P1.cristales);
         manaP2.setText(P2.cristales);
+
+        //para poner la carta que juega el rival
+        if(Cosingas.renderizador.jugadaOk){
+            stage.addActor(Cosingas.renderizador.carta);
+            Cosingas.renderizador.carta.mostrarCarta(560, 296);
+
+            Cosingas.renderizador.jugadaOk = false;
+
+        }
         //Testingo P1:
         if(Gdx.input.isKeyPressed(Input.Keys.ENTER)) {
            P1.getMove().kick(P1);
