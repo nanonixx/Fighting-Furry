@@ -23,8 +23,17 @@ public class Juego {
                     if(!partida.faltaJugador()) {
                         partida.repartirCartasIniciales();
 
-                        partida.jugador1.send(Mensaje.start(partida.jugador1.gato, partida.jugador2.gato, partida.jugador1.mano.toMensaje(), partida.turnoBool));
-                        partida.jugador2.send(Mensaje.start(partida.jugador2.gato, partida.jugador1.gato, partida.jugador2.mano.toMensaje(), partida.turnoBool));
+                        partida.jugador1.send(Mensaje.start(partida.jugador1.gato, partida.jugador2.gato, partida.jugador1.mano.toMensaje()));
+                        partida.jugador2.send(Mensaje.start(partida.jugador2.gato, partida.jugador1.gato, partida.jugador2.mano.toMensaje()));
+
+                        if(partida.turnoBool == partida.jugador1.torn){
+                            partida.jugador1.send(Mensaje.setTurno(true));
+                            partida.jugador2.send(Mensaje.setTurno(false));
+                        }
+                        else{
+                            partida.jugador2.send(Mensaje.setTurno(true));
+                            partida.jugador1.send(Mensaje.setTurno(false));
+                        }
                     }
                 }
             break;
@@ -36,6 +45,18 @@ public class Juego {
                     partida.jugador1.send(Mensaje.jugadaOk(mensaje.carta));
                 }
                 //aqui habria que enviar al rival un mensaje.jugadaOk() que de los datos de la jugada que ha hecho el otro
+                break;
+
+            case "cambiarTurno":
+                partida.turnoBool = !partida.turnoBool;
+                if(partida.turnoBool == partida.jugador1.torn){
+                    partida.jugador1.send(Mensaje.setTurno(true));
+                    partida.jugador2.send(Mensaje.setTurno(false));
+                }
+                else{
+                    partida.jugador2.send(Mensaje.setTurno(true));
+                    partida.jugador1.send(Mensaje.setTurno(false));
+                }
                 break;
 
         }

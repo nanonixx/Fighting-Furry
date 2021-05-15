@@ -227,7 +227,7 @@ kick
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
-  index: 6
+  index: 7
 kick
   rotate: false
   xy: 2, 2
@@ -241,7 +241,7 @@ kick
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
-  index: 7
+  index: 6
 kick
   rotate: false
   xy: 772, 651
@@ -493,14 +493,14 @@ punching
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 16
+  index: 10
 punching
   rotate: false
   xy: 876, 445
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 10
+  index: 16
 punching
   rotate: false
   xy: 618, 153

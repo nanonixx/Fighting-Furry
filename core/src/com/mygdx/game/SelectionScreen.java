@@ -21,6 +21,7 @@ public class SelectionScreen extends BaseScreen {
     Image pj = new Image();
     Image cartel = new Image();
     private String pjSeleccionado = null;
+    String mantenerSeleccionado;
 
     public SelectionScreen(MyGdxGame game) {
         super(game);
@@ -88,6 +89,7 @@ public class SelectionScreen extends BaseScreen {
                 unselectPjs(gokuFrame, furrieFrame, leeFrame, jacksonFrame, pateFrame, pussoliniFrame);
                 selected = selectPj(gokuFrame, "goku");
             }
+            mantenerSeleccionado = "gokuitot.png";
         });
         furrieFrame.onClick(() -> {
             if (!selected) {
@@ -97,6 +99,7 @@ public class SelectionScreen extends BaseScreen {
                 unselectPjs(gokuFrame, furrieFrame, leeFrame, jacksonFrame, pateFrame, pussoliniFrame);
                 selected = selectPj(furrieFrame, "furrie");
             }
+            mantenerSeleccionado = "curie.png";
         });
         leeFrame.onClick(() -> {
             if (!selected) {
@@ -135,13 +138,13 @@ public class SelectionScreen extends BaseScreen {
             }
         });
 
+
         stage.addActor(gokuFrame);
         stage.addActor(furrieFrame);
         stage.addActor(leeFrame);
         stage.addActor(jacksonFrame);
         stage.addActor(pateFrame);
         stage.addActor(pussoliniFrame);
-
 
     }
 

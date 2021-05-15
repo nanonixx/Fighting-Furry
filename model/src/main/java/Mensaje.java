@@ -1,5 +1,7 @@
 package main.java;
 
+import javafx.scene.input.Mnemonic;
+
 public class Mensaje {
     public String action;
     public boolean turno;
@@ -28,12 +30,11 @@ public class Mensaje {
         return mensaje;
     }
 
-    public static Mensaje start(String gato, String gato2, Mano mano, boolean turnoBool) {
+    public static Mensaje start(String gato, String gato2, Mano mano) {
         Mensaje mensaje = new Mensaje();
         mensaje.action = "start";
         mensaje.gato = gato;
         mensaje.gato2 = gato2;
-        mensaje.turno = turnoBool;
         mensaje.mano = mano;
         return mensaje;
     }
@@ -54,7 +55,18 @@ public class Mensaje {
         return mensaje;
     }
 
+    public static Mensaje setTurno(boolean torn){
+        Mensaje mensaje = new Mensaje();
+        mensaje.action = "turno";
+        mensaje.turno = torn;
+        return mensaje;
+    }
 
+    public static Mensaje cambiarTurno(){
+        Mensaje mensaje = new Mensaje();
+        mensaje.action = "cambiarTurno";
+        return mensaje;
+    }
     public Mensaje(){}
 
 

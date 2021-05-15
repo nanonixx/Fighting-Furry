@@ -31,6 +31,16 @@ public class BaseImageButton extends ImageButton {
         });
     }
 
+    public void onExit(final Callback callback){
+        addListener(new InputListener(){
+            @Override
+            public void enter(InputEvent event, float x, float y, int pointer, Actor fromActor) {
+                super.exit(event, x, y, pointer, fromActor);
+                callback.call();
+            }
+        });
+    }
+
     public void onClick(Callback callback){
         addListener(new InputListener(){
             @Override
