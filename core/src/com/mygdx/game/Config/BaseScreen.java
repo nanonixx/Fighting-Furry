@@ -8,6 +8,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.mygdx.game.MyGdxGame;
+import main.java.Mensaje;
 
 public class BaseScreen implements Screen {
     public final MyGdxGame game;
@@ -69,4 +70,6 @@ public class BaseScreen implements Screen {
     void setScreen(BaseScreen screen) {
         game.setScreen(screen);
     }
+
+    public void mensaje(Mensaje mensaje) {}
 }

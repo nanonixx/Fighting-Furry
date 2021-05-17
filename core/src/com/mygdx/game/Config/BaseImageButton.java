@@ -7,6 +7,8 @@ import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 
 public class BaseImageButton extends ImageButton {
+    private InputListener inputListener;
+
     public interface OnClick {
         void onClick();
     }
@@ -42,13 +44,22 @@ public class BaseImageButton extends ImageButton {
     }
 
     public void onClick(Callback callback){
-        addListener(new InputListener(){
+        inputListener = new InputListener(){
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
                 callback.call();
                 return true;
             }
-        });
+        };
+
+        addListener(inputListener);
+    }
+
+    public void removeListener(){
+        if(inputListener != null) {
+            removeListener(inputListener);
+            inputListener = null;
+        }
     }
 
 

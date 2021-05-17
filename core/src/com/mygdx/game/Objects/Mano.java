@@ -26,7 +26,7 @@ public class Mano extends MyActor {
         return new Mensaje.Mano(cartaList.stream().map(Carta::toMensaje).toArray(Mensaje.Carta[]::new));
     }
 
-    static Mano fromMensaje(Mensaje.Mano mano){
+    public static Mano fromMensaje(Mensaje.Mano mano){
         return new Mano(Arrays.stream(mano.cartaList).map(Carta::fromMensaje).collect(Collectors.toList()));
     }
     //

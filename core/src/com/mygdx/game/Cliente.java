@@ -1,5 +1,6 @@
 package com.mygdx.game;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.utils.Json;
 import com.github.czyzby.websocket.AbstractWebSocketListener;
 import com.github.czyzby.websocket.WebSocket;
@@ -27,13 +28,13 @@ public class Cliente {
 
             @Override
             public boolean onClose(final WebSocket webSocket, final WebSocketCloseCode code, final String reason) {
-                Cosingas.juego.desconectar(code, reason);
+//                Cosingas.juego.desconectar(code, reason);
                 return FULLY_HANDLED;
             }
 
             @Override
             public boolean onMessage(final WebSocket webSocket, final String packet) {
-                Cosingas.juego.mensaje(json.fromJson(Mensaje.class, packet));
+                Gdx.app.postRunnable(() -> Cosingas.juego.mensaje(json.fromJson(Mensaje.class, packet)));
                 return FULLY_HANDLED;
             }
 

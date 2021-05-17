@@ -13,6 +13,7 @@ public class MyActor extends Actor {
     public int WIDTH, HEIGHT;
     public boolean flipped;
     public float dx, dy;
+    private InputListener inputListener;
 
     public interface MyActorListener {
         void call();
@@ -39,13 +40,21 @@ public class MyActor extends Actor {
                 getX()+dx+pos, getY() + dy, getOriginX(), getOriginY(), getWidth() * fp, getHeight(), getScaleX(), getScaleY(), getRotation());
     }
 
-    public void addListener(MyActorListener listener) {
-        addListener(new InputListener(){
+    public void setListener(MyActorListener listener) {
+        inputListener = new InputListener(){
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
                 listener.call();
                 return false;
             }
-        });
+        };
+        addListener(inputListener);
+    }
+
+    public void removeListener(){
+        if(inputListener != null) {
+            removeListener(inputListener);
+            inputListener = null;
+        }
     }
 }

@@ -1,6 +1,6 @@
 package main.java;
 
-import javafx.scene.input.Mnemonic;
+
 
 public class Mensaje {
     public String action;

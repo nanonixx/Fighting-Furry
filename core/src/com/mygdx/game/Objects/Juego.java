@@ -1,44 +1,22 @@
 package com.mygdx.game.Objects;
 
-import com.badlogic.gdx.scenes.scene2d.InputEvent;
-import com.badlogic.gdx.scenes.scene2d.InputListener;
-import com.badlogic.gdx.utils.compression.lzma.Base;
-import com.github.czyzby.websocket.data.WebSocketCloseCode;
-import com.mygdx.game.Config.BaseImageButton;
 import com.mygdx.game.Cosingas;
+import com.mygdx.game.MyGdxGame;
 import main.java.Mensaje;
 
 public class Juego {
+    public Gatito P1, P2;
+    public Mano mano;
+    public boolean torn;
 
+    private final MyGdxGame game;
 
-//    public void alConectar(){
-//        //Cosingas.renderizador.mostrarMensaje("CONECTADO");
-//        Cosingas.cliente.enviar(new Mensaje("READY"));
-//    }
-
-    public void desconectar(WebSocketCloseCode code, String reason){}
+    public Juego(MyGdxGame game) {
+        this.game = game;
+    }
 
     public void mensaje(Mensaje mensaje){
-        switch (mensaje.action) {
-            case "ready_ok":
-                Cosingas.renderizador.mostrarMensaje("CONECTADO");
-                break;
-            case "start":
-                Cosingas.renderizador.irAPantallaJuego();
-                Cosingas.renderizador.pjSeleccionado(mensaje.gato, mensaje.gato2);
-                Cosingas.renderizador.ponerCartas(Mano.fromMensaje(mensaje.mano));
-                Cosingas.renderizador.torn = mensaje.turno;
-                break;
-            case "turno":
-                Cosingas.renderizador.torn = mensaje.turno;
-                break;
-            case "jugadaOk":
-                System.out.println("\n"+mensaje.carta.nombre);
-                Cosingas.renderizador.jugadaOk(mensaje.carta);
-                break;
-            default:
-                System.out.println(mensaje.action);
-        }
+        game.getBaseScreen().mensaje(mensaje);
     }
 
     public void jugarCarta(Carta carta, Gatito activo, Gatito rival){
@@ -54,7 +32,6 @@ public class Juego {
                         damages = carta.valor - rival.defensa;
                         rival.defensa = 0;
                         rival.salud -= damages;
-
                     }
                 }
                 break;
@@ -136,13 +113,6 @@ public class Juego {
     public void changeTurn() {
         Cosingas.cliente.enviar(Mensaje.cambiarTurno());
     }
-
-
-
-
-
-
-
 
     public void procesarJugada(Carta carta, Gatito destPlayer, Gatito sourcePlayer) {
         int damages;
