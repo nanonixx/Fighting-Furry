@@ -28,6 +28,7 @@ public class GameScreen extends BaseScreen {
     MyLabel saludP2 = new MyLabel("", Color.BLACK, 1050f, 600f);
     MyLabel manaP1 = new MyLabel("", Color.BLACK, 100f, 550f);
     MyLabel manaP2 = new MyLabel("", Color.BLACK, 1050f, 550f);
+    MyLabel mostrarTurno = new MyLabel("",Color.BLACK, 574,616);
     BaseImageButton endTurn = new BaseImageButton("endTurn.png", "endTurnOver.png", 154, 49, 1067, 86);
 
     public Carta carta;
@@ -57,6 +58,7 @@ public class GameScreen extends BaseScreen {
         game.getBaseScreen().stage.addActor(manaP1);
         game.getBaseScreen().stage.addActor(manaP2);
         game.getBaseScreen().stage.addActor(endTurn);
+        game.getBaseScreen().stage.addActor(mostrarTurno);
 
 
     }
@@ -66,10 +68,15 @@ public class GameScreen extends BaseScreen {
         switch (mensaje.action) {
             case "turno":
                 if(mensaje.turno) {
+                    Cosingas.juego.P1.cristales = 3;
+                    mostrarTurno.setText("TU TURNO");
                     activarListeners();
                 } else {
+                    Cosingas.juego.P2.cristales = 3;
+                    mostrarTurno.setText("");
                     desactivarListeners();
                 }
+                mostrarSaludMana();
                 break;
             case "jugadaOk":
                 System.out.println("\n"+mensaje.carta.nombre);
@@ -108,6 +115,7 @@ public class GameScreen extends BaseScreen {
         carta.lanzarCarta(560,296);
         Cosingas.juego.mano.cartaList.remove(carta);
         Cosingas.juego.jugarCarta(carta, propio, rival);
+        mostrarSaludMana();
     }
 
     void mostrarSaludMana(){
@@ -119,6 +127,8 @@ public class GameScreen extends BaseScreen {
 
     public void jugadaOk(Mensaje.Carta carta) {
         this.carta = new Carta(carta.nombre, carta.descripcion, carta.costeMana, carta.valor, carta.tipo);
+        Cosingas.juego.procesarJugada(this.carta, Cosingas.juego.P1, Cosingas.juego.P2);
+        mostrarSaludMana();
         jugadaOk = true;
     }
 

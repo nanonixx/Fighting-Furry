@@ -60,11 +60,6 @@ public class Juego {
                 break;
 
         }
-//        else if (mensaje.action.equals("JUGADA")){
-//            partida.hacerJugada(cliente, new Carta(mensaje.carta));
-//            partida.jugador1.send(new Mensaje("VIDAS", new int[]{partida.jugador1.vida, partida.jugador2.vida}));
-//            partida.jugador2.send(new Mensaje("VIDAS", new int[]{partida.jugador1.vida, partida.jugador2.vida}));
-//        }
     }
 }
 
