@@ -6,6 +6,8 @@ El mazo de cartas constará de alrededor 30 cartas idénticas para todas las cla
 Cada carta al ser usada consumirá X número de maná/magia.
 Usándolas aplicaremos mejoras a nuestro personaje y trataremos de bajar la vida de nuestro rival a 0. 
 
+webinga: https://nanonixx.github.io/Fighting-Furry
+
 <br>
 
 <p align="center">
