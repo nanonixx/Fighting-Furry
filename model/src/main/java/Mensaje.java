@@ -62,6 +62,12 @@ public class Mensaje {
         return mensaje;
     }
 
+    public static Mensaje refillMano(Mano mano){
+        Mensaje mensaje = new Mensaje();
+        mensaje.action = "refillCartas";
+        mensaje.mano = mano;
+        return mensaje;
+    }
     public static Mensaje cambiarTurno(){
         Mensaje mensaje = new Mensaje();
         mensaje.action = "cambiarTurno";

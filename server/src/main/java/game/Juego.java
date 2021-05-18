@@ -40,8 +40,10 @@ public class Juego {
             case "jugada":
                 System.out.println("llega la carta");
                 if(cliente.equals(partida.jugador1.session)){
+                    partida.jugador1.mano.cartaList.removeIf(c -> c.nombre.equals(mensaje.carta.nombre));
                     partida.jugador2.send(Mensaje.jugadaOk(mensaje.carta));
                 } else{
+                    partida.jugador2.mano.cartaList.removeIf(c -> c.nombre.equals(mensaje.carta.nombre));
                     partida.jugador1.send(Mensaje.jugadaOk(mensaje.carta));
                 }
                 //aqui habria que enviar al rival un mensaje.jugadaOk() que de los datos de la jugada que ha hecho el otro
@@ -50,10 +52,18 @@ public class Juego {
             case "cambiarTurno":
                 partida.turnoBool = !partida.turnoBool;
                 if(partida.turnoBool == partida.jugador1.torn){
+                    for (int i = partida.jugador1.mano.cartaList.size(); i < 3; i++) {
+                        partida.jugador1.mano.cartaList.add(partida.jugador1.mazo.robar());
+                    }
+                    partida.jugador1.send(Mensaje.refillMano(partida.jugador1.mano.toMensaje()));
                     partida.jugador1.send(Mensaje.setTurno(true));
                     partida.jugador2.send(Mensaje.setTurno(false));
                 }
                 else{
+                    for (int i = partida.jugador2.mano.cartaList.size(); i < 3; i++) {
+                        partida.jugador2.mano.cartaList.add(partida.jugador2.mazo.robar());
+                    }
+                    partida.jugador2.send(Mensaje.refillMano(partida.jugador2.mano.toMensaje()));
                     partida.jugador2.send(Mensaje.setTurno(true));
                     partida.jugador1.send(Mensaje.setTurno(false));
                 }

@@ -12,6 +12,7 @@ import com.mygdx.game.Config.MyActor;
 import com.mygdx.game.Config.MyLabel;
 import com.mygdx.game.Objects.Carta;
 import com.mygdx.game.Objects.Gatito;
+import com.mygdx.game.Objects.Mano;
 import main.java.Mensaje;
 
 public class GameScreen extends BaseScreen {
@@ -38,14 +39,7 @@ public class GameScreen extends BaseScreen {
 
     @Override
     public void show() {
-        for (int i = 0; i <3 ; i++) {
-            if(i == 0) Cosingas.juego.mano.cartaList.get(i).setPosition(Cosingas.juego.mano.dx,Cosingas.juego.mano.dy);
-            else if(i == 1) Cosingas.juego.mano.cartaList.get(i).setPosition(Cosingas.juego.mano.dx+250,Cosingas.juego.mano.dy);
-            else Cosingas.juego.mano.cartaList.get(i).setPosition(Cosingas.juego.mano.dx+250*2,Cosingas.juego.mano.dy);
-
-            stage.addActor(Cosingas.juego.mano.cartaList.get(i));
-            System.out.println(Cosingas.juego.mano.cartaList.get(i).nombre);
-        }
+        mostrarCartas();
 
         //  no borrar :
 //        gatito.addAction(Actions.moveBy(30, 30, 1));
@@ -83,6 +77,11 @@ public class GameScreen extends BaseScreen {
                 jugadaOk(mensaje.carta);
                 mostrarSaludMana();
                 break;
+            case "refillCartas":
+                quitarCartas();
+                Cosingas.juego.mano = Mano.fromMensaje(mensaje.mano);
+                mostrarCartas();
+                break;
             default:
                 System.out.println(mensaje.action);
         }
@@ -109,6 +108,24 @@ public class GameScreen extends BaseScreen {
     private void desactivarListeners() {
         Cosingas.juego.mano.cartaList.forEach(MyActor::removeListener);
         endTurn.removeListener();
+    }
+
+    public void mostrarCartas(){
+
+        for (int i = 0; i <3 ; i++) {
+            if(i == 0) Cosingas.juego.mano.cartaList.get(i).setPosition(Cosingas.juego.mano.dx,Cosingas.juego.mano.dy);
+            else if(i == 1) Cosingas.juego.mano.cartaList.get(i).setPosition(Cosingas.juego.mano.dx+250,Cosingas.juego.mano.dy);
+            else Cosingas.juego.mano.cartaList.get(i).setPosition(Cosingas.juego.mano.dx+250*2,Cosingas.juego.mano.dy);
+
+            stage.addActor(Cosingas.juego.mano.cartaList.get(i));
+            System.out.println(Cosingas.juego.mano.cartaList.get(i).nombre);
+        }
+    }
+
+    public void quitarCartas(){
+        for (Carta c: Cosingas.juego.mano.cartaList) {
+            c.remove();
+        }
     }
 
     public void touched(Carta carta, Gatito propio, Gatito rival) {
