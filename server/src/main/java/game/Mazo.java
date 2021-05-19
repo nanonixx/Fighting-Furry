@@ -35,7 +35,7 @@ public class Mazo {
             case "jackson":
                 cartaList.addAll(Arrays.asList(
                         new Carta("heehee","", 0, 3, "especial"),
-                        new Carta("antigravity lean","", 5, 1, "especial")
+                        new Carta("antigravity lean","", 5, 2, "especial")
                 ));
                 break;
             case "pate":
