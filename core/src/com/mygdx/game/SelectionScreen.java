@@ -1,5 +1,7 @@
 package com.mygdx.game;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
@@ -10,6 +12,7 @@ import com.mygdx.game.Config.BaseImageButton;
 import com.mygdx.game.Config.BaseScreen;
 import com.mygdx.game.Config.MyStage;
 import com.mygdx.game.Objects.Gatito;
+import com.mygdx.game.Objects.Juego;
 import com.mygdx.game.Objects.Mano;
 import main.java.Mensaje;
 
@@ -22,6 +25,7 @@ public class SelectionScreen extends BaseScreen {
     Image cartel = new Image();
     private String pjSeleccionado = null;
     String mantenerSeleccionado;
+    Sound selectSound;
 
     public SelectionScreen(MyGdxGame game) {
         super(game);
@@ -50,6 +54,8 @@ public class SelectionScreen extends BaseScreen {
 
         background = new Texture("fondaso.png");
 
+        selectSound = Gdx.audio.newSound(Gdx.files.internal("sounds/meow_03.wav"));
+
         BaseImageButton buttonReady = new BaseImageButton("select.png", "select_botonado.png", 190, 90, 805, 54);
         stage.addActor(buttonReady);
 
@@ -58,6 +64,7 @@ public class SelectionScreen extends BaseScreen {
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
                 if(pjSeleccionado != null){
+                    selectSound.play(1.0f);
                     Cosingas.juego.ready(pjSeleccionado);
                 }
 //                setScreen(new GameScreen(game));
@@ -79,10 +86,14 @@ public class SelectionScreen extends BaseScreen {
         furrieFrame.onEnter(() -> showPj(stage, "curie.png"));
 
         BaseImageButton leeFrame = new BaseImageButton("leeSelection.png", "leeSelected.png", 175, 175, 1050, 420);
-        leeFrame.onEnter(() -> showPj(stage, "miaulee.png"));
+        leeFrame.onEnter(() -> {
+            showPj(stage, "miaulee.png");
+        });
 
         BaseImageButton jacksonFrame = new BaseImageButton("miauchaelSelection.png", "miauchaelSelected.png", 175, 175, 570, 212);
-        jacksonFrame.onEnter(() -> showPj(stage, "heeHEE.png"));
+        jacksonFrame.onEnter(() -> {
+            showPj(stage, "heeHEE.png");
+        });
 
         BaseImageButton pateFrame = new BaseImageButton("pateSelection.png", "pateSelected.png", 175, 175, 810, 212);
         pateFrame.onEnter(() -> {
