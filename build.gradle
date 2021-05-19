@@ -49,9 +49,14 @@ project(":desktop") {
         implementation project(":core")
         implementation "com.github.czyzby:gdx-websocket-common:$libVersion"
         api "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
-        api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+        implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
 
         implementation project(path: ':model')
+        implementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-armeabi"
+        implementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-armeabi-v7a"
+        implementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-arm64-v8a"
+        implementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86"
+        implementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86_64"
     }
 }
 
@@ -69,6 +74,8 @@ project(":core") {
         implementation "com.github.czyzby:gdx-websocket:$libVersion"
         implementation "com.google.gwt:gwt-servlet:2.9.0"
         implementation project(path: ':model')
+        implementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+
     }
 }
 
