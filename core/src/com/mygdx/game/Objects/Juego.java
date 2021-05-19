@@ -4,6 +4,7 @@ import com.mygdx.game.Cosingas;
 import com.mygdx.game.MyGdxGame;
 import main.java.Mensaje;
 
+import java.util.Iterator;
 import java.util.Random;
 
 public class Juego {
@@ -146,14 +147,15 @@ public class Juego {
                 case "especial":
                     switch(carta.nombre){
                         case "autocracia":
-                            for (Carta c:Cosingas.juego.mano.cartaList) {
+                            for (Iterator<Carta> iterator = Cosingas.juego.mano.cartaList.iterator(); iterator.hasNext(); ) {
+                                Carta c = iterator.next();
                                 c.remove();
-                                Cosingas.juego.mano.cartaList.remove(c);
+                                iterator.remove();
                             }
                             break;
 
                         case "heehee":
-                            //TODO
+                            P1.skipTurno = true;
                             break;
 
                         case "antigravity lean":

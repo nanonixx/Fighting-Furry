@@ -22,6 +22,7 @@ public class Gatito extends MyActor {
     public boolean envenenado = false;
     public String character;
     public boolean inmune = false;
+    public boolean skipTurno = false;
 
 
     public int defBoost = 0;

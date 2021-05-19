@@ -61,15 +61,21 @@ public class GameScreen extends BaseScreen {
     public void mensaje(Mensaje mensaje) {
         switch (mensaje.action) {
             case "turno":
-                if(mensaje.turno) {
-                    Cosingas.juego.P1.cristales = 3;
-                    mostrarTurno.setText("TU TURNO");
-                    activarListeners();
-                } else {
-                    Cosingas.juego.P2.cristales = 3;
-                    mostrarTurno.setText("");
-                    desactivarListeners();
+                if(!Cosingas.juego.P1.skipTurno){
+                    if(mensaje.turno) {
+                        Cosingas.juego.P1.cristales = 3;
+                        mostrarTurno.setText("TU TURNO");
+                        activarListeners();
+                    } else {
+                        Cosingas.juego.P2.cristales = 3;
+                        mostrarTurno.setText("");
+                        desactivarListeners();
+                    }
+                }else{
+                    Cosingas.juego.changeTurn();
+                    Cosingas.juego.P1.skipTurno = false;
                 }
+
                 mostrarSaludMana();
                 break;
             case "jugadaOk":
