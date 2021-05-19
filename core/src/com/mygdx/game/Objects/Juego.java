@@ -153,7 +153,7 @@ public class Juego {
                             break;
 
                         case "heehee":
-                            //TODO
+                            P1.skipTurno = true;
                             break;
 
                         case "antigravity lean":
