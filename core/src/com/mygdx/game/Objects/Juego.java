@@ -2,6 +2,7 @@ package com.mygdx.game.Objects;
 
 import com.mygdx.game.Cosingas;
 import com.mygdx.game.MyGdxGame;
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import main.java.Mensaje;
 
 import java.util.Iterator;
@@ -62,18 +63,19 @@ public class Juego {
                         break;
 
                     case "antigravity lean":
-                        activo.atBoost = carta.valor;
+                        activo.atBoost += carta.valor;
                         break;
 
                     case "cabezazo":
-                        rival.atBoost = carta.valor;
+                        rival.atBoost += carta.valor;
                         //comprobar que si el ataque es menos de 5 no
                         // le suba vida al otro, se queda en 0
                         break;
 
 
                     case "pacto de acero":
-                        activo.defBoost = carta.valor;
+                        activo.defensa += carta.valor;
+                        P1.turnoCount = 1;
                         break;
 
                     case "furia oriental":
@@ -119,6 +121,7 @@ public class Juego {
         Random random = new Random();
         Carta c1;
         sourcePlayer.cristales -= carta.coste_mana;
+        System.out.println("AVER AHORA "+carta.nombre);
         if(!P1.inmune){
             switch(carta.tipo){
                 case "ataque":
@@ -159,23 +162,25 @@ public class Juego {
                             break;
 
                         case "antigravity lean":
-                            sourcePlayer.atBoost = carta.valor;
+                            sourcePlayer.atBoost += carta.valor;
                             break;
 
                         case "cabezazo":
-                            destPlayer.atBoost = carta.valor;
+                            destPlayer.atBoost += carta.valor;
                             //comprobar que si el ataque es menos de 5 no
                             // le suba vida al otro, se queda en 0
                             break;
 
                         case "pisoton":
+                            System.out.println("pos sa tirao");
                             c1 = Cosingas.juego.mano.cartaList.get(random.nextInt(Cosingas.juego.mano.cartaList.size()));
                             c1.remove();
                             Cosingas.juego.mano.cartaList.remove(c1);
                             break;
 
                         case "pacto de acero":
-                            sourcePlayer.defBoost = carta.valor;
+                            sourcePlayer.defensa += carta.valor;
+                            P2.turnoCount = 1;
                             break;
 
                         case "furia oriental":

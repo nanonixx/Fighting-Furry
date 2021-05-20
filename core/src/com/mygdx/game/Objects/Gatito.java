@@ -23,6 +23,8 @@ public class Gatito extends MyActor {
     public String character;
     public boolean inmune = false;
     public boolean skipTurno = false;
+    public int turnoCount = 0;
+    public int turnoCountRival = 0;
 
 
     public int defBoost = 0;

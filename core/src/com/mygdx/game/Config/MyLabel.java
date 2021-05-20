@@ -11,7 +11,7 @@ public class MyLabel extends Label {
     static {
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("fonts/Pixeled.ttf"));
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
-        parameter.size = 20;
+        parameter.size = 10;
         sLabelStyle.font = generator.generateFont(parameter);
     }
 
@@ -36,7 +36,7 @@ public class MyLabel extends Label {
         this(color);
         setText(charSequence);
         setPosition(x, y);
-        setFontScale(3f);
+        setFontScale(2.5f);
     }
 
     public MyLabel(float x, float y, Color color){

@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.mygdx.game.Config.BaseImageButton;
 import com.mygdx.game.Config.BaseScreen;
 import com.mygdx.game.Config.MyActor;
@@ -24,11 +25,23 @@ public class GameScreen extends BaseScreen {
     //    private Texture background = new Texture("pui.png");
     private Texture background = new Texture("fondo_desierto.png");
     //    private Texture background = new Texture("yMLAGVx.gif");
+    Image saludright = new Image(new Texture("hud/salud_right.png"));
+    Image saludleft = new Image(new Texture("hud/salud_left.png"));
+    Image cristalright = new Image(new Texture("hud/cristal_right.png"));
+    Image cristalleft = new Image(new Texture("hud/cristal_left.png"));
+    Image defright = new Image(new Texture("hud/def_right.png"));
+    Image defleft = new Image(new Texture("hud/def_left.png"));
+    Image attackright = new Image(new Texture("hud/attackboost_right.png"));
+    Image attackleft = new Image(new Texture("hud/attackboost_left.png"));
 
-    MyLabel saludP1 = new MyLabel("", Color.BLACK, 100f, 600f);
-    MyLabel saludP2 = new MyLabel("", Color.BLACK, 1050f, 600f);
-    MyLabel manaP1 = new MyLabel("", Color.BLACK, 100f, 550f);
-    MyLabel manaP2 = new MyLabel("", Color.BLACK, 1050f, 550f);
+    MyLabel saludP1 = new MyLabel("", Color.BLACK, 143f, 646f);
+    MyLabel saludP2 = new MyLabel("", Color.BLACK, 1090f, 646f);
+    MyLabel manaP1 = new MyLabel("", Color.BLACK, 153f, 560f);
+    MyLabel manaP2 = new MyLabel("", Color.BLACK, 1100f, 560f);
+    MyLabel attack1 = new MyLabel("", Color.BLACK, 153f, 470f);
+    MyLabel attack2 = new MyLabel("", Color.BLACK, 1090f, 470f);
+    MyLabel def1 = new MyLabel("", Color.BLACK, 153f, 390f);
+    MyLabel def2 = new MyLabel("", Color.BLACK, 1090, 390f);
     MyLabel mostrarTurno = new MyLabel("",Color.BLACK, 574,616);
     BaseImageButton endTurn = new BaseImageButton("endturn.png", "endturn_botonado.png", 170, 80, 1050, 86);
 
@@ -51,6 +64,10 @@ public class GameScreen extends BaseScreen {
         game.getBaseScreen().stage.addActor(saludP2); //no se si hay que meter en bucle
         game.getBaseScreen().stage.addActor(manaP1);
         game.getBaseScreen().stage.addActor(manaP2);
+        game.getBaseScreen().stage.addActor(attack1);
+        game.getBaseScreen().stage.addActor(attack2);
+        game.getBaseScreen().stage.addActor(def1);
+        game.getBaseScreen().stage.addActor(def2);
         game.getBaseScreen().stage.addActor(endTurn);
         game.getBaseScreen().stage.addActor(mostrarTurno);
 
@@ -63,6 +80,20 @@ public class GameScreen extends BaseScreen {
             case "turno":
                 if(!Cosingas.juego.P1.skipTurno){
                     if(mensaje.turno) {
+                        if(Cosingas.juego.P1.turnoCount == 1){
+                            Cosingas.juego.P1.defensa += 3;
+                            Cosingas.juego.P1.turnoCount++;
+                        }else if(Cosingas.juego.P1.turnoCount == 2){
+                            Cosingas.juego.P1.defensa += 3;
+                            Cosingas.juego.P1.turnoCount = 0;
+                        }
+                        if(Cosingas.juego.P2.turnoCount == 1){
+                            Cosingas.juego.P2.defensa += 3;
+                            Cosingas.juego.P2.turnoCount++;
+                        }else if(Cosingas.juego.P2.turnoCount == 2){
+                            Cosingas.juego.P2.defensa += 3;
+                            Cosingas.juego.P2.turnoCount = 0;
+                        }
                         Cosingas.juego.P1.cristales = 3;
                         mostrarTurno.setText("TU TURNO");
                         activarListeners();
@@ -146,6 +177,10 @@ public class GameScreen extends BaseScreen {
         saludP2.setText(String.valueOf(Cosingas.juego.P2.salud));
         manaP1.setText(String.valueOf(Cosingas.juego.P1.cristales));
         manaP2.setText(String.valueOf(Cosingas.juego.P2.cristales));
+        attack1.setText(String.valueOf(Cosingas.juego.P1.atBoost));
+        attack2.setText(String.valueOf(Cosingas.juego.P2.atBoost));
+        def1.setText(String.valueOf(Cosingas.juego.P1.defensa));
+        def2.setText(String.valueOf(Cosingas.juego.P2.defensa));
     }
 
     public void jugadaOk(Mensaje.Carta carta) {
