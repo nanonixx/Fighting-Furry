@@ -1,5 +1,6 @@
 package com.mygdx.game;
 
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Texture;
 import com.mygdx.game.Config.BaseImageButton;
 import com.mygdx.game.Config.BaseScreen;
@@ -7,6 +8,8 @@ import com.mygdx.game.Config.BaseScreen;
 public class PantallaInicial extends BaseScreen {
 
     private Texture background;
+
+
     public PantallaInicial(MyGdxGame game) {
         super(game);
     }
