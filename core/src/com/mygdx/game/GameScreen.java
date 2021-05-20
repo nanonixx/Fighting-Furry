@@ -30,7 +30,7 @@ public class GameScreen extends BaseScreen {
     MyLabel manaP1 = new MyLabel("", Color.BLACK, 100f, 550f);
     MyLabel manaP2 = new MyLabel("", Color.BLACK, 1050f, 550f);
     MyLabel mostrarTurno = new MyLabel("",Color.BLACK, 574,616);
-    BaseImageButton endTurn = new BaseImageButton("endTurn.png", "endTurnOver.png", 154, 49, 1067, 86);
+    BaseImageButton endTurn = new BaseImageButton("endturn.png", "endturn_botonado.png", 170, 80, 1050, 86);
 
     public Carta carta;
     public boolean jugadaOk = false;
