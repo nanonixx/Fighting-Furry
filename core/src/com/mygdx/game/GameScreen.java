@@ -57,6 +57,23 @@ public class GameScreen extends BaseScreen {
         //  no borrar :
 //        gatito.addAction(Actions.moveBy(30, 30, 1));
 //        gatito.addAction(Actions.rotateBy(360 * 10, 0.2f));
+        saludleft.setPosition(68,606);
+        saludright.setPosition(1051,606);
+        cristalleft.setPosition(68,521);
+        cristalright.setPosition(1058,521);
+        attackleft.setPosition(68,436);
+        attackright.setPosition(1051, 436);
+        defleft.setPosition(68,350);
+        defright.setPosition(1051, 350);
+
+        game.getBaseScreen().stage.addActor(saludright);
+        game.getBaseScreen().stage.addActor(saludleft);
+        game.getBaseScreen().stage.addActor(cristalright);
+        game.getBaseScreen().stage.addActor(cristalleft);
+        game.getBaseScreen().stage.addActor(defright);
+        game.getBaseScreen().stage.addActor(defleft);
+        game.getBaseScreen().stage.addActor(attackright);
+        game.getBaseScreen().stage.addActor(attackleft);
 
         game.getBaseScreen().stage.addActor(Cosingas.juego.P1);
         game.getBaseScreen().stage.addActor(Cosingas.juego.P2);
