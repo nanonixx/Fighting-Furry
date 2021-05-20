@@ -54,7 +54,7 @@ public class Juego {
             case "especial":
 
                 switch (carta.nombre){
-                    case "canvi de lloc instantani":
+                    case "canvidelloc instantani":
                         P1.inmune = true;
                         break;
 
@@ -62,7 +62,7 @@ public class Juego {
                     //TODO
                         break;
 
-                    case "antigravity lean":
+                    case "antigravitylean":
                         activo.atBoost += carta.valor;
                         break;
 
@@ -73,21 +73,21 @@ public class Juego {
                         break;
 
 
-                    case "pacto de acero":
+                    case "pactodeacero":
                         activo.defensa += carta.valor;
                         P1.turnoCount = 1;
                         break;
 
-                    case "furia oriental":
+                    case "furiaoriental":
                         rival.salud -= 3 + Math.random() * 5;
                         //entre 3 y 5 de damage
                         break;
 
-                    case "vomito radioactivo":
+                    case "vomitoradioactivo":
                         rival.envenenado = true;
                         break;
 
-                    case "polonio o plomo":
+                    case "poloniooplomo":
                         if (rival.envenenado) rival.salud -= 25;
                         else rival.salud -= carta.valor;
                         break;
@@ -161,7 +161,7 @@ public class Juego {
                             P1.skipTurno = true;
                             break;
 
-                        case "antigravity lean":
+                        case "antigravitylean":
                             sourcePlayer.atBoost += carta.valor;
                             break;
 
@@ -178,21 +178,21 @@ public class Juego {
                             Cosingas.juego.mano.cartaList.remove(c1);
                             break;
 
-                        case "pacto de acero":
+                        case "pactodeacero":
                             sourcePlayer.defensa += carta.valor;
                             P2.turnoCount = 1;
                             break;
 
-                        case "furia oriental":
+                        case "furiaoriental":
                             destPlayer.salud -= 3 + Math.random() * 5;
                             //entre 3 y 5 de damage
                             break;
 
-                        case "vomito radioactivo":
+                        case "vomitoradioactivo":
                             destPlayer.envenenado = true;
                             break;
 
-                        case "polonio o plomo":
+                        case "poloniooplomo":
                             if (destPlayer.envenenado) destPlayer.salud -= 25;
                             else destPlayer.salud -= carta.valor;
                             break;

@@ -99,7 +99,7 @@ public class Carta extends MyActor {
             case "amasar":
                 animation = Assets.getAnimation("amasar", 10, Animation.PlayMode.LOOP);
                 break;
-            case "canvi de lloc instantani":
+            case "canvidelloc instantani":
                 animation = Assets.getAnimation("imagenReflejo", 10, Animation.PlayMode.LOOP);
                 break;
             case "kame":
@@ -108,7 +108,7 @@ public class Carta extends MyActor {
             case "heehee":
                 animation = Assets.getAnimation("hehe", 10, Animation.PlayMode.LOOP);
                 break;
-            case "antigravity lean":
+            case "antigravitylean":
                 animation = Assets.getAnimation("antiGravity", 10, Animation.PlayMode.LOOP);
                 break;
             case "cabezazo":
@@ -120,19 +120,19 @@ public class Carta extends MyActor {
             case "autocracia":
                 animation = Assets.getAnimation("autocracia", 10, Animation.PlayMode.LOOP);
                 break;
-            case "pacto de acero":
+            case "pactodeacero":
                 animation = Assets.getAnimation("pactoAcero", 10, Animation.PlayMode.LOOP);
                 break;
-            case "patada voladora":
+            case "patadavoladora":
                 animation = Assets.getAnimation("patadaVoladora", 10, Animation.PlayMode.LOOP);
                 break;
-            case "furia oriental":
+            case "furiaoriental":
                 animation = Assets.getAnimation("furiaOriental", 10, Animation.PlayMode.LOOP);
                 break;
-            case "vomito radioactivo":
+            case "vomitoradioactivo":
                 animation = Assets.getAnimation("vomitoRadioactivo", 10, Animation.PlayMode.LOOP);
                 break;
-            case "polonio o plomo":
+            case "poloniooplomo":
                 animation = Assets.getAnimation("polonioPlomo", 10, Animation.PlayMode.LOOP);
                 break;
         }

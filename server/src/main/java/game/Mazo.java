@@ -28,14 +28,14 @@ public class Mazo {
         switch (gato) {
             case "goku":
                 cartaList.addAll(Arrays.asList(
-                        new Carta("canvi de lloc instantani","",0, 3, "especial"),
+                        new Carta("canvidellocinstantani","",0, 3, "especial"),
                         new Carta("kame","", 25, 3, "ataque")
                 ));
                 break;
             case "jackson":
                 cartaList.addAll(Arrays.asList(
                         new Carta("heehee","", 0, 3, "especial"),
-                        new Carta("antigravity lean","", 5, 2, "especial")
+                        new Carta("antigravitylean","", 5, 2, "especial")
                 ));
                 break;
             case "pate":
@@ -47,19 +47,19 @@ public class Mazo {
             case "pussolini":
                 cartaList.addAll(Arrays.asList(
                         new Carta("autocracia","", 0, 2, "especial"),
-                        new Carta("pacto de acero","", 3, 3, "especial")
+                        new Carta("pactodeacero","", 3, 3, "especial")
                 ));
                 break;
             case "lee":
                 cartaList.addAll(Arrays.asList(
-                        new Carta("patada voladora","", 25, 3, "ataque"),
-                        new Carta("furia oriental","", 5, 2, "especial")
+                        new Carta("patadavoladora","", 25, 3, "ataque"),
+                        new Carta("furiaoriental","", 5, 2, "especial")
                 ));
                 break;
             case "furrie":
                 cartaList.addAll(Arrays.asList(
-                        new Carta("vomito radioactivo","", 3, 3, "especial"),
-                        new Carta("polonio o plomo","", 15, 3, "especial")
+                        new Carta("vomitoradioactivo","", 3, 3, "especial"),
+                        new Carta("poloniooplomo","", 15, 3, "especial")
                 ));
                 break;
         }
