@@ -2,7 +2,6 @@ package com.mygdx.game.Objects;
 
 import com.mygdx.game.Cosingas;
 import com.mygdx.game.MyGdxGame;
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import main.java.Mensaje;
 
 import java.util.Iterator;
@@ -27,17 +26,21 @@ public class Juego {
         int damages;
         switch (carta.tipo){
             case "ataque":
-                if(rival.defensa == 0)
-                    rival.salud -= carta.valor;
-                else{
-                    if(rival.defensa - carta.valor >= 0)
-                        rival.defensa -= carta.valor;
-                    else{
-                        damages = carta.valor - rival.defensa;
-                        rival.defensa = 0;
-                        rival.salud -= damages;
+                if (carta.valor + activo.atBoost >= 0) {
+                    if (rival.defensa == 0) {
+                        rival.salud -= carta.valor + activo.atBoost;
+                    } else {
+                        if (rival.defensa - (carta.valor + activo.atBoost) >= 0)
+                            rival.defensa -= carta.valor + activo.atBoost;
+                        else {
+                            damages = (carta.valor + activo.atBoost) - rival.defensa;
+                            rival.defensa = 0;
+                            rival.salud -= damages;
+                        }
                     }
+                    activo.atBoost = 0;
                 }
+                    activo.atBoost -= carta.valor;
                 break;
 
             case "defensa":
