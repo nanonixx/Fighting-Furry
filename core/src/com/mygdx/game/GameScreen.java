@@ -23,8 +23,19 @@ public class GameScreen extends BaseScreen {
     }
 
     //    private Texture background = new Texture("pui.png");
-    private Texture background = new Texture("fondo_desierto.png");
-    //    private Texture background = new Texture("yMLAGVx.gif");
+    //private Texture background = new Texture("fondo_catedral.png");
+    //private Texture background = new Texture("fondo_cementerio.png");
+    private Texture background = new Texture("fondo_cloaca.png");
+    //private Texture background = new Texture("fondo_cripta.png");
+    //private Texture background = new Texture("fondo_desierto1.png");
+    //private Texture background = new Texture("fondo_desierto2.png");
+    //private Texture background = new Texture("fondo_dojo.png");
+    //private Texture background = new Texture("fondo_fighter.png");
+    //private Texture background = new Texture("fondo_horizonte.png");
+    //private Texture background = new Texture("fondo_lava.png");
+    //private Texture background = new Texture("fondo_nieve.png");
+    //private Texture background = new Texture("fondo_puig.png");(NO ESTÁ AUN)
+
     Image saludright = new Image(new Texture("hud/salud_right.png"));
     Image saludleft = new Image(new Texture("hud/salud_left.png"));
     Image cristalright = new Image(new Texture("hud/cristal_right.png"));

@@ -21,6 +21,6 @@ public class Main extends JPanel {
         frame.getContentPane().add(this, BorderLayout.CENTER);
         frame.setSize(200, 80);
         frame.setVisible(true);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 }

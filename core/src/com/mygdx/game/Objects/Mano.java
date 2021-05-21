@@ -13,7 +13,7 @@ public class Mano extends MyActor {
     public List<Carta> cartaList = new ArrayList<>();
 
     public int dx = 300;
-    public int dy = 9;
+    public int dy = 0;
 
     public Mano(List<Carta> mano) {
         this.cartaList = mano;

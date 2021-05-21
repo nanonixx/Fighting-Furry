@@ -11,7 +11,7 @@ public class MyLabel extends Label {
     static {
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("fonts/Pixeled.ttf"));
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
-        parameter.size = 10;
+        parameter.size = 8;
         sLabelStyle.font = generator.generateFont(parameter);
     }
 
