@@ -1,37 +1,67 @@
-## Welcome to GitHub Pages
+## Objetivo
 
-You can use the [editor on GitHub](https://github.com/nanonixx/Fighting-Furry/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+El objetivo en _Fighting Furry_ es dejar al contrincante sin puntos de vida, haciendo esto formando una estrategia con las cartas que tienes disponible.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## Dinámica deljuego
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Antes de empezar la partida eliges a uno de los seis personajes. Cada personaje tiene dos cartas especiales que se añadirán a tu mazo:
 
-```markdown
-Syntax highlighted code block
+Una vez elegido tendrás 3 cartas jugables en tu mano. En la carta está señalado el nombre, la descripción de lo que hace y abajo el valor y el coste de cristales. Podrás jugar tantas cartas en tu turno como puedas comprar con tus cristales.
 
-# Header 1
-## Header 2
-### Header 3
+En la pantalla de juego verás una serie de indicadores. Los de tu izquierda corresponden a tu estado, y los de la derecha los del rival.
+De arriba a abajo lo que indican es:
 
-- Bulleted
-- List
+- **Vida:** La salud en ese momento de la partida. Si llega a 0 se acaba el juego y gana el rival. Se puede curar usando cartas de curación pero su valor no puede sobrepasar de 100.
+- **Cristales:** Sirven para usar cartas en cada turno. Cuando se juegue una carta, se restará el valor al que indique en ésta. Cada turno se reestablecé el valor de los cristales a 3.
+- **Boost de ataque:** Es el ataque adicional que se suma al ataque si se usa una carta de ataque en ese turno. Se reestablece a 0 una vez usado.
+- **Defensa:** Es el valor de la defensa. Previene que se reste la vida por los ataques del rival. Cada vez que se reciba uno se irá restaando el valor.
 
-1. Numbered
-2. List
+### Cartas normales
 
-**Bold** and _Italic_ and `Code` text
+//TODO
+
+### Cartas especiales
+
+#### Paté
+
+- **Cabezazo:** Baja el ataque del enemigo 5 puntos.
+- **Pisotón:** Descarta una carta aleatoriamente de la mano del oponente
+
+#### B. Pussolini
+
+- **Autocracia:** Descarta las cartas de la mano del rival.
+- **Pacto de Acero:** Empieza con 3 puntos de defensa  durante 2 turnos.
+
+#### Miauchel Catson
+
+- **Heehee:** Paraliza al rival durante un turno sin poder hacer nada.
+- **Anti-Gravity Lean:** El siguiente ataque inflige 5 puntos de daño adicionales.
+
+#### Marie Furrie
+
+- **Vómito radioactivo:** Envenena al contrincante infligiendo 3 puntos de daño por turno.
+- **Polonio o plomo:** hace 15 de daño, si el enemigo está envenenado hace 25. 
+
+#### Goku
+
+- **Imagen Reflejo:** Esquiva las siguientes cartas que lance el rival.
+- **Kame:** Inflige 25 puntos de daño.
+
+#### Miau Lee
+- **Patada voladora:** Inflinge 25 puntos de daño
+- **Furia oriental:**  Hace entre 3 y 5 (aleatorio) golpes de 5 puntos de daño cada uno.
 
 [Link](url) and ![Image](src)
-```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+### Cómo ejecutar el juego
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/nanonixx/Fighting-Furry/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+//TODO
 
-### Support or Contact
+### FAQ
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- ¿Me quiero matar?
+
+Sí
