@@ -1,3 +1,4 @@
+
 ## Objetivo
 
 El objetivo en _Fighting Furry_ es dejar al contrincante sin puntos de vida, haciendo esto formando una estrategia con las cartas que tienes disponible.
@@ -11,6 +12,8 @@ Una vez elegido tendrás 3 cartas jugables en tu mano. En la carta está señala
 
 En la pantalla de juego verás una serie de indicadores. Los de tu izquierda corresponden a tu estado, y los de la derecha los del rival.
 De arriba a abajo lo que indican es:
+
+<img src="https://user-images.githubusercontent.com/62404395/119225395-d81ce380-bb03-11eb-9add-aef8f3c80496.png" width=100 align=right>
 
 - **Vida:** La salud en ese momento de la partida. Si llega a 0 se acaba el juego y gana el rival. Se puede curar usando cartas de curación pero su valor no puede sobrepasar de 100.
 - **Cristales:** Sirven para usar cartas en cada turno. Cuando se juegue una carta, se restará el valor al que indique en ésta. Cada turno se reestablecé el valor de los cristales a 3.
