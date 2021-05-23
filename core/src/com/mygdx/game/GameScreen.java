@@ -35,6 +35,7 @@ public class GameScreen extends BaseScreen {
     Image venenoleft = new Image(new Texture("hud/veneno.png"));
     Image venenoright = new Image(new Texture("hud/veneno.png"));
 
+    Image letreringo = new Image(new Texture("Cartel/letreringo.png"));
     Image mazo = new Image(new Texture("mazo2.png"));
 
     MyLabel saludP1 = new MyLabel("", Color.BLACK, 143f, 646f);
@@ -45,7 +46,7 @@ public class GameScreen extends BaseScreen {
     MyLabel attack2 = new MyLabel("", Color.BLACK, 1090f, 470f);
     MyLabel def1 = new MyLabel("", Color.BLACK, 153f, 390f);
     MyLabel def2 = new MyLabel("", Color.BLACK, 1090, 390f);
-    MyLabel mostrarTurno = new MyLabel("",Color.BLACK, 574,616);
+    MyLabel mostrarTurno = new MyLabel("",Color.BLACK, 592,656);
     BaseImageButton endTurn = new BaseImageButton("endturn.png", "endturn_botonado.png", 170, 80, 1050, 86);
 
     public Carta carta;
@@ -73,6 +74,8 @@ public class GameScreen extends BaseScreen {
         venenoleft.setVisible(false);
         venenoright.setVisible(false);
 
+        letreringo.setPosition(493, 618);
+        letreringo.setVisible(false);
         mazo.setPosition(90, 25);
 
         game.getBaseScreen().stage.addActor(saludright);
@@ -84,6 +87,7 @@ public class GameScreen extends BaseScreen {
         game.getBaseScreen().stage.addActor(attackright);
         game.getBaseScreen().stage.addActor(attackleft);
 
+        game.getBaseScreen().stage.addActor(letreringo);
         game.getBaseScreen().stage.addActor(mazo);
 
         game.getBaseScreen().stage.addActor(Cosingas.juego.P1);
@@ -100,6 +104,8 @@ public class GameScreen extends BaseScreen {
         game.getBaseScreen().stage.addActor(mostrarTurno);
         game.getBaseScreen().stage.addActor(venenoleft);
         game.getBaseScreen().stage.addActor(venenoright);
+
+
 
 
 
@@ -128,10 +134,12 @@ public class GameScreen extends BaseScreen {
                         }
                         Cosingas.juego.P1.cristales = 3;
                         mostrarTurno.setText("TU TURNO");
+                        letreringo.setVisible(true);
                         activarListeners();
                     } else {
                         Cosingas.juego.P2.cristales = 3;
                         mostrarTurno.setText("");
+                        letreringo.setVisible(false);
                         desactivarListeners();
                     }
                 }else{
