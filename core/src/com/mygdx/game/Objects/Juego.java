@@ -40,8 +40,7 @@ public class Juego {
                         }
                     }
                     activo.atBoost = 0;
-                }
-                    activo.atBoost -= carta.valor;
+                }else activo.atBoost += carta.valor;
                 break;
 
             case "defensa":
@@ -129,18 +128,21 @@ public class Juego {
         if(!P1.inmune){
             switch(carta.tipo){
                 case "ataque":
+                    if (carta.valor + sourcePlayer.atBoost >= 0) {
                     if(destPlayer.defensa == 0)
-                        destPlayer.salud -= carta.valor;
-                    else{
-                        if(destPlayer.defensa - carta.valor >= 0)
-                            destPlayer.defensa -= carta.valor;
-                        else{
-                            damages = carta.valor - destPlayer.defensa;
+                        destPlayer.salud -= carta.valor + sourcePlayer.atBoost;
+                    else {
+                        if (destPlayer.defensa - carta.valor + sourcePlayer.atBoost >= 0)
+                            destPlayer.defensa -= carta.valor + sourcePlayer.atBoost;
+                        else {
+                            damages = carta.valor + destPlayer.atBoost - destPlayer.defensa;
                             destPlayer.defensa = 0;
                             destPlayer.salud -= damages;
 
                         }
                     }
+                        sourcePlayer.atBoost = 0;
+                    }else sourcePlayer.atBoost += carta.valor;
                     break;
                 case "defensa":
                     sourcePlayer.defensa += carta.valor;
