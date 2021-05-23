@@ -33,6 +33,8 @@ public class GameScreen extends BaseScreen {
     Image attackright = new Image(new Texture("hud/attackboost_right.png"));
     Image attackleft = new Image(new Texture("hud/attackboost_left.png"));
 
+    Image mazo = new Image(new Texture("mazo2.png"));
+
     MyLabel saludP1 = new MyLabel("", Color.BLACK, 143f, 646f);
     MyLabel saludP2 = new MyLabel("", Color.BLACK, 1090f, 646f);
     MyLabel manaP1 = new MyLabel("", Color.BLACK, 153f, 560f);
@@ -65,6 +67,8 @@ public class GameScreen extends BaseScreen {
         defleft.setPosition(68,350);
         defright.setPosition(1051, 350);
 
+        mazo.setPosition(90, 25);
+
         game.getBaseScreen().stage.addActor(saludright);
         game.getBaseScreen().stage.addActor(saludleft);
         game.getBaseScreen().stage.addActor(cristalright);
@@ -73,6 +77,8 @@ public class GameScreen extends BaseScreen {
         game.getBaseScreen().stage.addActor(defleft);
         game.getBaseScreen().stage.addActor(attackright);
         game.getBaseScreen().stage.addActor(attackleft);
+
+        game.getBaseScreen().stage.addActor(mazo);
 
         game.getBaseScreen().stage.addActor(Cosingas.juego.P1);
         game.getBaseScreen().stage.addActor(Cosingas.juego.P2);
