@@ -76,7 +76,7 @@ public class GameScreen extends BaseScreen {
 
         letreringo.setPosition(493, 618);
         letreringo.setVisible(false);
-        mazo.setPosition(90, 25);
+        mazo.setPosition(50, 2);
 
         game.getBaseScreen().stage.addActor(saludright);
         game.getBaseScreen().stage.addActor(saludleft);
