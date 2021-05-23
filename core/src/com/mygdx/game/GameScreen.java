@@ -32,6 +32,8 @@ public class GameScreen extends BaseScreen {
     Image defleft = new Image(new Texture("hud/def_left.png"));
     Image attackright = new Image(new Texture("hud/attackboost_right.png"));
     Image attackleft = new Image(new Texture("hud/attackboost_left.png"));
+    Image venenoleft = new Image(new Texture("hud/veneno.png"));
+    Image venenoright = new Image(new Texture("hud/veneno.png"));
 
     Image mazo = new Image(new Texture("mazo2.png"));
 
@@ -66,6 +68,10 @@ public class GameScreen extends BaseScreen {
         attackright.setPosition(1051, 436);
         defleft.setPosition(68,350);
         defright.setPosition(1051, 350);
+        venenoleft.setPosition(8, 610);
+        venenoright.setPosition(1219, 610);
+        venenoleft.setVisible(false);
+        venenoright.setVisible(false);
 
         mazo.setPosition(90, 25);
 
@@ -92,6 +98,10 @@ public class GameScreen extends BaseScreen {
         game.getBaseScreen().stage.addActor(def2);
         game.getBaseScreen().stage.addActor(endTurn);
         game.getBaseScreen().stage.addActor(mostrarTurno);
+        game.getBaseScreen().stage.addActor(venenoleft);
+        game.getBaseScreen().stage.addActor(venenoright);
+
+
 
 
     }
@@ -128,7 +138,8 @@ public class GameScreen extends BaseScreen {
                     Cosingas.juego.changeTurn();
                     Cosingas.juego.P1.skipTurno = false;
                 }
-
+                if (Cosingas.juego.P1.envenenado) Cosingas.juego.P1.salud -= 3;
+                if (Cosingas.juego.P2.envenenado) Cosingas.juego.P2.salud -= 3;
                 mostrarSaludMana();
                 break;
             case "jugadaOk":
@@ -194,6 +205,7 @@ public class GameScreen extends BaseScreen {
         mostrarSaludMana();
     }
 
+
     void mostrarSaludMana(){
         saludP1.setText(String.valueOf(Cosingas.juego.P1.salud));
         saludP2.setText(String.valueOf(Cosingas.juego.P2.salud));
@@ -203,6 +215,9 @@ public class GameScreen extends BaseScreen {
         attack2.setText(String.valueOf(Cosingas.juego.P2.atBoost));
         def1.setText(String.valueOf(Cosingas.juego.P1.defensa));
         def2.setText(String.valueOf(Cosingas.juego.P2.defensa));
+        venenoleft.setVisible(Cosingas.juego.P1.envenenado);
+        venenoright.setVisible(Cosingas.juego.P2.envenenado);
+        System.out.println(Cosingas.juego.P1.envenenado + "" +  Cosingas.juego.P2.envenenado);
     }
 
     public void jugadaOk(Mensaje.Carta carta) {
