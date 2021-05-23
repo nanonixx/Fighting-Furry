@@ -26,6 +26,7 @@ public class Juego {
         int damages;
         switch (carta.tipo){
             case "ataque":
+                //va bien, no tocar
                 if (carta.valor + activo.atBoost >= 0) {
                     if (rival.defensa == 0) {
                         rival.salud -= carta.valor + activo.atBoost;
