@@ -21,7 +21,7 @@ public class BaseScreen implements Screen {
 
     public BaseScreen(MyGdxGame game) {
         this.game = game;
-
+        Gdx.graphics.setTitle("Fighting Furry");
         camera = new OrthographicCamera();
         camera.position.set(WIDTH/2, HEIGHT/2, 0);
         viewport = new FitViewport(WIDTH, HEIGHT, camera);
