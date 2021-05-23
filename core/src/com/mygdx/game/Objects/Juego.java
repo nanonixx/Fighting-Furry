@@ -11,6 +11,7 @@ public class Juego {
     public Gatito P1, P2;
     public Mano mano;
     public boolean torn;
+    int furiaOrientalValor = (int)(3 + Math.random() * 5) * 5;
 
     private final MyGdxGame game;
 
@@ -24,6 +25,7 @@ public class Juego {
 
     public void jugarCarta(Carta carta, Gatito activo, Gatito rival){
         int damages;
+
         switch (carta.tipo){
             case "ataque":
                 //va bien, no tocar
@@ -82,8 +84,9 @@ public class Juego {
                         break;
 
                     case "furiaoriental":
-                        rival.salud -= 3 + Math.random() * 5;
-                        //entre 3 y 5 de damage
+//                        furiaOrientalValor = (int)(3 + Math.random() * 5) * 5;
+                        rival.salud -= furiaOrientalValor;
+                        //entre 3 y 5 de turno por 5 damage
                         break;
 
                     case "vomitoradioactivo":
@@ -190,7 +193,8 @@ public class Juego {
                             break;
 
                         case "furiaoriental":
-                            destPlayer.salud -= 3 + Math.random() * 5;
+//                            furiaOrientalValor = (int)(3 + Math.random() * 5) * 5;
+                            destPlayer.salud -= furiaOrientalValor;
                             //entre 3 y 5 de damage
                             break;
 
