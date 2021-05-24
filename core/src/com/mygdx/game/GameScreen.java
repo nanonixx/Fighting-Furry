@@ -210,6 +210,9 @@ public class GameScreen extends BaseScreen {
         carta.lanzarCarta(560,296);
         Cosingas.juego.mano.cartaList.remove(carta);
         Cosingas.juego.jugarCarta(carta, propio, rival);
+        propio.getMove().punch(propio);
+        propio.animation = Assets.getAnimation(propio.getMove().getName(), propio.getMove().getMs(), propio.getMove().loopMode());
+        //TODO ponerlo que lo vea el otro jugador y que vuelva a idle cuando acabe animacion (o se queda parado)
         mostrarSaludMana();
     }
 
@@ -225,7 +228,6 @@ public class GameScreen extends BaseScreen {
         def2.setText(String.valueOf(Cosingas.juego.P2.defensa));
         venenoleft.setVisible(Cosingas.juego.P1.envenenado);
         venenoright.setVisible(Cosingas.juego.P2.envenenado);
-        System.out.println(Cosingas.juego.P1.envenenado + "" +  Cosingas.juego.P2.envenenado);
     }
 
     public void jugadaOk(Mensaje.Carta carta) {

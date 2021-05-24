@@ -1,5 +1,7 @@
 package com.mygdx.game;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.mygdx.game.Objects.Gatito;
@@ -9,6 +11,10 @@ public class Move {
     private float ms;
     private String name;
     private boolean loop = true;
+
+    Sound attackSound;
+
+//   attackSound = Gdx.audio.newSound(Gdx.files.internal("sounds/????"));
 
     public float getMs() {
         return ms;
@@ -30,42 +36,25 @@ public class Move {
     }
 
 
-    public void kick(Gatito gatito){
-        gatito.getMove().name = "kick";
-        gatito.getMove().ms = 0.02f;
-        loop = false;
-        gatito.addAction(Actions.moveBy(15, 5, 2));
-        //depende de si está flipped, TODO
-//        gatito.addAction(Actions.moveBy(-30, -30, 2));
-    }
-
-    public void kick2(Gatito gatito){
-        gatito.getMove().name = "kick";
-        gatito.getMove().ms = 0.02f;
-        loop = false;
-        gatito.addAction(Actions.moveBy(-15, -5, 2));
-        gatito.stateTime = 0;
-        //depende de si está flipped, TODO
-//        gatito.addAction(Actions.moveBy(-30, -30, 2));
-    }
 
     public void punch(Gatito gatito){
-        gatito.getMove().name = "punching";
-        gatito.getMove().ms = 0.03f;
-        loop = true;
-        gatito.addAction(Actions.moveBy(-50, 0, 5));
+        gatito.getMove().name = gatito.character+"_punch";
+        gatito.getMove().ms = 0.05f;
+        loop = false;
+        gatito.addAction(Actions.moveBy(0, 0, 5));
+//        attackSound.play(1.0f);
         gatito.stateTime = 0;
         //depende de si está flipped
     }
 
-    public void bite(Gatito gatito, float delta){
-        gatito.getMove().name = "bite";
+    public void ayuwoki(Gatito gatito, float delta){
+        //es un png EH
+        gatito.getMove().name = "ayuwoki";
         gatito.getMove().ms = 0.08f;
         loop = false;
-        gatito.addAction(Actions.moveBy(-50, 0, 5));
+        gatito.addAction(Actions.moveBy(-50, 0, 5)); //poner rotacion Jeje
 
         gatito.stateTime = 0;
-        //depende de si está flipped
     }
 
     public void idle(Gatito gatito){
