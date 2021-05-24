@@ -104,12 +104,6 @@ public class GameScreen extends BaseScreen {
         game.getBaseScreen().stage.addActor(mostrarTurno);
         game.getBaseScreen().stage.addActor(venenoleft);
         game.getBaseScreen().stage.addActor(venenoright);
-
-
-
-
-
-
     }
 
     @Override
