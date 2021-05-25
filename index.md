@@ -33,7 +33,12 @@ El juego terminará cuando el nivel de vida de uno de los dos jugadores llega a 
 
 ## Cartas
 
-> //TODO: esquema
+Las cartas son lo que se usa en cada turno para ejecutar una acción, esta sea atacar al rival, curarse la vida, protegerse de futuros ataques, etc.
+
+Este es el esquema de una carta:
+
+![carta](https://user-images.githubusercontent.com/62404395/119485205-1827d480-bd57-11eb-8645-929d0c471520.png)
+
 
 ### Cartas normales
 
