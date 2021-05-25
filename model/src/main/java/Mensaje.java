@@ -1,8 +1,5 @@
 package main.java;
 
-
-import com.sun.prism.Texture;
-
 public class Mensaje {
     public String action;
     public boolean turno;

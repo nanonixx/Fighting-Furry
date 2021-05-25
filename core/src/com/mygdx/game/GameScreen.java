@@ -46,7 +46,7 @@ public class GameScreen extends BaseScreen {
     MyLabel attack2 = new MyLabel("", Color.BLACK, 1090f, 470f);
     MyLabel def1 = new MyLabel("", Color.BLACK, 153f, 390f);
     MyLabel def2 = new MyLabel("", Color.BLACK, 1090, 390f);
-    MyLabel mostrarTurno = new MyLabel("",Color.BLACK, 592,656);
+    MyLabel mostrarTurno = new MyLabel("",Color.BLACK, 567,669);
     BaseImageButton endTurn = new BaseImageButton("endturn.png", "endturn_botonado.png", 170, 80, 1050, 86);
 
     public Carta carta;
@@ -69,12 +69,12 @@ public class GameScreen extends BaseScreen {
         attackright.setPosition(1051, 436);
         defleft.setPosition(68,350);
         defright.setPosition(1051, 350);
-        venenoleft.setPosition(8, 610);
-        venenoright.setPosition(1219, 610);
+        venenoleft.setPosition(110, 620);
+        venenoright.setPosition(1150, 620);
         venenoleft.setVisible(false);
         venenoright.setVisible(false);
 
-        letreringo.setPosition(493, 618);
+        letreringo.setPosition(530, 640);
         letreringo.setVisible(false);
         mazo.setPosition(50, 2);
 
