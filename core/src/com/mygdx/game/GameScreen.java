@@ -22,7 +22,7 @@ public class GameScreen extends BaseScreen {
         super(game);
     }
 
-    private Texture background = new Texture("fondos/fondo_"+(int)(Math.random() * 11)+".png");
+    private Texture background = new Texture(Cosingas.juego.bg);
 
     Image saludright = new Image(new Texture("hud/salud_right.png"));
     Image saludleft = new Image(new Texture("hud/salud_left.png"));

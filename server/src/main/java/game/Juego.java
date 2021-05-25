@@ -2,14 +2,13 @@ package main.java.game;
 
 import jakarta.websocket.Session;
 import main.java.Mensaje;
-
 import java.util.HashMap;
 import java.util.Map;
 
 public class Juego {
     Map<String, Partida> partidaMap = new HashMap<>();
     Partida partida = new Partida();
-
+    String background;
     public void onMessage(Session cliente, Mensaje mensaje) {
         switch(mensaje.action){
             case "ready":
@@ -23,8 +22,10 @@ public class Juego {
                     if(!partida.faltaJugador()) {
                         partida.repartirCartasIniciales();
 
-                        partida.jugador1.send(Mensaje.start(partida.jugador1.gato, partida.jugador2.gato, partida.jugador1.mano.toMensaje()));
-                        partida.jugador2.send(Mensaje.start(partida.jugador2.gato, partida.jugador1.gato, partida.jugador2.mano.toMensaje()));
+                        background = "fondos/fondo_"+(int)(Math.random() * 11)+".png";
+
+                        partida.jugador1.send(Mensaje.start(partida.jugador1.gato, partida.jugador2.gato, partida.jugador1.mano.toMensaje(), background));
+                        partida.jugador2.send(Mensaje.start(partida.jugador2.gato, partida.jugador1.gato, partida.jugador2.mano.toMensaje(), background));
 
                         if(partida.turnoBool == partida.jugador1.torn){
                             partida.jugador1.send(Mensaje.setTurno(true));

@@ -1,6 +1,7 @@
 package main.java;
 
 
+import com.sun.prism.Texture;
 
 public class Mensaje {
     public String action;
@@ -9,6 +10,7 @@ public class Mensaje {
     public Carta carta;
     public int[] vidas;
     public String gato, gato2; //
+    public String background;
 
 
     public static Mensaje ready(String gato){
@@ -24,18 +26,19 @@ public class Mensaje {
         return mensaje;
     }
 
-    public static Mensaje starts(){
-        Mensaje mensaje = new Mensaje();
-        mensaje.action = "ready";
-        return mensaje;
-    }
+//    public static Mensaje starts(){
+//        Mensaje mensaje = new Mensaje();
+//        mensaje.action = "ready";
+//        return mensaje;
+//    }
 
-    public static Mensaje start(String gato, String gato2, Mano mano) {
+    public static Mensaje start(String gato, String gato2, Mano mano, String background) {
         Mensaje mensaje = new Mensaje();
         mensaje.action = "start";
         mensaje.gato = gato;
         mensaje.gato2 = gato2;
         mensaje.mano = mano;
+        mensaje.background = background;
         return mensaje;
     }
 

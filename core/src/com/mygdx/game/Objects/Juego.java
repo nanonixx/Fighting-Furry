@@ -12,6 +12,7 @@ public class Juego {
     public Mano mano;
     public boolean torn;
     int furiaOrientalValor = (int)(3 + Math.random() * 5) * 5;
+    public String bg;
 
     private final MyGdxGame game;
 

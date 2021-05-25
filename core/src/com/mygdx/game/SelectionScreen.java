@@ -42,6 +42,7 @@ public class SelectionScreen extends BaseScreen {
                 Cosingas.juego.P2 = new Gatito(750, 270, true, mensaje.gato2);
                 Cosingas.juego.mano = Mano.fromMensaje(mensaje.mano);
                 Cosingas.juego.torn = mensaje.turno;
+                Cosingas.juego.bg = mensaje.background;
                 setScreen(new GameScreen(game));
                 break;
             default:

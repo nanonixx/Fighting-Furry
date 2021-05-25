@@ -1,3 +1,5 @@
+main/java/Main.java
+ main.java.Main
 main/java/game/Jugador.java
  main.java.game.Jugador
 main/java/ServidorEndpoint.java
@@ -6,8 +8,6 @@ main/java/ServidorEndpoint.java
  main.java.ServidorEndpoint$MyEncoder
 main/java/game/Carta.java
  main.java.game.Carta
-main/java/Main.java
- main.java.Main
 main/java/game/Mano.java
  main.java.game.Mano
 main/java/game/Mazo.java
