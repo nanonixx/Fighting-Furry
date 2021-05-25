@@ -18,13 +18,42 @@ De arriba a abajo lo que indican es:
 - **Vida:** La salud en ese momento de la partida. Si llega a 0 se acaba el juego y gana el rival. Se puede curar usando cartas de curación pero su valor no puede sobrepasar de 100.
 - **Cristales:** Sirven para usar cartas en cada turno. Cuando se juegue una carta, se restará el valor al que indique en ésta. Cada turno se reestablecé el valor de los cristales a 3.
 - **Boost de ataque:** Es el ataque adicional que se suma al ataque si se usa una carta de ataque en ese turno. Se reestablece a 0 una vez usado.
-- **Defensa:** Es el valor de la defensa. Previene que se reste la vida por los ataques del rival. Cada vez que se reciba uno se irá restaando el valor.
+- **Defensa:** Es el valor de la defensa. Previene que se reste la vida por los ataques del rival. Cada vez que se reciba uno se irá restando el valor. Si el valor es 0 los ataques bajaran la salud
+
+//TODO: veneno
+
+El juego terminará cuando el nivel de vida de uno de los dos jugadores llega a 0, en ese caso el otro jugador será proclamado ganador.
+
+## Cartas
+
+//TODO: esquema
 
 ### Cartas normales
 
-//TODO
+#### Ataque
 
-### Cartas especiales
+Las cartas de ataque baja tanta salud o defensa al contrincante como el valor que marca en la carta
+
+- **Zarpazo:** Inflinge 10 puntos de daño 
+- **Mordisco:** Inflinge 15 puntos de daño 
+
+#### Defensa
+
+Las cartas de defensa suman su valor la defensa del usuario
+
+- **Bufido:** Aporta 10 puntos de escudo 
+- **Alerta Máxima:** Aporta 15 puntos de escudo
+
+#### Curación
+
+Las cartas de curación suma su valor a la salud del usuario hasta llegar a 100 como máximo
+
+- **Ronroneo:** Recupera 15 puntos de vida
+- **Amasar:** Recupera 10 puntos de vida 
+
+
+
+### Cartas especiales / de personaje
 
 #### Paté
 <img src="https://user-images.githubusercontent.com/62404395/119474767-d003b480-bd4c-11eb-9631-1f36861e566f.png" width=50 align=left>
@@ -78,3 +107,7 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 - ¿Me quiero matar?
 
 Sí
+
+
+
+<img src="https://user-images.githubusercontent.com/62404395/119477435-3e497680-bd4f-11eb-9bfc-0b9ef5a0f3af.png" width=65 align=center>
