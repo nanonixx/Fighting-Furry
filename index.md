@@ -107,10 +107,6 @@ Las cartas de curación suma su valor a la salud del usuario hasta llegar a 100 
 
 <br>
 
-[Link](url) and ![Image](src)
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
 ## Cómo ejecutar el juego
 
 > //TODO
@@ -122,5 +118,10 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 Sí
 
 
-
+<br> <br>
 <img src="https://user-images.githubusercontent.com/62404395/119477435-3e497680-bd4f-11eb-9bfc-0b9ef5a0f3af.png" width=65 align=center>
+
+
+
+
+ [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
