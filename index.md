@@ -1,5 +1,8 @@
 # Instrucciones
 
+![image](https://user-images.githubusercontent.com/62404395/119480386-e52f1200-bd51-11eb-8374-c76b9740d175.png)
+
+
 ## Objetivo
 
 El objetivo en _Fighting Furry_ es dejar al contrincante sin puntos de vida, haciendo esto formando una estrategia con las cartas que tienes disponible.
@@ -109,7 +112,7 @@ Las cartas de curación suma su valor a la salud del usuario hasta llegar a 100 
 
 ## Cómo ejecutar el juego
 
-> //TODO
+> //TODO: Buena pregunta jaja
 
 ## FAQ
 
