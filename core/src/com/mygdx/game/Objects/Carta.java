@@ -60,6 +60,8 @@ public class Carta extends MyActor {
                 )
         );
 
+        //remove();
+
     }
 
     public void lanzarCarta(float x, float y){

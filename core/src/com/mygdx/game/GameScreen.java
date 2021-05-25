@@ -226,10 +226,14 @@ public class GameScreen extends BaseScreen {
 
     public void jugadaOk(Mensaje.Carta carta) {
         this.carta = new Carta(carta.nombre, carta.descripcion, carta.costeMana, carta.valor, carta.tipo);
+        stage.addActor(this.carta);
+        this.carta.mostrarCarta(564, 304);
         Cosingas.juego.procesarJugada(this.carta, Cosingas.juego.P1, Cosingas.juego.P2);
         mostrarSaludMana();
         jugadaOk = true;
+
     }
+
 
 
     @Override
