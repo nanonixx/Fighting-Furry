@@ -19,13 +19,17 @@ public class PantallaInicial extends BaseScreen {
 
         background = new Texture("FondoInicio.png");
 
-        BaseImageButton buttonPlay = new BaseImageButton("play_rojo.png", "play_rojo_botonado.png", 205, 100, 400, 150);
+        BaseImageButton buttonPlay = new BaseImageButton("play_rojo.png", "play_rojo_botonado.png", 166, 81, 448, 230);
         buttonPlay.onClick(()->setScreen(new SelectionScreen(game)));
         stage.addActor(buttonPlay);
 
-        BaseImageButton buttonQuit = new BaseImageButton("quit.png", "quit_botonado.png", 205, 100, 675, 150);
+        BaseImageButton buttonQuit = new BaseImageButton("quit.png", "quit_botonado.png", 166, 81, 557, 101);
         buttonQuit.onClick(()->System.exit(0));
         stage.addActor(buttonQuit);
+
+        BaseImageButton buttonOptions = new BaseImageButton("optionsButton.png", "optionsButtonBotonado.png", 166, 81, 666, 230);
+        buttonOptions.onClick(()->System.exit(0));
+        stage.addActor(buttonOptions);
     }
 
     public void render(float delta) {
