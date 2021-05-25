@@ -4,7 +4,7 @@
 El objetivo en _Fighting Furry_ es dejar al contrincante sin puntos de vida, haciendo esto formando una estrategia con las cartas que tienes disponible.
 
 
-## Dinámica deljuego
+## Dinámica del juego
 
 Antes de empezar la partida eliges a uno de los seis personajes. Cada personaje tiene dos cartas especiales que se añadirán a tu mazo:
 
@@ -27,31 +27,41 @@ De arriba a abajo lo que indican es:
 ### Cartas especiales
 
 #### Paté
+<img src="https://user-images.githubusercontent.com/62404395/119474767-d003b480-bd4c-11eb-9631-1f36861e566f.png" width=50 align=left>
+
 
 - **Cabezazo:** Baja el ataque del enemigo 5 puntos.
 - **Pisotón:** Descarta una carta aleatoriamente de la mano del oponente
 
 #### B. Pussolini
+<img src="https://user-images.githubusercontent.com/62404395/119474730-c5e1b600-bd4c-11eb-9411-c1d1e5b56a9e.png" width=50 align=left>
 
 - **Autocracia:** Descarta las cartas de la mano del rival.
 - **Pacto de Acero:** Empieza con 3 puntos de defensa  durante 2 turnos.
 
 #### Miauchel Catson
+<img src="https://user-images.githubusercontent.com/62404395/119474974-fa557200-bd4c-11eb-90ab-9e1e25f4c6b7.png" width=50 align=left>
 
 - **Heehee:** Paraliza al rival durante un turno sin poder hacer nada.
 - **Anti-Gravity Lean:** El siguiente ataque inflige 5 puntos de daño adicionales.
 
 #### Marie Furrie
+<img src="https://user-images.githubusercontent.com/62404395/119474826-db56e000-bd4c-11eb-906d-59e90ac90c9c.png" width=50 align=left>
 
 - **Vómito radioactivo:** Envenena al contrincante infligiendo 3 puntos de daño por turno.
 - **Polonio o plomo:** hace 15 de daño, si el enemigo está envenenado hace 25. 
 
+
 #### Goku
+<img src="https://user-images.githubusercontent.com/62404395/119474268-4358f680-bd4c-11eb-854e-7ff489064fe1.png" width=50 align=left>
 
 - **Imagen Reflejo:** Esquiva las siguientes cartas que lance el rival.
-- **Kame:** Inflige 25 puntos de daño.
+
+- **Kame kame ha:** Inflige 25 puntos de daño.
 
 #### Miau Lee
+<img src="https://user-images.githubusercontent.com/62404395/119474885-e873cf00-bd4c-11eb-8505-9767715d42e8.png" width=50 align=left>
+
 - **Patada voladora:** Inflinge 25 puntos de daño
 - **Furia oriental:**  Hace entre 3 y 5 (aleatorio) golpes de 5 puntos de daño cada uno.
 
