@@ -1,3 +1,4 @@
+# Instrucciones
 
 ## Objetivo
 
@@ -98,11 +99,11 @@ Las cartas de curación suma su valor a la salud del usuario hasta llegar a 100 
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Cómo ejecutar el juego
+## Cómo ejecutar el juego
 
 //TODO
 
-### FAQ
+## FAQ
 
 - ¿Me quiero matar?
 
