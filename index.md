@@ -63,7 +63,7 @@ Las cartas de curación suma su valor a la salud del usuario hasta llegar a 100 
 - **Ronroneo:** Recupera 15 puntos de vida
 - **Amasar:** Recupera 10 puntos de vida 
 
-
+<br>
 
 ### Cartas especiales / de personaje
 
