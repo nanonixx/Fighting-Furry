@@ -208,6 +208,7 @@ public class GameScreen extends BaseScreen {
         propio.animation = Assets.getAnimation(propio.getMove().getName(), propio.getMove().getMs(), propio.getMove().loopMode());
         //TODO ponerlo que lo vea el otro jugador y que vuelva a idle cuando acabe animacion (o se queda parado)
         mostrarSaludMana();
+        checkWinner();
     }
 
 
@@ -230,12 +231,17 @@ public class GameScreen extends BaseScreen {
         this.carta.mostrarCarta(564, 304);
         Cosingas.juego.procesarJugada(this.carta, Cosingas.juego.P1, Cosingas.juego.P2);
         mostrarSaludMana();
+        checkWinner();
         jugadaOk = true;
 
     }
 
 
-
+    public void checkWinner(){
+        if(Cosingas.juego.P1.salud <= 0 || Cosingas.juego.P2.salud <= 0){
+            setScreen(new FinalScreen(game));
+        }
+    }
     @Override
     public void render(float delta) {
         Gdx.gl.glClearColor(0f, 0f, 0f, 0);
