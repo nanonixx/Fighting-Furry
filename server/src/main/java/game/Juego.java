@@ -42,10 +42,10 @@ public class Juego {
                 System.out.println("llega la carta");
                 if(cliente.equals(partida.jugador1.session)){
                     partida.jugador1.mano.cartaList.removeIf(c -> c.nombre.equals(mensaje.carta.nombre));
-                    partida.jugador2.send(Mensaje.jugadaOk(mensaje.carta));
+                    partida.jugador2.send(Mensaje.jugadaOk(mensaje.carta, mensaje.furiadaño));
                 } else{
                     partida.jugador2.mano.cartaList.removeIf(c -> c.nombre.equals(mensaje.carta.nombre));
-                    partida.jugador1.send(Mensaje.jugadaOk(mensaje.carta));
+                    partida.jugador1.send(Mensaje.jugadaOk(mensaje.carta, mensaje.furiadaño));
                 }
                 //aqui habria que enviar al rival un mensaje.jugadaOk() que de los datos de la jugada que ha hecho el otro
                 break;

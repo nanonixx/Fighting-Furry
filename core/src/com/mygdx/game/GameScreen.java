@@ -146,7 +146,7 @@ public class GameScreen extends BaseScreen {
                 break;
             case "jugadaOk":
                 System.out.println("\n"+mensaje.carta.nombre);
-                jugadaOk(mensaje.carta);
+                jugadaOk(mensaje.carta, mensaje.furiadaño);
                 mostrarSaludMana();
                 break;
             case "refillCartas":
@@ -225,13 +225,13 @@ public class GameScreen extends BaseScreen {
         venenoright.setVisible(Cosingas.juego.P2.envenenado);
     }
 
-    public void jugadaOk(Mensaje.Carta carta) {
+    public void jugadaOk(Mensaje.Carta carta, int furiadaño) {
         this.carta = new Carta(carta.nombre, carta.descripcion, carta.costeMana, carta.valor, carta.tipo);
         stage.addActor(this.carta);
         this.carta.mostrarCarta(564, 304);
         Cosingas.juego.P2.getMove().punch(Cosingas.juego.P2);
         Cosingas.juego.P2.animation = Assets.getAnimation(Cosingas.juego.P2.getMove().getName(), Cosingas.juego.P2.getMove().getMs(), Cosingas.juego.P2.getMove().loopMode());
-        Cosingas.juego.procesarJugada(this.carta, Cosingas.juego.P1, Cosingas.juego.P2);
+        Cosingas.juego.procesarJugada(this.carta, Cosingas.juego.P1, Cosingas.juego.P2, furiadaño);
         mostrarSaludMana();
         checkWinner();
         jugadaOk = true;
