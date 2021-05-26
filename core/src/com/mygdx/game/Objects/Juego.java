@@ -123,7 +123,7 @@ public class Juego {
         Cosingas.cliente.enviar(Mensaje.cambiarTurno());
     }
 
-    public void procesarJugada(Carta carta, Gatito destPlayer, Gatito sourcePlayer, int furiadaño) {
+    public void procesarJugada(Carta carta, Gatito destPlayer, Gatito sourcePlayer, int furiadanyo) {
         int damages;
         Random random = new Random();
         Carta c1;
@@ -195,7 +195,7 @@ public class Juego {
 
                         case "furiaoriental":
 //                            furiaOrientalValor = (int)(3 + Math.random() * 5) * 5;
-                            destPlayer.salud -= furiadaño;
+                            destPlayer.salud -= furiadanyo;
                             //entre 3 y 5 de damage
                             break;
 

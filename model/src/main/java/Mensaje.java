@@ -8,7 +8,7 @@ public class Mensaje {
     public int[] vidas;
     public String gato, gato2; //
     public String background;
-    public int furiadaño;
+    public int furiadanyo;
 
 
     public static Mensaje ready(String gato){
@@ -36,19 +36,19 @@ public class Mensaje {
     }
 
     //el mensaje de la jugada con la carta a procesar
-    public static Mensaje jugada(Carta carta, int furiadaño){
+    public static Mensaje jugada(Carta carta, int furiadanyo){
         Mensaje mensaje = new Mensaje();
         mensaje.action = "jugada";
         mensaje.carta = carta;
-        mensaje.furiadaño = furiadaño;
+        mensaje.furiadanyo = furiadanyo;
         return mensaje;
     }
 
-    public static Mensaje jugadaOk(Carta carta, int furiadaño){
+    public static Mensaje jugadaOk(Carta carta, int furiadanyo){
         Mensaje mensaje = new Mensaje();
         mensaje.carta = carta;
         mensaje.action = "jugadaOk";
-        mensaje.furiadaño = furiadaño;
+        mensaje.furiadanyo = furiadanyo;
         return mensaje;
     }
 

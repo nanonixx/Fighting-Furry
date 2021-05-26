@@ -39,13 +39,26 @@ public class Juego {
                 }
             break;
             case "jugada":
+
                 System.out.println("llega la carta");
                 if(cliente.equals(partida.jugador1.session)){
-                    partida.jugador1.mano.cartaList.removeIf(c -> c.nombre.equals(mensaje.carta.nombre));
-                    partida.jugador2.send(Mensaje.jugadaOk(mensaje.carta, mensaje.furiadaño));
+                    //partida.jugador1.mano.cartaList.removeIf(c -> c.nombre.equals(mensaje.carta.nombre));
+                    for (Carta c:partida.jugador1.mano.cartaList) {
+                        if(c.nombre.equals(mensaje.carta.nombre)){
+                            partida.jugador1.mano.cartaList.remove(c);
+                            break;
+                        }
+                    }
+                    partida.jugador2.send(Mensaje.jugadaOk(mensaje.carta, mensaje.furiadanyo));
                 } else{
-                    partida.jugador2.mano.cartaList.removeIf(c -> c.nombre.equals(mensaje.carta.nombre));
-                    partida.jugador1.send(Mensaje.jugadaOk(mensaje.carta, mensaje.furiadaño));
+                    //partida.jugador2.mano.cartaList.removeIf(c -> c.nombre.equals(mensaje.carta.nombre));
+                    for (Carta c:partida.jugador2.mano.cartaList) {
+                        if(c.nombre.equals(mensaje.carta.nombre)){
+                            partida.jugador2.mano.cartaList.remove(c);
+                            break;
+                        }
+                    }
+                    partida.jugador1.send(Mensaje.jugadaOk(mensaje.carta, mensaje.furiadanyo));
                 }
                 //aqui habria que enviar al rival un mensaje.jugadaOk() que de los datos de la jugada que ha hecho el otro
                 break;
