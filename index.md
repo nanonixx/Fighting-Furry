@@ -6,13 +6,15 @@
 ## Objetivo
 
 El objetivo en _Fighting Furry_ es dejar al contrincante sin puntos de vida, haciendo esto formando una estrategia con las cartas que tienes disponible.
-
+<br>
 
 ## Dinámica del juego
 
 Antes de empezar la partida eliges a uno de los seis personajes. Cada personaje tiene dos cartas especiales que se añadirán a tu mazo:
 
 Una vez elegido tendrás 3 cartas jugables en tu mano. En la carta está señalado el nombre, la descripción de lo que hace y abajo el valor y el coste de cristales. Podrás jugar tantas cartas en tu turno como puedas comprar con tus cristales.
+
+<br>
 
 En la pantalla de juego verás una serie de indicadores. Los de tu izquierda corresponden a tu estado, y los de la derecha los del rival.
 De arriba a abajo lo que indican es:
@@ -29,7 +31,11 @@ De arriba a abajo lo que indican es:
 
 - **Veneno:** Este símbolo aparecerá junto a la barra de salud cuando el jugador está envenenado, indicando que se restará a su vida cada turno que pasa 
 
+<br>
+
 El juego terminará cuando el nivel de vida de uno de los dos jugadores llega a 0, en ese caso el otro jugador será proclamado ganador.
+
+<br>
 
 ## Cartas
 
@@ -131,8 +137,10 @@ Si no se introduce puerto el que se asigna por defecto es __12345__ .
 
 Sí
 
-
+<!--haha html go-->
 <br> <br>
+
+
 <img src="https://user-images.githubusercontent.com/62404395/119477435-3e497680-bd4f-11eb-9bfc-0b9ef5a0f3af.png" width=65 align=center>
 
 
