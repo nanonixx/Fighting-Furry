@@ -10,6 +10,7 @@ public class FinalScreen extends BaseScreen {
 
     Texture background;
     BaseImageButton buttonQuit;
+    BaseImageButton buttonRestart;
     public FinalScreen(MyGdxGame game) {
         super(game);
     }
@@ -18,13 +19,16 @@ public class FinalScreen extends BaseScreen {
     public void show() {
         if(Cosingas.juego.P1.salud <= 0){
             background = new Texture("fondos/gameOver.png");
+            buttonRestart = new BaseImageButton("restart.png", "restart_botonado.png", 166, 81, 1004, 165);
             buttonQuit = new BaseImageButton("quit.png", "quit_botonado.png", 166, 81, 1004, 71);
         }else{
             background = new Texture("fondos/victoria.png");
+            buttonRestart = new BaseImageButton("restart.png", "restart_botonado.png", 166, 81, 1004, 165);
             buttonQuit = new BaseImageButton("quit.png", "quit_botonado.png", 166, 81, 987, 40);
         }
 
-        buttonQuit.onClick(()->System.exit(0));
+        buttonQuit.onClick(()-> System.exit(0));
+        buttonRestart.onClick(()-> setScreen(new PantallaInicial(game)));
 
         stage.addActor(buttonQuit);
     }
