@@ -52,4 +52,14 @@ public class Gatito extends MyActor {
         setOrigin(center);
         animation = Assets.getAnimation(getMove().getName(), 0.4f, Animation.PlayMode.LOOP);
     }
+
+    @Override
+    public void draw(Batch batch, float parentAlpha) {
+        super.draw(batch, parentAlpha);
+
+        if (animation.isAnimationFinished(stateTime)){
+            move.idle(this);
+            animation = Assets.getAnimation(getMove().getName(), 0.4f, Animation.PlayMode.LOOP);
+        }
+    }
 }

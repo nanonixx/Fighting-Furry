@@ -20,8 +20,8 @@ import com.mygdx.game.MyGdxGame;
 public class OptionsScreen extends BaseScreen {
 
     private Texture background;
-    String ipAdress;
     private TextField input;
+    Cosingas cosingas;
 
     public OptionsScreen(MyGdxGame game) {
         super(game);
@@ -36,9 +36,8 @@ public class OptionsScreen extends BaseScreen {
         buttonDone.addListener(new InputListener() {
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                String ipAdress = input.getText();
+//                ipAddress = (input.getText());
                 setScreen(new PantallaInicial(game));
-
                 return super.touchDown(event, x, y, pointer, button);
             }
         });
