@@ -28,7 +28,7 @@ public class PantallaInicial extends BaseScreen {
         stage.addActor(buttonQuit);
 
         BaseImageButton buttonOptions = new BaseImageButton("optionsButton.png", "optionsButtonBotonado.png", 166, 81, 666, 230);
-        buttonOptions.onClick(()->System.exit(0));
+        buttonOptions.onClick(()->setScreen(new OptionsScreen(game)));
         stage.addActor(buttonOptions);
     }
 
