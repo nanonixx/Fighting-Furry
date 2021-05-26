@@ -15,7 +15,13 @@ public class Cliente {
     static Json json = new Json();
 
     public void conectar(){
+
         String host = "localhost";
+
+        if (Cosingas.ipAddress != null) {
+            host = Cosingas.ipAddress;
+        }
+
         socket = ExtendedNet.getNet().newWebSocket(host, 12345);
 
         socket.addListener(new AbstractWebSocketListener() {

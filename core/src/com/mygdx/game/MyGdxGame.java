@@ -13,8 +13,8 @@ public class MyGdxGame extends Game {
 
 	@Override
 	public void create () {
-		Cosingas.cliente = new Cliente();
-		Cosingas.cliente.conectar();
+
+
 		Cosingas.juego = new Juego(this);
 		assets = new Assets();
 		assets.load();
