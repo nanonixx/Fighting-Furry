@@ -146,7 +146,7 @@ public class GameScreen extends BaseScreen {
                 break;
             case "jugadaOk":
                 System.out.println("\n"+mensaje.carta.nombre);
-                jugadaOk(mensaje.carta, mensaje.furiadaño);
+                jugadaOk(mensaje.carta, mensaje.furiadanyo);
                 mostrarSaludMana();
                 break;
             case "refillCartas":
