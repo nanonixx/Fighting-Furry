@@ -178,14 +178,14 @@ furrie_punch
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 5
+  index: 4
 furrie_punch
   rotate: false
   xy: 876, 518
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 4
+  index: 5
 furrie_punch
   rotate: false
   xy: 876, 446
@@ -388,6 +388,13 @@ kick
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
+  index: 5
+kick
+  rotate: false
+  xy: 113, 83
+  size: 52, 73
+  orig: 52, 73
+  offset: 0, 0
   index: 6
 kick
   rotate: false
@@ -396,13 +403,6 @@ kick
   orig: 52, 73
   offset: 0, 0
   index: 7
-kick
-  rotate: false
-  xy: 113, 83
-  size: 52, 73
-  orig: 52, 73
-  offset: 0, 0
-  index: 5
 kick
   rotate: false
   xy: 772, 572
