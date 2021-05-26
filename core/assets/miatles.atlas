@@ -283,14 +283,14 @@ kick
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 11
+  index: 0
 kick
   rotate: false
   xy: 722, 230
   size: 50, 70
   orig: 50, 70
   offset: 0, 0
-  index: 0
+  index: 11
 idlehehe
   rotate: false
   xy: 618, 142
@@ -388,14 +388,14 @@ kick
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
-  index: 5
+  index: 6
 kick
   rotate: false
   xy: 113, 83
   size: 52, 73
   orig: 52, 73
   offset: 0, 0
-  index: 6
+  index: 5
 kick
   rotate: false
   xy: 113, 83
@@ -500,14 +500,14 @@ lee_punch
   size: 57, 78
   orig: 57, 78
   offset: 0, 0
-  index: 6
+  index: 5
 lee_punch
   rotate: false
   xy: 2, 78
   size: 57, 78
   orig: 57, 78
   offset: 0, 0
-  index: 5
+  index: 6
 lee_punch
   rotate: false
   xy: 2, 2

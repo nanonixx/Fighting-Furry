@@ -10,6 +10,7 @@ public class DesktopLauncher {
 	public static void main (String[] arg) {
 		CommonWebSockets.initiate();
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
+//		config.fullscreen = true;
 		new LwjglApplication(new MyGdxGame(), config);
 	}
 }

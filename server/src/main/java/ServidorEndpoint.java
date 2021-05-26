@@ -9,10 +9,22 @@ import main.java.game.Juego;
 @ServerEndpoint(value = "/", encoders = ServidorEndpoint.MyEncoder.class, decoders = ServidorEndpoint.MyDecoder.class)
 public class ServidorEndpoint {
     static Gson gson = new Gson();
-    static Juego juego = new Juego();
+    static Juego juego;
+    boolean firstOpen = true;
 
-    public ServidorEndpoint() {}
-    
+    public ServidorEndpoint() {
+        juego = new Juego();
+    }
+
+    @OnOpen
+    public void onOpen(Session cliente) {
+        if (firstOpen) {
+            System.out.println("FIRST OPEN");
+            juego = new Juego();
+            firstOpen = false;
+        }
+    }
+
 
     @OnMessage
     public void onMessage(Session cliente, Mensaje mensaje) {
