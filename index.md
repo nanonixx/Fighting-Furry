@@ -121,13 +121,35 @@ Las cartas de curación suma su valor a la salud del usuario hasta llegar a 100 
 
 <br>
 
-## Cómo empezar una partida multijugador
+## Cómo crear una partida multijugador
 
-En el menú principal hay un apartado de opciones. Ahí se habrá de escribir la IP del anfitrión de la partida y el puerto.
-> Ej.: 192.168.10.10:1234
+Para poder jugar en conexión, primero de todo, una máquina tiene que ejecutar el servidor de juego. El servidor se inicia en el puerto _12345_.
+
+En el menú principal hay un apartado de opciones. Ahí se habrá de escribir la IP del anfitrión de la partida.
+> Ej.: 192.168.10.10
+
+![imagen](https://user-images.githubusercontent.com/62404395/119744846-2710a300-be8d-11eb-82a1-55b904284db1.png)
 
 
-Si no se introduce puerto el que se asigna por defecto es __12345__ .
+Una vez se haya escrito darle al botón y darle a _PLAY_ para empezar una nueva partida. Se abrirá una pantalla de elección de personaje, donde se habrá de elegir uno de los personajes disponibles.
+
+Cuando hayamos elegido a nuestro personaje darle al botón _SELECT_. La partida comenzará cuando se encuentre otro jugador contra el que jugar que haya elegido también a su personaje.
+
+
+
+<br>
+
+## CÓMO EJECUTAR
+
+
+#### Servidor
+
+> //TODO:   jar?? web??
+
+#### Cliente
+
+> // TODO:   same???
+
 
 <br>
 
