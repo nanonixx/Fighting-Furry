@@ -33,7 +33,7 @@ El juego terminará cuando el nivel de vida de uno de los dos jugadores llega a 
 
 ## Cartas
 
-Las cartas son lo que se usa en cada turno para ejecutar una acción, esta sea atacar al rival, curarse la vida, protegerse de futuros ataques, etc.
+Las cartas son lo que se usa en cada turno para ejecutar una acción, esta sea atacar al rival, curarse la vida, protegerse de futuros ataques, etc. Para jugar una carta sólo basta con hacer clic izquierdo con el ratón.
 
 Este es el esquema de una carta:
 
@@ -115,9 +115,15 @@ Las cartas de curación suma su valor a la salud del usuario hasta llegar a 100 
 
 <br>
 
-## Cómo ejecutar el juego
+## Cómo empezar una partida multijugador
 
-> //TODO: Buena pregunta jaja
+En el menú principal hay un apartado de opciones. Ahí se habrá de escribir la IP del anfitrión de la partida y el puerto.
+> Ej.: 192.168.10.10:1234
+
+
+Si no se introduce puerto el que se asigna por defecto es __12345__ .
+
+<br>
 
 ## FAQ
 
