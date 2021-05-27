@@ -1,4 +1,4 @@
-# CÓMO JUGAR
+# Instrucciones
 
 ![image](https://user-images.githubusercontent.com/62404395/119480386-e52f1200-bd51-11eb-8374-c76b9740d175.png)
 <br>
