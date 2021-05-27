@@ -30,6 +30,7 @@ public class FinalScreen extends BaseScreen {
         buttonQuit.onClick(()-> System.exit(0));
         buttonRestart.onClick(()-> setScreen(new PantallaInicial(game)));
 
+        stage.addActor(buttonRestart);
         stage.addActor(buttonQuit);
     }
 
