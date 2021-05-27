@@ -32,6 +32,9 @@ public class OptionsScreen extends BaseScreen {
 
         BaseImageButton buttonDone = new BaseImageButton("button/done.png", "button/done_botonado.png", 166, 81, 558, 100);
 
+        BaseImageButton buttonBack = new BaseImageButton("button/atras.png", "button/atras_botonado.png", 75, 75, 4, 639);
+        stage.addActor(buttonBack);
+
         buttonDone.addListener(new InputListener() {
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
@@ -42,6 +45,14 @@ public class OptionsScreen extends BaseScreen {
         });
 
         stage.addActor(buttonDone);
+
+        buttonBack.addListener(new InputListener() {
+            @Override
+            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
+                setScreen(new PantallaInicial(game));
+                return super.touchDown(event, x, y, pointer, button);
+            }
+        });
 
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("fonts/Pixeled.ttf"));
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
