@@ -20,7 +20,7 @@ Al acabar tu turno darle al botón 'END TURN'.
 
 <br>
 
-![partida](https://user-images.githubusercontent.com/62404395/119746704-59bc9a80-be91-11eb-85ce-806745601b52.png)
+![partida](https://user-images.githubusercontent.com/62404395/119748164-92aa3e80-be94-11eb-93ab-ccd79ba817a5.png)
 
 
 <br>
