@@ -23,7 +23,7 @@ public class FinalScreen extends BaseScreen {
             buttonQuit = new BaseImageButton("quit.png", "quit_botonado.png", 166, 81, 1004, 71);
         }else{
             background = new Texture("fondos/victoria.png");
-            buttonRestart = new BaseImageButton("button/restart.png", "button/restart_botonado.png", 166, 81, 1004, 165);
+            buttonRestart = new BaseImageButton("button/restart.png", "button/restart_botonado.png", 166, 81, 987, 165);
             buttonQuit = new BaseImageButton("quit.png", "quit_botonado.png", 166, 81, 987, 40);
         }
 
