@@ -175,7 +175,7 @@ Sí
 <br> <br>
 
 
-<img src="https://user-images.githubusercontent.com/62404395/119477435-3e497680-bd4f-11eb-9bfc-0b9ef5a0f3af.png" width=65 align=center>
+<img src="https://user-images.githubusercontent.com/62404395/119477435-3e497680-bd4f-11eb-9bfc-0b9ef5a0f3af.png" width=82 align=center>
 
 
 
