@@ -143,7 +143,7 @@ En el menú principal hay un apartado de opciones. Ahí se habrá de escribir la
 ![imagen](https://user-images.githubusercontent.com/62404395/119744846-2710a300-be8d-11eb-82a1-55b904284db1.png)
 
 
-Una vez se haya escrito darle al botón y darle a _PLAY_ para empezar una nueva partida. Se abrirá una pantalla de elección de personaje, donde se habrá de elegir uno de los personajes disponibles.
+Una vez se haya escrito darle al botón, que te llevará a la pantalla de inicio, y darle a _PLAY_ para empezar una nueva partida. Se abrirá una pantalla de elección de personaje, donde se habrá de elegir uno de los personajes disponibles.
 
 Cuando hayamos elegido a nuestro personaje darle al botón _SELECT_. La partida comenzará cuando se encuentre otro jugador contra el que jugar que haya elegido también a su personaje.
 
