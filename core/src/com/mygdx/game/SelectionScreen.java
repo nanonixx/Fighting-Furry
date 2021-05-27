@@ -57,10 +57,13 @@ public class SelectionScreen extends BaseScreen {
 
         selectSound = Gdx.audio.newSound(Gdx.files.internal("sounds/meow_03.wav"));
 
+        BaseImageButton buttonBack = new BaseImageButton("button/atras.png", "button/atras_botonado.png", 75, 75, 4, 639);
+        stage.addActor(buttonBack);
+
+
         BaseImageButton buttonReady = new BaseImageButton("select.png", "select_botonado.png", 190, 90, 805, 54);
         stage.addActor(buttonReady);
 
-        //para testeo
         buttonReady.addListener(new InputListener() {
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
@@ -69,6 +72,14 @@ public class SelectionScreen extends BaseScreen {
                     Cosingas.juego.ready(pjSeleccionado);
                 }
 //                setScreen(new GameScreen(game));
+                return super.touchDown(event, x, y, pointer, button);
+            }
+        });
+
+        buttonBack.addListener(new InputListener() {
+            @Override
+            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
+                setScreen(new PantallaInicial(game));
                 return super.touchDown(event, x, y, pointer, button);
             }
         });
