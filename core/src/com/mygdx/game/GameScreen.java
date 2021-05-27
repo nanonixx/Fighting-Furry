@@ -61,6 +61,8 @@ public class GameScreen extends BaseScreen {
 
     public Carta carta;
     public boolean jugadaOk = false;
+    private Sound turn = Gdx.audio.newSound(Gdx.files.internal("sounds/menu_select.ogg"));
+    private Sound lanzar = Gdx.audio.newSound(Gdx.files.internal("sounds/tirar_sound.mp3"));
 
       //    private Texture background = new Texture("pui.png");
 
@@ -183,6 +185,7 @@ public class GameScreen extends BaseScreen {
 
 
         endTurn.onClick(() -> {
+            turn.play();
             Cosingas.juego.changeTurn();
         });
     }
@@ -211,6 +214,7 @@ public class GameScreen extends BaseScreen {
     }
 
     public void touched(Carta carta, Gatito propio, Gatito rival) {
+        lanzar.play();
         carta.lanzarCarta(560,296);
         Cosingas.juego.mano.cartaList.remove(carta);
         Cosingas.juego.jugarCarta(carta, propio, rival);
