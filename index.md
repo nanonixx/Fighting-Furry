@@ -1,12 +1,13 @@
 # Instrucciones
 
 ![image](https://user-images.githubusercontent.com/62404395/119480386-e52f1200-bd51-11eb-8374-c76b9740d175.png)
+<br>
 
 
 ## Objetivo
 
 El objetivo en _Fighting Furry_ es dejar al contrincante sin puntos de vida, haciendo esto formando una estrategia con las cartas que tienes disponible.
-<br>
+<br> <br>
 
 ## Dinámica del juego
 
@@ -14,22 +15,32 @@ Antes de empezar la partida eliges a uno de los seis personajes. Cada personaje 
 
 Una vez elegido tendrás 3 cartas jugables en tu mano. En la carta está señalado el nombre, la descripción de lo que hace y abajo el valor y el coste de cristales. Podrás jugar tantas cartas en tu turno como puedas comprar con tus cristales.
 
+Al acabar tu turno darle al botón 'END TURN'.
+
+
+<br>
+
+![partida](https://user-images.githubusercontent.com/62404395/119746704-59bc9a80-be91-11eb-85ce-806745601b52.png)
+
+
 <br>
 
 En la pantalla de juego verás una serie de indicadores. Los de tu izquierda corresponden a tu estado, y los de la derecha los del rival.
 De arriba a abajo lo que indican es:
+<br>
 
-<img src="https://user-images.githubusercontent.com/62404395/119225395-d81ce380-bb03-11eb-9add-aef8f3c80496.png" width=100 align=right>
+![corazon 1](https://user-images.githubusercontent.com/62404395/119746942-f1ba8400-be91-11eb-95af-d59453af44b5.png)
+**VIDA:**    La salud en ese momento de la partida. Si llega a 0 se acaba el juego y gana el rival. Se puede curar usando cartas de curación pero su valor no puede sobrepasar de 100. El símbolo <img src="https://user-images.githubusercontent.com/62404395/119478324-03940e00-bd50-11eb-810e-c39d203c2901.png" width=25> aparecerá superpuesto cuando el jugador está envenenado, indicando que se restará a su vida cada turno que pasa  <br><br>
+![diam 9](https://user-images.githubusercontent.com/62404395/119746895-d3548880-be91-11eb-92cc-e4a04f6b7ba7.png)
+**CRISTALES:**    Sirven para usar cartas en cada turno. Cuando se juegue una carta, se restará el valor al que indique en ésta. Cada turno se reestablecé el valor de los cristales a 3.<br><br>
+![Group 2](https://user-images.githubusercontent.com/62404395/119746903-d8193c80-be91-11eb-9e66-69b73d1db78a.png)
+ **BOOST DE ATAQUE:**   Es el ataque adicional que se suma al ataque si se usa una carta de ataque en ese turno. Se reestablece a 0 una vez usado. <br><br>
 
-- **Vida:** La salud en ese momento de la partida. Si llega a 0 se acaba el juego y gana el rival. Se puede curar usando cartas de curación pero su valor no puede sobrepasar de 100.
-- **Cristales:** Sirven para usar cartas en cada turno. Cuando se juegue una carta, se restará el valor al que indique en ésta. Cada turno se reestablecé el valor de los cristales a 3.
-- **Boost de ataque:** Es el ataque adicional que se suma al ataque si se usa una carta de ataque en ese turno. Se reestablece a 0 una vez usado.
-- **Defensa:** Es el valor de la defensa. Previene que se reste la vida por los ataques del rival. Cada vez que se reciba uno se irá restando el valor. Si el valor es 0 los ataques bajaran la salud
+![imatge 22](https://user-images.githubusercontent.com/62404395/119746793-91c3dd80-be91-11eb-8770-9ff04283c363.png) **DEFENSA:**    Es el valor de la defensa. Previene que se reste la vida por los ataques del rival. Cada vez que se reciba uno se irá restando el valor. Si el valor es 0 los ataques bajaran la salud
 
 
-<img src="https://user-images.githubusercontent.com/62404395/119478324-03940e00-bd50-11eb-810e-c39d203c2901.png" width=25 align=right>
 
-- **Veneno:** Este símbolo aparecerá junto a la barra de salud cuando el jugador está envenenado, indicando que se restará a su vida cada turno que pasa 
+
 
 <br>
 
@@ -45,6 +56,7 @@ Este es el esquema de una carta:
 
 ![carta](https://user-images.githubusercontent.com/62404395/119485205-1827d480-bd57-11eb-8645-929d0c471520.png)
 
+<br>
 
 ### Cartas normales
 
