@@ -1,6 +1,7 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -18,8 +19,17 @@ import main.java.Mensaje;
 
 public class GameScreen extends BaseScreen {
 
+    private Sound fight;
+
     public GameScreen(MyGdxGame game) {
         super(game);
+        fight = Gdx.audio.newSound(Gdx.files.internal("sounds/fight_sound.ogg"));
+        fight.play();
+        Cosingas.music.stop();
+        Cosingas.music = Gdx.audio.newMusic(Gdx.files.internal("sounds/battle_01.ogg"));
+        Cosingas.music.setVolume(0.25f);
+        Cosingas.music.setLooping(true);
+        Cosingas.music.play();
     }
 
     private Texture background = new Texture(Cosingas.juego.bg);

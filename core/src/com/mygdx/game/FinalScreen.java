@@ -13,6 +13,7 @@ public class FinalScreen extends BaseScreen {
     BaseImageButton buttonRestart;
     public FinalScreen(MyGdxGame game) {
         super(game);
+        Cosingas.music.stop();
     }
 
     @Override
@@ -21,10 +22,14 @@ public class FinalScreen extends BaseScreen {
             background = new Texture("fondos/gameOver.png");
             buttonRestart = new BaseImageButton("button/restart.png", "button/restart_botonado.png", 166, 81, 1004, 165);
             buttonQuit = new BaseImageButton("quit.png", "quit_botonado.png", 166, 81, 1004, 71);
+            Cosingas.music = Gdx.audio.newMusic(Gdx.files.internal("sounds/lose_theme.ogg"));
+            Cosingas.music.play();
         }else{
             background = new Texture("fondos/victoria.png");
             buttonRestart = new BaseImageButton("button/restart.png", "button/restart_botonado.png", 166, 81, 987, 165);
             buttonQuit = new BaseImageButton("quit.png", "quit_botonado.png", 166, 81, 987, 40);
+            Cosingas.music = Gdx.audio.newMusic(Gdx.files.internal("sounds/win_theme.ogg"));
+            Cosingas.music.play();
         }
 
         buttonQuit.onClick(()-> System.exit(0));
