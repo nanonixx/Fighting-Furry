@@ -22,9 +22,11 @@ public class PantallaInicial extends BaseScreen {
     public void show() {
 
         background = new Texture("FondoInicio.png");
-        Cosingas.music = Gdx.audio.newMusic(Gdx.files.internal("sounds/title_theme1.ogg"));
-        Cosingas.music.setLooping(true);
-        Cosingas.music.play();
+        if(Cosingas.music == null) {
+            Cosingas.music = Gdx.audio.newMusic(Gdx.files.internal("sounds/title_theme1.ogg"));
+            Cosingas.music.setLooping(true);
+            Cosingas.music.play();
+        }
 
         BaseImageButton buttonPlay = new BaseImageButton("play_rojo.png", "play_rojo_botonado.png", 166, 81, 448, 230);
 
