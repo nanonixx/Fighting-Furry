@@ -27,7 +27,7 @@ public class FinalScreen extends BaseScreen {
         }else{
             background = new Texture("fondos/victoria.png");
             buttonRestart = new BaseImageButton("button/restart.png", "button/restart_botonado.png", 166, 81, 987, 165);
-            buttonQuit = new BaseImageButton("quit.png", "quit_botonado.png", 166, 81, 987, 40);
+            buttonQuit = new BaseImageButton("quit.png", "quit_botonado.png", 166, 81, 987, 71);
             Cosingas.music = Gdx.audio.newMusic(Gdx.files.internal("sounds/win_theme.ogg"));
             Cosingas.music.play();
         }

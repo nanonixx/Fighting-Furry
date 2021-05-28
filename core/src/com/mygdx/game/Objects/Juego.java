@@ -86,17 +86,47 @@ public class Juego {
                     case "furiaoriental":
 //                        furiaOrientalValor = (int)(3 + Math.random() * 5) * 5;
                         furiaOrientalValor = (int)(3 + Math.random() * 5) * 5;
-                        rival.salud -= furiaOrientalValor;
-                        //entre 3 y 5 de turno por 5 damage
+                        if (furiaOrientalValor + activo.atBoost >= 0) {
+                            if (rival.defensa == 0) {
+                                rival.salud -= furiaOrientalValor + activo.atBoost;
+                            } else {
+                                if (rival.defensa - (furiaOrientalValor + activo.atBoost) >= 0)
+                                    rival.defensa -= furiaOrientalValor + activo.atBoost;
+                                else {
+                                    damages = (furiaOrientalValor + activo.atBoost) - rival.defensa;
+                                    rival.defensa = 0;
+                                    rival.salud -= damages;
+                                }
+                            }
+                            activo.atBoost = 0;
+                        }else activo.atBoost += furiaOrientalValor;
                         break;
+                        //entre 3 y 5 de turno por 5 damage
+
 
                     case "vomitoradioactivo":
                         rival.envenenado = true;
                         break;
 
                     case "poloniooplomo":
-                        if (rival.envenenado) rival.salud -= 25;
-                        else rival.salud -= carta.valor;
+                        int veneno ;
+                        if (rival.envenenado) {
+                            veneno = 25;
+                        }else veneno=15;
+                        if (veneno + activo.atBoost >= 0) {
+                            if (rival.defensa == 0) {
+                                rival.salud -= veneno + activo.atBoost;
+                            } else {
+                                if (rival.defensa - (veneno + activo.atBoost) >= 0)
+                                    rival.defensa -= veneno + activo.atBoost;
+                                else {
+                                    damages = (veneno + activo.atBoost) - rival.defensa;
+                                    rival.defensa = 0;
+                                    rival.salud -= damages;
+                                }
+                            }
+                            activo.atBoost = 0;
+                        }else activo.atBoost += veneno;
                         break;
                 }
 
@@ -195,7 +225,20 @@ public class Juego {
 
                         case "furiaoriental":
 //                            furiaOrientalValor = (int)(3 + Math.random() * 5) * 5;
-                            destPlayer.salud -= furiadanyo;
+                            if (furiadanyo + sourcePlayer.atBoost >= 0) {
+                                if (destPlayer.defensa == 0) {
+                                    destPlayer.salud -= furiadanyo + sourcePlayer.atBoost;
+                                } else {
+                                    if (destPlayer.defensa - (furiadanyo + sourcePlayer.atBoost) >= 0)
+                                        destPlayer.defensa -= furiadanyo + sourcePlayer.atBoost;
+                                    else {
+                                        damages = (furiadanyo + destPlayer.atBoost) - destPlayer.defensa;
+                                        destPlayer.defensa = 0;
+                                        destPlayer.salud -= damages;
+                                    }
+                                }
+                                sourcePlayer.atBoost = 0;
+                            }else sourcePlayer.atBoost += furiadanyo;
                             //entre 3 y 5 de damage
                             break;
 
@@ -204,8 +247,24 @@ public class Juego {
                             break;
 
                         case "poloniooplomo":
-                            if (destPlayer.envenenado) destPlayer.salud -= 25;
-                            else destPlayer.salud -= carta.valor;
+                            int veneno;
+                            if (destPlayer.envenenado) {
+                                veneno = 25;
+                            }else veneno=15;
+                            if (veneno + sourcePlayer.atBoost >= 0) {
+                                if (destPlayer.defensa == 0) {
+                                    destPlayer.salud -= veneno + sourcePlayer.atBoost;
+                                } else {
+                                    if (destPlayer.defensa - (veneno + sourcePlayer.atBoost) >= 0)
+                                        destPlayer.defensa -= veneno + sourcePlayer.atBoost;
+                                    else {
+                                        damages = (veneno + sourcePlayer.atBoost) - destPlayer.defensa;
+                                        destPlayer.defensa = 0;
+                                        destPlayer.salud -= damages;
+                                    }
+                                }
+                                sourcePlayer.atBoost = 0;
+                            }else sourcePlayer.atBoost += veneno;
                             break;
                     }
                     break;
